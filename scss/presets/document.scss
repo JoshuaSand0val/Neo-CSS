@@ -1,0 +1,67 @@
+// Presets/document.scss: Presets to HTML tags used to format the document.
+
+@use "../tools/color.scss" as color;
+@use "../tools/spacing.scss" as spacing;
+
+// Main root:
+
+html {
+    position: absolute;
+    top: 0px; bottom: 0px;
+    width: 100%;
+    @include color.theme(background-color, color.$body1);
+    @include color.theme(color, color.$text);
+}
+
+// Blockquotes:
+
+blockquote {
+    border-left: spacing.px(2) solid;
+    padding: 0px spacing.size(0);
+    margin: spacing.size(0) 0px;
+    @include color.theme(border-color, color.$gray);
+}
+
+// Paragraphs:
+
+p {
+    margin: spacing.size(0) 0px;
+}
+
+// Links:
+
+a {
+    @include color.theme(color, color.$blue);
+    &:not(:hover):not(:focus) {
+        text-decoration: none;
+    }
+    &:hover, &:focus {
+        @include color.theme(color, color.$text);
+    }
+    &:active {
+        @include color.theme(color, color.$gray);
+    }
+}
+
+// Marked text:
+
+mark {
+    @include color.theme(background-color, color.$yellow-bg);
+    @include color.theme(color, color.$text-bg);
+}
+
+// Horizontal rules:
+
+hr {
+    width: 100%;
+    height: spacing.px(2);
+    border: none;
+    margin: spacing.size(-1) 0px;
+    @include color.theme(background-color, color.$gray);
+}
+
+// Figures:
+
+figure {
+    margin: spacing.size(0);
+}

@@ -1,0 +1,46 @@
+// Tools/media.scss: Helper tools to update CSS on media conditions.
+
+@use "sass:map" as MAP;
+
+// Light/Darkmode theming mixin: 
+@mixin theme($property, $values) {
+    @if (MAP.has-key($values, "light")) {
+        #{$property}: MAP.get($values, "light");
+    }
+    @if (MAP.has-key($values, "dark")) {
+        @media (prefers-color-scheme: dark) {
+            #{$property}: MAP.get($values, "dark");
+        }
+    }
+}
+
+// Media Query widths:
+$tiny: 180px;
+$small: 300px;
+$medium: 640px;
+$large: 980px;
+
+// Media Query mixins:
+@mixin tiny {
+    @media (max-width: $small) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media (min-width: $small) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media (min-width: $medium) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: $large) {
+        @content;
+    }
+}

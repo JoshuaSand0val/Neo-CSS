@@ -1,0 +1,14 @@
+// Tools/math.scss: Helper tools to perform calculations.
+
+// Value step up/down calculator:
+@function step($value, $ratio, $step) {
+    @for $i from 1 through abs($step) {
+        @if ($step > 0) {
+            $value: ($value * $ratio);
+        }
+        @if ($step < 0) {
+            $value: ($value / $ratio);
+        }
+    }
+    @return $value;
+}

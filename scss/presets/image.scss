@@ -1,0 +1,11 @@
+// Presets/images.scss: Presets to HTML images.
+
+@use "../tools/spacing.scss" as spacing;
+
+// Baseline image:
+
+img {
+    display: block;
+    width: 100%;
+    margin: spacing.size(0) 0px;
+}

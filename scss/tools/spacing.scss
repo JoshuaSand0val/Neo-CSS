@@ -1,0 +1,49 @@
+// Tools/spacing.scss: Helper tools to craft margins/paddings.
+
+@use "math.scss" as math;
+@use "media.scss" as media;
+
+// Spacing-size baseline:
+$_baseline: 1rem;
+
+// Spacing-scaling ratio:
+$_ratio: 1.33;
+
+// Spacing pixel function:
+@function px($value) {
+    @return $value / 16 * 1rem;
+}
+
+// Spacing-size function:
+@function size($step) {
+    @return math.step($_baseline, $_ratio, $step);
+}
+
+// Spacing multi-property mixin:
+@mixin size($properties, $step) {
+    @each $property in $properties {
+        #{$property}: size($step);
+    }
+}
+
+// Spacing viewport mixin:
+@mixin size-viewport($properties, $all, $small, $medium, $large) {
+    @each $property in $properties {
+        #{$property}: size($all);
+    }
+    @include media.small {
+        @each $property in $properties {
+            #{$property}: size($small);
+        }
+    }
+    @include media.medium {
+        @each $property in $properties {
+            #{$property}: size($medium);
+        }
+    }
+    @include media.large {
+        @each $property in $properties {
+            #{$property}: size($large);
+        }
+    }
+}
