@@ -56,3 +56,9 @@ small small {
 code, samp, pre, kbd {
     font-family: text.$font-mono;
 }
+
+// Text weight:
+
+b, strong {
+    font-weight: text.$weight-bold;
+}
