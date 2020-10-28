@@ -52,4 +52,4 @@ Neo CSS was built by Joshua Elijah Sandoval.
 Thanks to all those who worked on [normalize.css](https://github.com/necolas/normalize.css/).
 
 ## License
-Prototype CSS is distributed under the [MIT](https://choosealicense.com/licenses/mit/) License.
+Neo CSS is distributed under the [MIT](https://choosealicense.com/licenses/mit/) License.
