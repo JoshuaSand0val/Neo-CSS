@@ -2,17 +2,17 @@
 /* Neo CSS created by Joshua Elijah Sandoval. MIT License (view LICENSE.md). */
 /* https://github.com/joshuasand0val */
 
-// Setup...
+// Setup (order important)...
 @forward "setup/normalize/normalize.css";
 @forward "setup/hotfix.scss";
 
 // Presets...
-@forward "presets/document.scss";
-@forward "presets/text.scss";
-@forward "presets/list.scss";
 @forward "presets/code.scss";
-@forward "presets/table.scss";
-@forward "presets/image.scss";
+@forward "presets/document.scss";
 @forward "presets/form.scss";
+@forward "presets/image.scss";
+@forward "presets/list.scss";
+@forward "presets/table.scss";
+@forward "presets/text.scss";
 
 // Extensions...
