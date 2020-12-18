@@ -2,6 +2,7 @@
 
 @use "math.scss" as math;
 @use "media.scss" as media;
+@use "ruleset.scss" as ruleset;
 
 // Spacing-size baseline:
 $_baseline: 1rem;
@@ -21,29 +22,10 @@ $_ratio: 1.33;
 
 // Spacing multi-property mixin:
 @mixin size($properties, $step) {
-    @each $property in $properties {
-        #{$property}: size($step);
-    }
+    @include ruleset.declare($properties, size($step));
 }
 
 // Spacing viewport mixin:
-@mixin size-viewport($properties, $all, $small, $medium, $large) {
-    @each $property in $properties {
-        #{$property}: size($all);
-    }
-    @include media.small {
-        @each $property in $properties {
-            #{$property}: size($small);
-        }
-    }
-    @include media.medium {
-        @each $property in $properties {
-            #{$property}: size($medium);
-        }
-    }
-    @include media.large {
-        @each $property in $properties {
-            #{$property}: size($large);
-        }
-    }
+@mixin size-viewport($properties, $tiny, $small, $medium, $large) {
+    @include media.viewport($properties, size($tiny), size($small), size($medium), size($large));
 }
