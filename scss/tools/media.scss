@@ -1,6 +1,7 @@
 // Tools/media.scss: Helper tools to update CSS on media conditions.
 
 @use "sass:map" as MAP;
+@use "ruleset.scss" as ruleset;
 
 // Light/Darkmode theming mixin: 
 @mixin theme($property, $values) {
@@ -42,5 +43,20 @@ $large: 980px;
 @mixin large {
     @media (min-width: $large) {
         @content;
+    }
+}
+
+@mixin viewport($properties, $tiny, $small, $medium, $large) {
+    @include tiny {
+        @include ruleset.declare($properties,  $tiny);
+    }
+    @include small {
+        @include ruleset.declare($properties,  $small);
+    }
+    @include medium {
+        @include ruleset.declare($properties,  $medium);
+    }
+    @include large {
+        @include ruleset.declare($properties,  $large);
     }
 }
