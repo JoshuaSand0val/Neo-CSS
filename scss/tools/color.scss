@@ -3,12 +3,25 @@
 @use "sass:map" as MAP;
 @use "media.scss" as media;
 
-// Page Body Background Color Palette:
+// Page Body Background Color Mono Palette:
 $body1: ("light": #FFFFFF, "dark": #101010);
 $body2: ("light": #F7F7F7, "dark": #181818);
 $body3: ("light": #F0F0F0, "dark": #202020);
 $body4: ("light": #E8E8E8, "dark": #282828);
 $body5: ("light": #E0E0E0, "dark": #303030);
+
+// Page Body Background-Color Hued Palette:
+$red-body: ("light": #FFD8D6, "dark": #660500);
+$orange-body: ("light": #FFDBA8, "dark": #472A00);
+$yellow-body: ("light": #FFDF61, "dark": #382D00);
+$brown-body: ("light": #E9DED8, "dark": #3A2F22);
+$green-body: ("light": #AEEFB7, "dark": #0A3814);
+$blue-body: ("light": #D1E7FF, "dark": #002F61);
+$teal-body: ("light": #BCE7FB, "dark": #073540);
+$purple-body: ("light": #F0DBFA, "dark": #4B1367);
+$indigo-body: ("light": #E0DEF7, "dark": #212083);
+$pink-body: ("light": #FFD6EA, "dark": #61002F);
+$accent-body: $blue-body;
 
 // Page Body Text Color Palette:
 $text: ("light": #000000, "dark": #FFFFFF);
@@ -26,18 +39,18 @@ $pink: ("light": #C70060, "dark": #FF57A8);
 $accent: $blue;
 
 // Element Background/Text Color Palette:
-$text-bg: ("light": #000000);
-$gray-bg: ("light": #8E8E8E);
-$red-bg: ("light": #FF3B30);
-$orange-bg: ("light": #FF9500);
-$yellow-bg: ("light": #FFCC00);
-$brown-bg: ("light": #A2845E);
-$green-bg: ("light": #28CD41);
-$blue-bg: ("light": #007AFF);
-$teal-bg: ("light": #5AC8FA);
-$purple-bg: ("light": #AF52DE);
-$indigo-bg: ("light": #6967DA);
-$pink-bg: ("light": #FA0079);
+$text-bg: ("light": #000000, "dark": #000000);
+$gray-bg: ("light": #B3B3B3, "dark": #8E8E8E);
+$red-bg: ("light": #FF3B30, "dark": #EB0C00);
+$orange-bg: ("light": #FF9500, "dark": #E68600);
+$yellow-bg: ("light": #FFCC00, "dark": #E6B800);
+$brown-bg: ("light": #A2845E, "dark": #927854);
+$green-bg: ("light": #28CD41, "dark": #23B339);
+$blue-bg: ("light": #3898FF, "dark": #007AFF);
+$teal-bg: ("light": #5AC8FA, "dark": #09ABF6);
+$purple-bg: ("light": #C27AE6, "dark": #AF52DE);
+$indigo-bg: ("light": #8D8CE3, "dark": #6967DA);
+$pink-bg: ("light": #FF429E, "dark": #FA0079);
 $accent-bg: $blue-bg;
 
 // Color alpha function:
