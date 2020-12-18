@@ -1,0 +1,8 @@
+// Tools/ruleset.scss: Helper tools to streamline defining CSS rulesets.
+
+// Declare multiple properties mixin: 
+@mixin declare($properties, $value) {
+    @each $property in $properties {
+        #{$property}: $value;
+    }
+}
