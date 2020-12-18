@@ -2,6 +2,7 @@
 
 @use "math.scss" as math;
 @use "media.scss" as media;
+@use "ruleset.scss" as ruleset;
 
 // Font-family variables:
 $font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", // Native.
@@ -32,29 +33,10 @@ $_ratio: 1.125;
 
 // Font-size multi-property mixin:
 @mixin size($properties, $step) {
-    @each $property in $properties {
-        #{$property}: font-size($step);
-    }
+    @include ruleset.declare($properties, size($step));
 }
 
 // Font-size viewport mixin:
-@mixin size-viewport($properties, $all, $small, $medium, $large) {
-    @each $property in $properties {
-        #{$property}: size($all);
-    }
-    @include media.small {
-        @each $property in $properties {
-            #{$property}: size($small);
-        }
-    }
-    @include media.medium {
-        @each $property in $properties {
-            #{$property}: size($medium);
-        }
-    }
-    @include media.large {
-        @each $property in $properties {
-            #{$property}: size($large);
-        }
-    }
+@mixin size-viewport($properties, $tiny, $small, $medium, $large) {
+    @include media.viewport($properties, size($tiny), size($small), size($medium), size($large));
 }
