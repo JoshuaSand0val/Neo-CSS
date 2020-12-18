@@ -18,7 +18,7 @@ To get started with Neo CSS, complete the following:
 4. Compile using [SASS](https://sass-lang.com/install).
 
 ## Using Neo CSS toolkit
-All of Neo CSS's toolkit uses the SASS module system.
+All of Neo CSS's [toolkit](scss/tools/) uses the SASS module system.
 To begin using any of the tools, first link the module with `@use`.
 
 Neo CSS's toolkit is intuitive and condensed. If you know SASS/SCSS,
