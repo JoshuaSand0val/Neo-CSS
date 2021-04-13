@@ -17,9 +17,14 @@ kbd,
 pre > code {
     border: 1px solid;
     border-radius: gui.$radius-tiny;
-    padding: spacing.px(1) spacing.px(4);
+    padding: spacing.px(1) spacing.px(2);
     @include color.theme(background-color, color.$body3);
     @include color.theme(border-color, color.$body5);
+}
+
+kbd kbd {
+    border: none;
+    padding: 0px;
 }
 
 pre > code {
