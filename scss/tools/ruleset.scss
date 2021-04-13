@@ -6,3 +6,8 @@
         #{$property}: $value;
     }
 }
+
+// Inset position shorthand:
+@mixin inset($value) {
+    @include declare(top right bottom left, $value);
+}
