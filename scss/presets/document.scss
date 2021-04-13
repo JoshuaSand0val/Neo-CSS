@@ -13,6 +13,13 @@ html {
     @include color.theme(color, color.$text);
 }
 
+// Sectioning root:
+
+body {
+    position: relative;
+    min-height: 100%;
+}
+
 // Blockquotes:
 
 blockquote {
