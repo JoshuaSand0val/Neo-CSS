@@ -5,21 +5,17 @@
 
 // Light/Darkmode theming mixin: 
 @mixin theme($property, $values) {
-    @if (MAP.has-key($values, "light")) {
-        #{$property}: MAP.get($values, "light");
-    }
-    @if (MAP.has-key($values, "dark")) {
-        @media (prefers-color-scheme: dark) {
-            #{$property}: MAP.get($values, "dark");
-        }
+    #{$property}: MAP.get($values, "light");
+    @media (prefers-color-scheme: dark) {
+        #{$property}: MAP.get($values, "dark");
     }
 }
 
 // Media Query widths:
-$tiny: 180px;
-$small: 300px;
-$medium: 640px;
-$large: 980px;
+$tiny: 180.5px;
+$small: 300.5px;
+$medium: 640.5px;
+$large: 980.5px;
 
 // Media Query mixins:
 @mixin tiny {
@@ -48,15 +44,15 @@ $large: 980px;
 
 @mixin viewport($properties, $tiny, $small, $medium, $large) {
     @include tiny {
-        @include ruleset.declare($properties,  $tiny);
+        @include ruleset.declare($properties, $tiny);
     }
     @include small {
-        @include ruleset.declare($properties,  $small);
+        @include ruleset.declare($properties, $small);
     }
     @include medium {
-        @include ruleset.declare($properties,  $medium);
+        @include ruleset.declare($properties, $medium);
     }
     @include large {
-        @include ruleset.declare($properties,  $large);
+        @include ruleset.declare($properties, $large);
     }
 }
