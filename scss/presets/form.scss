@@ -38,8 +38,7 @@ label {
 
 // Input states:
 
-:invalid:focus,
-:invalid:not(:placeholder-shown) {
+:invalid:focus {
     @include color.theme(border-color, color.$red);
 }
 
