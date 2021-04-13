@@ -37,6 +37,8 @@ or the [`media.scss`](scss/tools/media.scss) module.
 Note that alternatively, you can define these values as CSS Custom Properties (Variables)
 using the mixin, for an easier syntax for styles such as `box-shadow`.
 
+The default color palette values are also available as CSS variables in the [`color.scss`](scss/presets/color.scss) presets.
+
 ### Spacing and Text Size
 Neo CSS provides a step system for sizing padding, margin, ect., and typography.
 They can be utilized either by a function, or by a mixin.
