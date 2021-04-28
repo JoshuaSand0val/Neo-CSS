@@ -3,14 +3,14 @@
 @use "../tools/color.scss" as color;
 
 :root {
-    // Page Body Background Color Mono Palette:
+    // Body Mono Palette:
     @include color.theme("--body1", color.$body1);
     @include color.theme("--body2", color.$body2);
     @include color.theme("--body3", color.$body3);
     @include color.theme("--body4", color.$body4);
     @include color.theme("--body5", color.$body5);
     
-    // Page Body Background Color Hued Palette:
+    // Body Hued Palette:
     @include color.theme("--red-body", color.$red-body);
     @include color.theme("--orange-body", color.$orange-body);
     @include color.theme("--yellow-body", color.$yellow-body);
@@ -23,7 +23,7 @@
     @include color.theme("--pink-body", color.$pink-body);
     @include color.theme("--accent-body", color.$accent-body);
 
-    // Page Body Text Color Palette:
+    // Body Text Palette:
     @include color.theme("--text", color.$text);
     @include color.theme("--gray", color.$gray);
     @include color.theme("--red", color.$red);
@@ -38,7 +38,7 @@
     @include color.theme("--pink", color.$pink);
     @include color.theme("--accent", color.$accent);
 
-    // Element Background/Text Color Palette:
+    // Body Fill Palette:
     @include color.theme("--text-bg", color.$text-bg);
     @include color.theme("--gray-bg", color.$gray-bg);
     @include color.theme("--red-bg", color.$red-bg);
@@ -54,7 +54,7 @@
     @include color.theme("--accent-bg", color.$accent-bg);
 }
 
-:root {
+:root, .accent {
     --color-body: var(--accent-body);
     --color-bg: var(--accent-bg);
     --color: var(--accent);
@@ -144,10 +144,4 @@
     --color-body: var(--pink-body);
     --color-bg: var(--pink-bg);
     --color: var(--pink);
-}
-
-.accent {
-    --color-body: var(--accent-body);
-    --color-bg: var(--accent-bg);
-    --color: var(--accent);
 }
