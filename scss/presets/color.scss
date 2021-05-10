@@ -11,6 +11,7 @@
     @include color.theme("--body5", color.$body5);
     
     // Body Hued Palette:
+    @include color.theme("--gray-body", color.$gray-body);
     @include color.theme("--red-body", color.$red-body);
     @include color.theme("--orange-body", color.$orange-body);
     @include color.theme("--yellow-body", color.$yellow-body);
@@ -81,7 +82,7 @@
 }
 
 .gray {
-    --color-body: var(--body5);
+    --color-body: var(--gray-body);
     --color-bg: var(--gray-bg);
     --color: var(--gray);
 }
