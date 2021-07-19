@@ -1,42 +1,51 @@
-// Tools/type.scss: Helper tools to build responsive typography.
+// Tools/text.scss: Helper tools to build responsive typography.
 
 @use "math.scss" as math;
 @use "media.scss" as media;
 @use "ruleset.scss" as ruleset;
 
+// ==============
+// TEXT DEFAULTS:
+// ==============
+
 // Font-family variables:
 $font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", // Native.
 "Helvetica Neue", Arial, sans-serif, // Fallback.
-"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; // Emoji.
-$font-mono: Consolas, Monaco, monospace;
+"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default; // Emoji.
+$font-mono: Consolas, Monaco, monospace !default;
 
 // Font-weight variables:
-$weight: 400;
-$weight-thin: 200;
-$weight-bold: 600;
-$weight-heavy: 800;
+$weight: 400 !default;
+$weight-thin: 200 !default;
+$weight-bold: 600 !default;
+$weight-heavy: 800 !default;
 
 // Line-height variables:
-$line-height: 1.5;
-$line-height-heading: 1.33;
+$line-height: 1.5 !default;
+$line-height-heading: 1.33 !default;
 
-// Type-size baseline:
-$_baseline: 1rem;
+// ===============
+// SCALE DEFAULTS:
+// ===============
 
-// Type-scaling ratio:
-$_ratio: 1.125;
+$_baseline: 1rem !default;
+$_ratio: 1.125 !default;
 
-// Font-size function:
+// ================
+// SCALE FUNCTIONS:
+// ================
+
+// Scales text based on $_baseline and $_ratio.
 @function size($step) {
     @return math.step($_baseline, $_ratio, $step);
 }
 
-// Font-size multi-property mixin:
+// Scales multiple $properties at once.
 @mixin size($properties, $step) {
     @include ruleset.declare($properties, size($step));
 }
 
-// Font-size viewport mixin:
+// Scales multiple $properties across the viewport at once.
 @mixin size-viewport($properties, $tiny, $small, $medium, $large) {
     @include media.viewport($properties, size($tiny), size($small), size($medium), size($large));
 }

@@ -2,7 +2,7 @@
 
 @use "sass:math" as MATH;
 
-// Value step up/down calculator:
+// Steps $value up/down based on $ratio.
 @function step($value, $ratio, $step) {
     @return $value * MATH.pow($ratio, $step);
 }

@@ -4,28 +4,33 @@
 @use "media.scss" as media;
 @use "ruleset.scss" as ruleset;
 
-// Spacing-size baseline:
-$_baseline: 1rem;
+// ===============
+// SCALE DEFAULTS:
+// ===============
 
-// Spacing-scaling ratio:
-$_ratio: 1.33;
+$_baseline: 1rem !default;
+$_ratio: 1.33 !default;
 
-// Spacing pixel function:
+// ================
+// SCALE FUNCTIONS:
+// ================
+
+// Converts "px" units into "rem" units.
 @function px($value) {
     @return $value / 16 * 1rem;
 }
 
-// Spacing-size function:
+// Scales value based on $_baseline and $_ratio.
 @function size($step) {
     @return math.step($_baseline, $_ratio, $step);
 }
 
-// Spacing multi-property mixin:
+// Scales multiple $properties at once.
 @mixin size($properties, $step) {
     @include ruleset.declare($properties, size($step));
 }
 
-// Spacing viewport mixin:
+// Scales multiple $properties across the viewport at once.
 @mixin size-viewport($properties, $tiny, $small, $medium, $large) {
     @include media.viewport($properties, size($tiny), size($small), size($medium), size($large));
 }

@@ -3,21 +3,16 @@
 @use "sass:map" as MAP;
 @use "ruleset.scss" as ruleset;
 
-// Light/Darkmode theming mixin: 
-@mixin theme($property, $values) {
-    #{$property}: MAP.get($values, "light");
-    @media (prefers-color-scheme: dark) {
-        #{$property}: MAP.get($values, "dark");
-    }
-}
+// =========================
+// BREAKPOINT MEDIA QUERIES:
+// =========================
 
-// Media Query widths:
-$tiny: 180.5px;
-$small: 300.5px;
-$medium: 640.5px;
-$large: 980.5px;
+// Default Breakpoints:
+$tiny: 180.5px !default;
+$small: 300.5px !default;
+$medium: 640.5px !default;
+$large: 980.5px !default;
 
-// Media Query mixins:
 @mixin tiny {
     @media (max-width: $small) {
         @content;
@@ -54,5 +49,38 @@ $large: 980.5px;
     }
     @include large {
         @include ruleset.declare($properties, $large);
+    }
+}
+
+// ======================
+// ACCESSIBILITY QUERIES:
+// ======================
+
+@mixin reduced-motion {
+    @media (prefers-reduced-motion: reduce) {
+        @content;
+    }
+}
+
+// =====================
+// COLOR SCHEME QUERIES:
+// =====================
+
+@mixin light {
+    @media (prefers-color-scheme: light) {
+        @content;
+    }
+}
+
+@mixin dark {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
+}
+
+@mixin theme($property, $values) {
+    #{$property}: MAP.get($values, "light");
+    @include dark {
+        #{$property}: MAP.get($values, "dark");
     }
 }
