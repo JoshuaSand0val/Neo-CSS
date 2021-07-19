@@ -1,6 +1,6 @@
 // Presets/document.scss: Presets to HTML tags used to format the document.
 
-@use "../tools/color.scss" as color;
+@use "../tools/palette.scss" as palette;
 @use "../tools/spacing.scss" as spacing;
 
 // Main root:
@@ -9,8 +9,8 @@ html {
     position: absolute;
     top: 0px; bottom: 0px;
     width: 100%;
-    @include color.theme(background-color, color.$body1);
-    @include color.theme(color, color.$text);
+    background-color: palette.get("white");
+    color: palette.text("black", "white");
 }
 
 // Sectioning root:
@@ -23,10 +23,7 @@ body {
 // Blockquotes:
 
 blockquote {
-    border-left: spacing.px(2) solid;
-    padding: 0px spacing.size(0);
-    margin: spacing.size(0) 0px;
-    @include color.theme(border-color, color.$gray);
+    margin: spacing.size(0) spacing.size(1);
 }
 
 // Paragraphs:
@@ -38,37 +35,37 @@ p {
 // Links:
 
 a {
-    @include color.theme(color, color.$blue);
+    $link-color: palette.text("blue", "white");
+    color: $link-color;
     &:not(:hover):not(:focus) {
         text-decoration: none;
     }
     &:hover, &:focus {
-        @include color.theme(color, color.$text);
+        color: palette.shade($link-color, 20%);
     }
     &:active {
-        @include color.theme(color, color.$gray);
+        color: palette.shade($link-color, 30%);
     }
 }
 
 // Marked text:
 
 mark {
-    @include color.theme(background-color, color.$yellow-bg);
-    @include color.theme(color, color.$text-bg);
+    background-color: palette.get("yellow");
+    color: palette.text("black", "yellow");
 }
 
 // Horizontal rules:
 
 hr {
-    width: 100%;
     height: spacing.px(2);
+    background-color: palette.get("gray");
     border: none;
-    margin: spacing.size(-1) 0px;
-    @include color.theme(background-color, color.$gray);
+    margin: spacing.size(-2) 0px;
 }
 
 // Figures:
 
 figure {
-    margin: spacing.size(0);
+    margin: spacing.size(0) spacing.size(1);
 }

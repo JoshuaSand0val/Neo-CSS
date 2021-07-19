@@ -1,27 +1,9 @@
 // Presets/table.scss: Presets to HTML tables.
 
-@use "../tools/spacing.scss" as spacing;
-@use "../tools/color.scss" as color;
-
 table {
-    display: block;
     border-collapse: collapse;
-    margin: spacing.size(0) 0px;
-    overflow-x: auto;
-    @include color.theme(background-color, color.$body1);
-}
-
-caption {
-    margin: spacing.size(-1) 0px;
 }
 
 th {
     white-space: nowrap;
-}
-
-th, td {
-    width: 2%; // Make cells grow!
-    padding: spacing.size(-1);
-    border: 1px solid;
-    @include color.theme(border-color, color.$body5);
 }

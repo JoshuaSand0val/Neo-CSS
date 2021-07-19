@@ -1,9 +1,9 @@
 // Presets/form.scss: Presets to HTML form elements.
 
-@use "../tools/text.scss" as text;
-@use "../tools/spacing.scss" as spacing;
-@use "../tools/color.scss" as color;
 @use "../tools/gui.scss" as gui;
+@use "../tools/palette.scss" as palette;
+@use "../tools/spacing.scss" as spacing;
+@use "../tools/text.scss" as text;
 
 // Form formatting:
 
@@ -15,7 +15,6 @@ fieldset {
 
 legend {
     font-size: text.size(1);
-    margin: spacing.size(-1) 0px;
 }
 
 label {
@@ -25,37 +24,30 @@ label {
 // Basic input types:
 
 %textfield, %button, textarea, select {
-    display: block;
-    width: 100%;
-    border: 1px solid;
+    background-color: palette.get("white");
+    color: palette.text("black", "white");
+    border: 1px solid palette.text("gray", "white");
     border-radius: gui.$radius-tiny;
     padding: spacing.px(4) spacing.px(6);
-    margin: spacing.size(0) 0px;
-    @include color.theme(background-color, color.$body1);
-    @include color.theme(border-color, color.$gray);
-    @include color.theme(color, color.$text);
 }
 
 // Input states:
 
 :invalid:focus {
-    @include color.theme(border-color, color.$red);
+    border-color: palette.text("red", "white");
 }
 
 :disabled {
-    @include color.theme(color, color.$gray);
+    color: palette.text("gray", "white");
 }
 
 // Button input:
 
 %button {
-    display: inline-block;
-    width: auto;
     font-weight: text.$weight-bold;
+    background-color: palette.step("white", 1);
     padding: spacing.px(4) spacing.px(12);
-    margin: spacing.px(2) 0px;
     cursor: pointer;
-    @include color.theme(background-color, color.$body3);
 }
 
 // Select arrow:
@@ -67,7 +59,7 @@ select {
     background-size: spacing.px(16) spacing.px(16);
     background-image: url("data:image/svg+xml, \
     %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E \
-    %3Cpath d='M 3,4 8,12 13,4 Z' stroke='%23FFF'/%3E \
+    %3Cpath d='M 3,4 8,12 13,4 Z' fill='%23000'/%3E \
     %3C/svg%3E");
 }
 

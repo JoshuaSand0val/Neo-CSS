@@ -1,7 +1,7 @@
 // Presets/list.scss: Presets to HTML lists.
 
-@use "../tools/text.scss" as text;
 @use "../tools/spacing.scss" as spacing;
+@use "../tools/text.scss" as text;
 
 ul, ol {
     padding-left: 2ch;
