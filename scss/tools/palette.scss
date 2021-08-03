@@ -1,39 +1,18 @@
 // Tools/palette.scss: Helper tools to build color palettes.
 
+@forward "globals.scss" show $palette, $contrast-text-ratio, $contrast-step-ratio;
+@use "globals.scss" as *;
 @use "sass:color" as COLOR;
 @use "sass:list" as LIST;
 @use "sass:map" as MAP;
 @use "sass:math" as MATH;
 @use "sass:meta" as META;
 
-// ==============
-// COLOR PALETTE:
-// ==============
-
-$palette: (
-    "white": #ffffff,
-    "black": #202020,
-    "gray": #acacac,
-    "red": #ed6a5a,
-    "orange": #ed955a,
-    "yellow": #eee989,
-    "brown": #a3977b,
-    "green": #7bc089,
-    "blue": #83a6d4,
-    "teal": #70bfd3,
-    "purple": #f177dd,
-    "indigo": #9b97c2,
-    "pink": #ffbeef
-) !default;
+// ====================
+// COLOR PALETTE NAMES:
+// ====================
 
 $colors: MAP.keys($palette);
-
-// ========================
-// COLOR FUNCTION DEFAULTS:
-// ========================
-
-$text-ratio: 4.5 !default;
-$step-ratio: 1.1 !default;
 
 // ===============
 // COLOR FETCHING:
@@ -79,12 +58,12 @@ $step-ratio: 1.1 !default;
 // ====================
 
 // Adjusts $color1 contrast to be legible on $color2.
-@function text($color1, $color2, $ratio: $text-ratio) {
+@function text($color1, $color2, $ratio: $contrast-text-ratio) {
     @return accessible($color1, $color2, $ratio);
 }
 
 // Steps $color contrast by $ratio, $step number of times.
-@function step($color, $step, $ratio: $step-ratio) {
+@function step($color, $step, $ratio: $contrast-step-ratio) {
     @return accessible($color, $color, MATH.pow($ratio, $step));
 }
 

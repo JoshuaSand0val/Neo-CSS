@@ -1,17 +1,13 @@
 // Tools/media.scss: Helper tools to update CSS on media conditions.
 
-@use "sass:map" as MAP;
+@forward "globals.scss" show $tiny, $small, $medium, $large;
+@use "globals.scss" as *;
 @use "ruleset.scss" as ruleset;
+@use "sass:map" as MAP;
 
 // =========================
 // BREAKPOINT MEDIA QUERIES:
 // =========================
-
-// Default Breakpoints:
-$tiny: 180.5px !default;
-$small: 300.5px !default;
-$medium: 640.5px !default;
-$large: 980.5px !default;
 
 @mixin tiny {
     @media (max-width: $small) {

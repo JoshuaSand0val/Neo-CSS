@@ -1,28 +1,8 @@
 // Tools/gui.scss: Helper tools to create GUIs.
-
-@use "palette.scss" as palette;
-@use "spacing.scss" as spacing;
-
-// ==============
-// BORDER-RADIUS:
-// ==============
-
-$radius-tiny: spacing.px(3) !default;
-$radius-small: spacing.px(6) !default;
-$radius-medium: spacing.px(9) !default;
-$radius-large: spacing.px(12) !default;
-
-// =================
-// Z-INDEX POSITION:
-// =================
-
-$z-dropdown: 100 !default;
-$z-sticky: 200 !default;
-$z-fixed: 300 !default;
-$z-modal-backdrop: 400 !default;
-$z-modal: 500 !default;
-$z-popover: 600 !default;
-$z-tooltip: 700 !default;
+@forward "globals.scss" show $radius-tiny, $radius-small, $radius-medium, $radius-large,
+$z-dropdown, $z-sticky, $z-fixed, $z-modal-backdrop, $z-modal, $z-popover, $z-tooltip,
+$safe-top, $safe-right, $safe-bottom, $safe-left, $safe;
+@use "palette.scss";
 
 // ===========
 // BOX-SHADOW:
@@ -31,14 +11,4 @@ $z-tooltip: 700 !default;
 $shadow: (
     "light": 0 2px 8px palette.alpha("black", 0.25),
     "dark": 0 2px 8px palette.get("black")
-) !default;
-
-// ===========
-// SAFE-AREAS:
-// ===========
-
-$safe-top: env(safe-area-inset-top);
-$safe-right: env(safe-area-inset-right);
-$safe-bottom: env(safe-area-inset-bottom);
-$safe-left: env(safe-area-inset-left);
-$safe: $safe-top $safe-right $safe-bottom $safe-left;
+);

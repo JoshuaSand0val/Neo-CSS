@@ -1,15 +1,10 @@
-// Tools/spacing.scss: Helper tools to craft margins/paddings.
+// Tools/spacing.scss: Helper tools to space/size CSS properties.
 
+@forward "globals.scss" show $scale-baseline, $scale-ratio;
+@use "globals.scss" as *;
 @use "math.scss" as math;
 @use "media.scss" as media;
 @use "ruleset.scss" as ruleset;
-
-// ===============
-// SCALE DEFAULTS:
-// ===============
-
-$_baseline: 1rem !default;
-$_ratio: 1.33 !default;
 
 // ================
 // SCALE FUNCTIONS:
@@ -20,9 +15,9 @@ $_ratio: 1.33 !default;
     @return $value / 16 * 1rem;
 }
 
-// Scales value based on $_baseline and $_ratio.
+// Scales value based on $scale-baseline and $scale-ratio.
 @function size($step) {
-    @return math.step($_baseline, $_ratio, $step);
+    @return math.step($scale-baseline, $scale-ratio, $step);
 }
 
 // Scales multiple $properties at once.

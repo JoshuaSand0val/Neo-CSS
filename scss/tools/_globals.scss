@@ -1,0 +1,107 @@
+// Tools/globals.scss: All global/configurable toolkit variables.
+
+// ==============
+// COLOR PALETTE:
+// ==============
+
+$palette: (
+    "white": #ffffff,
+    "black": #202020,
+    "gray": #acacac,
+    "red": #ed6a5a,
+    "orange": #ed955a,
+    "yellow": #eee989,
+    "brown": #a3977b,
+    "green": #7bc089,
+    "blue": #83a6d4,
+    "teal": #70bfd3,
+    "purple": #f177dd,
+    "indigo": #9b97c2,
+    "pink": #ffbeef
+) !default;
+
+// ===============
+// CONTRAST RATIO:
+// ===============
+
+$contrast-text-ratio: 4.5 !default;
+$contrast-step-ratio: 1.1 !default;
+
+// ===================
+// SCALING PROPERTIES:
+// ===================
+
+$scale-baseline: 1rem !default;
+$scale-ratio: 1.33 !default;
+
+// ============
+// FONT SIZING:
+// ============
+
+$font-size: 1rem !default;
+$font-size-ratio: 1.125 !default;
+
+// ============
+// FONT FAMILY:
+// ============
+
+$font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", // Native.
+"Helvetica Neue", Arial, sans-serif, // Fallback.
+"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default; // Emoji.
+$font-mono: Consolas, Monaco, monospace !default;
+
+// ============
+// FONT WEIGHT:
+// ============
+
+$weight: 400 !default;
+$weight-thin: 200 !default;
+$weight-bold: 600 !default;
+$weight-heavy: 800 !default;
+
+// ============
+// LINE HEIGHT:
+// ============
+
+$line-height: 1.5 !default;
+$line-height-heading: 1.33 !default;
+
+// =====================
+// VIEWPORT BREAKPOINTS:
+// =====================
+
+$tiny: 180.5px !default;
+$small: 300.5px !default;
+$medium: 640.5px !default;
+$large: 980.5px !default;
+
+// ==============
+// BORDER-RADIUS:
+// ==============
+
+$radius-tiny: 3px !default;
+$radius-small: 6px !default;
+$radius-medium: 9px !default;
+$radius-large: 12px !default;
+
+// =================
+// Z-INDEX POSITION:
+// =================
+
+$z-dropdown: 100 !default;
+$z-sticky: 200 !default;
+$z-fixed: 300 !default;
+$z-modal-backdrop: 400 !default;
+$z-modal: 500 !default;
+$z-popover: 600 !default;
+$z-tooltip: 700 !default;
+
+// ===========
+// SAFE-AREAS:
+// ===========
+
+$safe-top: env(safe-area-inset-top) !default;
+$safe-right: env(safe-area-inset-right) !default;
+$safe-bottom: env(safe-area-inset-bottom) !default;
+$safe-left: env(safe-area-inset-left) !default;
+$safe: $safe-top $safe-right $safe-bottom $safe-left;
