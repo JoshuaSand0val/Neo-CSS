@@ -26,7 +26,7 @@ label {
 %textfield, %button, textarea, select {
     background-color: palette.get("white");
     color: palette.text("black", "white");
-    border: 1px solid palette.text("gray", "white");
+    border: 1px solid palette.accessible("gray", "white", 3);
     border-radius: gui.$radius-tiny;
     padding: spacing.px(4) spacing.px(6);
 }
@@ -34,7 +34,7 @@ label {
 // Input states:
 
 :invalid:focus {
-    border-color: palette.text("red", "white");
+    border-color: palette.accessible("red", "white", 3);
 }
 
 :disabled {
@@ -46,6 +46,7 @@ label {
 %button {
     font-weight: text.$weight-bold;
     background-color: palette.step("white", 1);
+    color: palette.text("black", palette.step("white", 1));
     padding: spacing.px(4) spacing.px(12);
     cursor: pointer;
 }
