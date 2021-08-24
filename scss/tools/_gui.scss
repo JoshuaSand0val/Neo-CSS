@@ -2,13 +2,3 @@
 @forward "globals.scss" show $radius-tiny, $radius-small, $radius-medium, $radius-large,
 $z-dropdown, $z-sticky, $z-fixed, $z-modal-backdrop, $z-modal, $z-popover, $z-tooltip,
 $safe-top, $safe-right, $safe-bottom, $safe-left, $safe;
-@use "palette.scss";
-
-// ===========
-// BOX-SHADOW:
-// ===========
-
-$shadow: (
-    "light": 0 2px 8px palette.alpha("black", 0.25),
-    "dark": 0 2px 8px palette.get("black")
-);

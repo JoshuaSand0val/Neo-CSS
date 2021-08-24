@@ -73,10 +73,3 @@
         @content;
     }
 }
-
-@mixin theme($property, $values) {
-    #{$property}: MAP.get($values, "light");
-    @include dark {
-        #{$property}: MAP.get($values, "dark");
-    }
-}
