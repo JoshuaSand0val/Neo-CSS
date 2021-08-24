@@ -1,6 +1,6 @@
 // Tools/text.scss: Helper tools to build responsive typography.
 
-@forward "globals.scss" show $font-size, $font-size-ratio, $font, $font-mono,
+@forward "globals.scss" show $font-size, $font-size-ratio, $font, $font-heading, $font-mono,
 $weight, $weight-thin, $weight-bold, $weight-heavy,
 $line-height, $line-height-heading;
 @use "globals.scss" as *;

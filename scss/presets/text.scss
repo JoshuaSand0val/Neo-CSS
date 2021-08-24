@@ -13,8 +13,9 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    line-height: text.$line-height-heading;
+    font-family: text.$font-heading;
     font-weight: text.$weight-bold;
+    line-height: text.$line-height-heading;
     margin: spacing.size(-1) 0px;
 }
 
