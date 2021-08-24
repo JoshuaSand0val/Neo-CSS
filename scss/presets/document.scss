@@ -41,10 +41,10 @@ a {
         text-decoration: none;
     }
     &:hover, &:focus {
-        color: palette.shade($link-color, 20%);
+        color: palette.shade($link-color, 5%);
     }
     &:active {
-        color: palette.shade($link-color, 30%);
+        color: palette.shade($link-color, 10%);
     }
 }
 
