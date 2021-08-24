@@ -21,7 +21,12 @@ $colors: MAP.keys($palette);
 // Fetches out of $palette without alteration.
 @function get($color) {
     @while META.type-of($color) != color {
-        $color: MAP.get($palette, $color);
+        @if MAP.has-key($palette, $color) {
+            $color: MAP.get($palette, $color);
+        }
+        @else {
+            @error "#{$color} does not exist in $palette.";
+        }
     }
     @return $color;
 }
