@@ -1,0 +1,138 @@
+// Mixins: All of Neo CSS's API mixins.
+
+@use "functions" as *;
+@use "variables" as *;
+@use "sass:map" as MAP;
+
+// =========================
+// DECLARING CSS PROPERTIES:
+// =========================
+
+// Declares multiple $properties to $value.
+@mixin declare($properties, $value) {
+    @each $property in $properties {
+        #{$property}: $value;
+    }
+}
+
+// Sets CSS top, right, bottom, left to $value.
+@mixin inset($value) {
+    @include declare(top right bottom left, $value);
+}
+
+// =========================
+// BREAKPOINT MEDIA QUERIES:
+// =========================
+
+@mixin tiny {
+    @media (max-width: $vw-small) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media (min-width: $vw-small) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media (min-width: $vw-medium) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: $vw-large) {
+        @content;
+    }
+}
+
+@mixin huge {
+    @media (min-width: $vw-huge) {
+        @content;
+    }
+}
+
+@mixin giant {
+    @media (min-width: $vw-giant) {
+        @content;
+    }
+}
+
+@mixin viewport($properties, $vw-map) {
+    @include tiny {
+        @include declare($properties, MAP.get($vw-map, "tiny"));
+    }
+    @include small {
+        @include declare($properties, MAP.get($vw-map, "small"));
+    }
+    @include medium {
+        @include declare($properties, MAP.get($vw-map, "medium"));
+    }
+    @include large {
+        @include declare($properties, MAP.get($vw-map, "large"));
+    }
+    @include huge {
+        @include declare($properties, MAP.get($vw-map, "huge"));
+    }
+    @include giant {
+        @include declare($properties, MAP.get($vw-map, "giant"));
+    }
+}
+
+// ======================
+// ACCESSIBILITY QUERIES:
+// ======================
+
+@mixin reduced-motion {
+    @media (prefers-reduced-motion: reduce) {
+        @content;
+    }
+}
+
+// =====================
+// COLOR SCHEME QUERIES:
+// =====================
+
+@mixin light {
+    @media (prefers-color-scheme: light) {
+        @content;
+    }
+}
+
+@mixin dark {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
+}
+
+// =================
+// SIZING FUNCTIONS:
+// =================
+
+// Scales multiple $properties at once.
+@mixin scale($properties, $step) {
+    @include declare($properties, scale($step));
+}
+
+// Scales multiple $properties across the viewport at once.
+@mixin scale-viewport($properties, $vw-map) {
+    @each $vw, $value in $vw-map {
+        $vw-map: MAP.set($vw-map, $vw, scale($value));
+    }
+    @include viewport($properties, $vw-map);
+}
+
+// Scales multiple $properties at once.
+@mixin text-size($properties, $step) {
+    @include declare($properties, text-size($step));
+}
+
+// Scales multiple $properties across the viewport at once.
+@mixin text-size-viewport($properties, $vw-map) {
+    @each $vw, $value in $vw-map {
+        $vw-map: MAP.set($vw-map, $vw, text-size($value));
+    }
+    @include viewport($properties, $vw-map);
+}

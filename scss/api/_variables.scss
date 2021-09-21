@@ -1,0 +1,120 @@
+// Variables: All of Neo CSS's API variables.
+
+@use "sass:map" as MAP;
+
+// ==============
+// COLOR PALETTE:
+// ==============
+
+$palette: (
+    "white": #EBEBEF,
+    "black": #18181C,
+    "gray": #727C83,
+    "red": #EF6461,
+    "orange": #EE8434,
+    "yellow": #FFCB47,
+    "brown": #BB946C,
+    "green": #74bf80,
+    "blue": #5490b8,
+    "teal": #2a9186,
+    "cyan": #6bcee7,
+    "purple": #b350ed,
+    "indigo": #9892C8,
+    "pink": #F47C98
+) !default;
+
+$colors: MAP.keys($palette);
+
+// ===============
+// CONTRAST RATIO:
+// ===============
+
+$contrast-text-ratio: 4.5 !default;
+$contrast-step-ratio: 1.1 !default;
+
+// ===================
+// SCALING PROPERTIES:
+// ===================
+
+$scale-baseline: 1rem !default;
+$scale-ratio: 1.33 !default;
+
+// ============
+// FONT SIZING:
+// ============
+
+$font-size: 1rem !default;
+$font-size-ratio: 1.125 !default;
+
+// ============
+// FONT FAMILY:
+// ============
+
+$font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", // Native.
+"Helvetica Neue", Arial, sans-serif, // Fallback.
+"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default; // Emoji.
+$font-heading: $font !default;
+$font-mono: Consolas, Monaco, monospace !default;
+
+// ============
+// FONT WEIGHT:
+// ============
+
+$weight: 400 !default;
+$weight-thin: 200 !default;
+$weight-bold: 600 !default;
+$weight-heavy: 800 !default;
+
+// ============
+// LINE HEIGHT:
+// ============
+
+$line-height: 1.5 !default;
+$line-height-heading: 1.33 !default;
+
+// =====================
+// VIEWPORT BREAKPOINTS:
+// =====================
+
+$vw-tiny: 180.5px !default;
+$vw-small: 300.5px !default;
+$vw-medium: 640.5px !default;
+$vw-large: 980.5px !default;
+$vw-huge: 1280.5px !default;
+$vw-giant: 1440.5px !default;
+
+// ==============
+// CORNER-RADIUS:
+// ==============
+
+$radius-tiny: 3px !default;
+$radius-small: 6px !default;
+$radius-medium: 9px !default;
+$radius-large: 12px !default;
+$radius-huge: 16px !default;
+$radius-giant: 24px !default;
+
+// =================
+// Z-INDEX POSITION:
+// =================
+
+$z-dropdown: 100 !default;
+$z-sticky: 200 !default;
+$z-fixed: 300 !default;
+$z-modal-backdrop: 400 !default;
+$z-modal: 500 !default;
+$z-popover: 600 !default;
+$z-tooltip: 700 !default;
+
+// ===========
+// SAFE-AREAS:
+// ===========
+
+$safe-top: env(safe-area-inset-top) !default;
+$safe-right: env(safe-area-inset-right) !default;
+$safe-bottom: env(safe-area-inset-bottom) !default;
+$safe-left: env(safe-area-inset-left) !default;
+
+$safe: $safe-top $safe-right $safe-bottom $safe-left;
+$safe-x: 0 $safe-right 0 $safe-left;
+$safe-y: $safe-top 0 $safe-bottom 0;
