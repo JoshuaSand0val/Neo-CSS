@@ -1,7 +1,6 @@
 // Presets/document.scss: Presets to HTML tags used to format the document.
 
-@use "../tools/palette.scss" as palette;
-@use "../tools/spacing.scss" as spacing;
+@use "../api/" as *;
 
 // Main root:
 
@@ -9,8 +8,8 @@ html {
     position: absolute;
     top: 0px; bottom: 0px;
     width: 100%;
-    background-color: palette.get("white");
-    color: palette.text("black", "white");
+    background-color: color("white");
+    color: text-color("black", "white");
 }
 
 // Sectioning root:
@@ -23,49 +22,49 @@ body {
 // Blockquotes:
 
 blockquote {
-    margin: spacing.size(0) spacing.size(1);
+    margin: scale(0) scale(1);
 }
 
 // Paragraphs:
 
 p {
-    margin: spacing.size(0) 0px;
+    margin: scale(0) 0px;
 }
 
 // Links:
 
 a {
-    $link-color: palette.text("blue", "white");
+    $link-color: text-color("blue", "white");
     color: $link-color;
     &:not(:hover):not(:focus) {
         text-decoration: none;
     }
     &:hover, &:focus {
-        color: palette.shade($link-color, 5%);
+        color: shade($link-color, 5%);
     }
     &:active {
-        color: palette.shade($link-color, 10%);
+        color: shade($link-color, 10%);
     }
 }
 
 // Marked text:
 
 mark {
-    background-color: palette.get("yellow");
-    color: palette.text("black", "yellow");
+    background-color: color("yellow");
+    color: text-color("black", "yellow");
 }
 
 // Horizontal rules:
 
 hr {
-    height: spacing.px(2);
-    background-color: palette.accessible("gray", "white", 2);
+    height: px(2);
+    background-color: accessible("gray", "white", 2);
     border: none;
-    margin: spacing.size(-2) 0px;
+    margin: scale(-2) 0px;
 }
 
 // Figures:
 
 figure {
-    margin: spacing.size(0) spacing.size(1);
+    margin: scale(0) scale(1);
 }

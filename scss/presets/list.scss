@@ -1,18 +1,17 @@
 // Presets/list.scss: Presets to HTML lists.
 
-@use "../tools/spacing.scss" as spacing;
-@use "../tools/text.scss" as text;
+@use "../api/" as *;
 
 ul, ol {
     padding-left: 2ch;
-    margin: spacing.size(0) 0px;
+    margin: scale(0) 0px;
     & & {
-        font-size: text.size(-1);
+        font-size: text-size(-1);
         padding-left: 1ch;
-        margin: spacing.px(4) 0px;
+        margin: px(4) 0px;
     }
     & & & {
-        font-size: text.size(-2);
+        font-size: text-size(-2);
     }
 }
 
@@ -21,13 +20,13 @@ ul {
 }
 
 dl {
-    margin: spacing.size(0) 0px;
+    margin: scale(0) 0px;
 }
 
 dt {
-    font-weight: text.$weight-bold;
+    font-weight: $weight-bold;
 }
 
 dd {
-    margin-left: spacing.size(0);
+    margin-left: scale(0);
 }
