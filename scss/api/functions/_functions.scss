@@ -1,6 +1,6 @@
 // Functions: All of Neo CSS's API functions.
 
-@use "variables" as *;
+@use "../variables/" as *;
 @use "sass:color" as COLOR;
 @use "sass:list" as LIST;
 @use "sass:map" as MAP;

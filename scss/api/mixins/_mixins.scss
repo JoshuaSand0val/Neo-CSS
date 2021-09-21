@@ -1,7 +1,7 @@
 // Mixins: All of Neo CSS's API mixins.
 
-@use "functions" as *;
-@use "variables" as *;
+@use "../functions/" as *;
+@use "../variables/" as *;
 @use "sass:map" as MAP;
 
 // =========================
