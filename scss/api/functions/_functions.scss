@@ -118,10 +118,10 @@
     @for $i from 1 through 3
     {
         // Get and divide channel by 255:
-        $channel: LIST.nth($rgb, $i) / 255;
+        $channel: MATH.div(LIST.nth($rgb, $i), 255);
 
         // Perform calculations on channel:
-        $channel: if($channel < 0.03928, $channel / 12.92, MATH.pow(($channel + 0.055) / 1.055, 2.4));
+        $channel: if($channel < 0.03928, MATH.div($channel, 12.92), MATH.pow(MATH.div($channel + 0.055, 1.055), 2.4));
 
         // Replace channel in list:
         $rgb: LIST.set-nth($rgb, $i, $channel);
@@ -140,10 +140,10 @@
     $color2: luminance($color2);
 
     // Calculate initial color ratio:
-    $ratio: ($color1 + 0.05) / ($color2 + 0.05);
+    $ratio: MATH.div(($color1 + 0.05), ($color2 + 0.05));
 
     // Return correct ratio based on both color's luminance:
-    @return if($color1 < $color2, 1 / $ratio, $ratio);
+    @return if($color1 < $color2, MATH.div(1, $ratio), $ratio);
 }
 
 // ==================
@@ -161,7 +161,7 @@
 
 // Converts "px" units into "rem" units.
 @function px($value) {
-    @return $value / 16 * 1rem;
+    @return MATH.div($value, 16) * 1rem;
 }
 
 // Scales value based on $scale-baseline and $scale-ratio.
