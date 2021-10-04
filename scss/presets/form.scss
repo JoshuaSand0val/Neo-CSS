@@ -1,4 +1,4 @@
-// Presets/form.scss: Presets to HTML form elements.
+// Form: Presets to HTML form elements.
 
 @use "../api/" as *;
 
@@ -11,7 +11,7 @@ fieldset {
 }
 
 legend {
-    font-size: text-size(1);
+    font-size: font-size(1);
 }
 
 label {
@@ -21,29 +21,29 @@ label {
 // Basic input types:
 
 %textfield, %button, textarea, select {
-    background-color: color("white");
-    color: text-color("black", "white");
-    border: 1px solid accessible("gray", "white", 3);
-    border-radius: $radius-tiny;
+    background-color: $white;
+    color: text-color($black, $white);
+    border: 1px solid accessible($gray, $white, 3);
+    border-radius: $radius-xs;
     padding: px(4) px(6);
 }
 
 // Input states:
 
 :invalid:focus {
-    border-color: accessible("red", "white", 3);
+    border-color: accessible($red, $white, 3);
 }
 
 :disabled {
-    color: text-color("gray", "white");
+    color: text-color($gray, $white);
 }
 
 // Button input:
 
 %button {
     font-weight: $weight-bold;
-    background-color: step-color("white", 1);
-    color: text-color("black", step-color("white", 1));
+    background-color: step-color($white, 1);
+    color: text-color($black, step-color($white, 1));
     padding: px(4) px(12);
     cursor: pointer;
 }

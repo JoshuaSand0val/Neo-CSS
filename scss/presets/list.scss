@@ -1,17 +1,17 @@
-// Presets/list.scss: Presets to HTML lists.
+// List: Presets to HTML lists.
 
 @use "../api/" as *;
 
 ul, ol {
     padding-left: 2ch;
-    margin: scale(0) 0px;
+    margin: size(0) 0px;
     & & {
-        font-size: text-size(-1);
+        font-size: font-size(-1);
         padding-left: 1ch;
         margin: px(4) 0px;
     }
     & & & {
-        font-size: text-size(-2);
+        font-size: font-size(-2);
     }
 }
 
@@ -20,7 +20,7 @@ ul {
 }
 
 dl {
-    margin: scale(0) 0px;
+    margin: size(0) 0px;
 }
 
 dt {
@@ -28,5 +28,5 @@ dt {
 }
 
 dd {
-    margin-left: scale(0);
+    margin-left: size(0);
 }

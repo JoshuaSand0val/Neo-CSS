@@ -1,4 +1,4 @@
-// Presets/document.scss: Presets to HTML tags used to format the document.
+// Document: Presets to HTML tags used to format the document.
 
 @use "../api/" as *;
 
@@ -8,8 +8,8 @@ html {
     position: absolute;
     top: 0px; bottom: 0px;
     width: 100%;
-    background-color: color("white");
-    color: text-color("black", "white");
+    background-color: $white;
+    color: text-color($black, $white);
 }
 
 // Sectioning root:
@@ -22,19 +22,19 @@ body {
 // Blockquotes:
 
 blockquote {
-    margin: scale(0) scale(1);
+    margin: size(0) size(1);
 }
 
 // Paragraphs:
 
 p {
-    margin: scale(0) 0px;
+    margin: size(0) 0px;
 }
 
 // Links:
 
 a {
-    $link-color: text-color("blue", "white");
+    $link-color: text-color($blue, $white);
     color: $link-color;
     &:not(:hover):not(:focus) {
         text-decoration: none;
@@ -50,21 +50,21 @@ a {
 // Marked text:
 
 mark {
-    background-color: color("yellow");
-    color: text-color("black", "yellow");
+    background-color: $yellow;
+    color: text-color($black, $yellow);
 }
 
 // Horizontal rules:
 
 hr {
     height: px(2);
-    background-color: accessible("gray", "white", 2);
+    background-color: accessible($gray, $white, 2);
     border: none;
-    margin: scale(-2) 0px;
+    margin: size(-2) 0px;
 }
 
 // Figures:
 
 figure {
-    margin: scale(0) scale(1);
+    margin: size(0) size(1);
 }
