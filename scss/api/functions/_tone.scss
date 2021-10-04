@@ -1,0 +1,7 @@
+// Tone: Grays $color by $perc.
+
+@use "../sass" as *;
+
+@function tone($color, $perc) {
+    @return COLOR-mix(#808080, $color, $weight: $perc);
+}

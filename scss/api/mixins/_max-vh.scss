@@ -1,0 +1,7 @@
+// Max-Viewport Height: A query for a maximum viewport height.
+
+@mixin max-vh($vh) {
+    @media (max-height: $vh) {
+        @content;
+    }
+}

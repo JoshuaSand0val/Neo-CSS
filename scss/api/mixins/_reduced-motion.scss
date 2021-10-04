@@ -1,0 +1,7 @@
+// Reduced Motion: A query for when the user requests reduced motion.
+
+@mixin reduced-motion {
+    @media (prefers-reduced-motion: reduce) {
+        @content;
+    }
+}

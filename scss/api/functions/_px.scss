@@ -1,0 +1,7 @@
+// Pixel: Converts 'px' units into 'rem' units.
+
+@use "../sass" as *;
+
+@function px($value) {
+    @return MATH-div($value, 16) * 1rem;
+}

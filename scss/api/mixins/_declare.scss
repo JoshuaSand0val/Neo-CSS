@@ -1,0 +1,7 @@
+// Declare: Set multiple $properties to $value.
+
+@mixin declare($properties, $value) {
+    @each $property in $properties {
+        #{$property}: $value;
+    }
+}

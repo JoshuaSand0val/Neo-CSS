@@ -1,2 +1,14 @@
-// Functions: All of Neo CSS's API functions forwarded.
-@forward "functions";
+// Functions: All API functions forwarded.
+@forward "accessible";
+@forward "color-shift";
+@forward "contrast";
+@forward "font-size";
+@forward "luminance";
+@forward "px";
+@forward "shade";
+@forward "size";
+@forward "step-color";
+@forward "step";
+@forward "text-color";
+@forward "tint";
+@forward "tone";
