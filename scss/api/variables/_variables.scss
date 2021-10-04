@@ -20,8 +20,20 @@ $indigo: #9892C8 !default;
 $pink: #F47C98 !default;
 
 $colors: (
-    $white, $black, $gray, $red, $orange, $yellow, $brown,
-    $green, $blue, $teal, $cyan, $purple, $indigo, $pink
+    "white": $white,
+    "black": $black,
+    "gray": $gray,
+    "red": $red,
+    "orange": $orange,
+    "yellow": $yellow,
+    "brown": $brown,
+    "green": $green,
+    "blue": $blue,
+    "teal": $teal,
+    "cyan": $cyan,
+    "purple": $purple,
+    "indigo": $indigo,
+    "pink": $pink
 ) !default;
 
 // ===============
@@ -81,6 +93,11 @@ $md: 640.5px !default;
 $lg: 980.5px !default;
 $xl: 1280.5px !default;
 $xxl: 1440.5px !default;
+
+$vw-map: (
+    "xs": $xs, "sm": $sm, "md": $md,
+    "lg": $lg, "xl": $xl, "xxl": $xxl
+) !default;
 
 $breakpoints: (
     0px, $sm, $md, $lg, $xl, $xxl
