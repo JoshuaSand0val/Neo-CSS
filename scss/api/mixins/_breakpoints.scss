@@ -3,6 +3,7 @@
 @use "../variables/" as *;
 @use "../sass" as *;
 @use "declare" as *;
+@use "min-vw" as *;
 
 @mixin breakpoints($properties, $values...) {
     @for $i from 1 through LIST-length($values) {
