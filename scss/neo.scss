@@ -1,12 +1,7 @@
-// Neo.scss: A master file combining all modules to build the boilerplate.
+// Neo: A master file combining all modules to build the boilerplate.
 /* Neo CSS created by Joshua Elijah Sandoval. MIT License (view LICENSE.md). */
 /* https://github.com/joshuasand0val */
 
-// API...
 @forward "api/";
-
-// Setup...
 @forward "setup/";
-
-// Presets...
 @forward "presets/";
