@@ -1,5 +1,5 @@
-// API: All API functions, mixins and variables forwarded.
+// API: All API variables, functions and mixins forwarded.
+@forward "variables/";
 @forward "functions/";
 @forward "mixins/";
-@forward "variables/";
 @forward "sass";
