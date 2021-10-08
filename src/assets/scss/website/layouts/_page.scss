@@ -1,0 +1,26 @@
+// Page: Styles that effect the base page layout.
+
+@use "../api" as *;
+
+#page {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+#sitehead, #sitecontent, #sitefoot {
+    display: block;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+#sitecontent {
+    display: block;
+    padding: $safe-x;
+    max-width: $xxl;
+    margin: 0 auto auto;
+}
+
+#sitecontent-wrapper {
+    @include breakpoints(padding, size(0), size(1), size(2));
+}
