@@ -1,0 +1,21 @@
+// Sitefoot: Styles for the global site footer.
+
+@use "../api" as *;
+
+#sitefoot {
+    display: block;
+    background-color: $black;
+    color: text-color($white, $black);
+    padding: 0 $safe-right $safe-bottom $safe-left;
+}
+
+#sitefoot-wrapper {
+    display: block;
+    max-width: $lg;
+    padding: size(0) size(1) size(5);
+    margin: auto;
+}
+
+#sitefoot-copy {
+    text-align: center;
+}
