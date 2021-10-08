@@ -1,0 +1,76 @@
+// Form: Presets to HTML form elements.
+
+@use "../api/" as *;
+
+// Form formatting:
+
+fieldset {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+legend {
+    font-size: font-size(1);
+}
+
+label {
+    display: inline-block;
+}
+
+// Basic input types:
+
+%textfield, %button, textarea, select {
+    background-color: $white;
+    color: text-color($black, $white);
+    border: 1px solid accessible($gray, $white, 3);
+    border-radius: $radius-xs;
+    padding: px(4) px(6);
+}
+
+// Input states:
+
+:invalid:focus {
+    border-color: accessible($red, $white, 3);
+}
+
+:disabled {
+    color: text-color($gray, $white);
+}
+
+// Button input:
+
+%button {
+    font-weight: $weight-bold;
+    background-color: step-color($white, 1);
+    color: text-color($black, step-color($white, 1));
+    padding: px(4) px(12);
+    cursor: pointer;
+}
+
+// Select arrow:
+
+select {
+    padding-right: px(24);
+    background-repeat: no-repeat;
+    background-position: right px(4) center;
+    background-size: px(16) px(16);
+    background-image: url("data:image/svg+xml, \
+    %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E \
+    %3Cpath d='M 3,4 8,12 13,4 Z' fill='%23000'/%3E \
+    %3C/svg%3E");
+}
+
+// Shorthand input types:
+
+[type="text"], [type="email"], [type="password"], [type="search"],
+[type="tel"], [type="url"], [type="number"], [type="time"],
+[type="week"], [type="month"], [type="date"],
+[type="datetime-local"] {
+    @extend %textfield;
+}
+
+button, [type="button"],
+[type="reset"], [type="submit"] {
+    @extend %button;
+}

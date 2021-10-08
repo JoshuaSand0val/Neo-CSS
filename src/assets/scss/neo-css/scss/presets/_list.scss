@@ -1,0 +1,32 @@
+// List: Presets to HTML lists.
+
+@use "../api/" as *;
+
+ul, ol {
+    padding-left: 2ch;
+    margin: size(0) 0px;
+    & & {
+        font-size: font-size(-1);
+        padding-left: 1ch;
+        margin: px(4) 0px;
+    }
+    & & & {
+        font-size: font-size(-2);
+    }
+}
+
+ul {
+    list-style-type: circle;
+}
+
+dl {
+    margin: size(0) 0px;
+}
+
+dt {
+    font-weight: $weight-bold;
+}
+
+dd {
+    margin-left: size(0);
+}

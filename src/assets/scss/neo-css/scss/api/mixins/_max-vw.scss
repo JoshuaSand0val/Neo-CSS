@@ -1,0 +1,7 @@
+// Max-Viewport Width: A query for a maximum viewport width.
+
+@mixin max-vw($vw) {
+    @media (max-width: $vw) {
+        @content;
+    }
+}

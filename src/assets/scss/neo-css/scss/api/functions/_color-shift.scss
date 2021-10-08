@@ -1,0 +1,12 @@
+// Color Shift: Lightens/Darkens $color by $perc based on lightness.
+
+@use "../sass" as *;
+@use "shade" as *;
+@use "tint" as *;
+
+@function color-shift($color, $perc) {
+    @if COLOR-lightness($color) > 50% {
+        @return shade($color, $perc);
+    }
+    @return tint($color, $perc);
+}

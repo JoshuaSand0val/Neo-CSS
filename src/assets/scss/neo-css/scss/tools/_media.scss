@@ -1,0 +1,75 @@
+// Tools/media.scss: Helper tools to update CSS on media conditions.
+
+@forward "globals.scss" show $tiny, $small, $medium, $large;
+@use "globals.scss" as *;
+@use "ruleset.scss" as ruleset;
+@use "sass:map" as MAP;
+
+// =========================
+// BREAKPOINT MEDIA QUERIES:
+// =========================
+
+@mixin tiny {
+    @media (max-width: $small) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media (min-width: $small) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media (min-width: $medium) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: $large) {
+        @content;
+    }
+}
+
+@mixin viewport($properties, $tiny, $small, $medium, $large) {
+    @include tiny {
+        @include ruleset.declare($properties, $tiny);
+    }
+    @include small {
+        @include ruleset.declare($properties, $small);
+    }
+    @include medium {
+        @include ruleset.declare($properties, $medium);
+    }
+    @include large {
+        @include ruleset.declare($properties, $large);
+    }
+}
+
+// ======================
+// ACCESSIBILITY QUERIES:
+// ======================
+
+@mixin reduced-motion {
+    @media (prefers-reduced-motion: reduce) {
+        @content;
+    }
+}
+
+// =====================
+// COLOR SCHEME QUERIES:
+// =====================
+
+@mixin light {
+    @media (prefers-color-scheme: light) {
+        @content;
+    }
+}
+
+@mixin dark {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
+}

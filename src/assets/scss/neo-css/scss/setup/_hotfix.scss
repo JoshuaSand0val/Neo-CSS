@@ -1,0 +1,136 @@
+// Hotfix: Builds over normalize.css to fix more problems with browser CSS.
+
+:focus {
+    // Add consistent focus ring:
+    outline: 1px dotted currentColor;
+    outline-offset: 3px;
+}
+
+*, ::before, ::after {
+    // Prevent iOS Tap Highlight Overlay:
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    // Prefer `border` sizing to `content` sizing:
+    box-sizing: border-box;
+    // Remove any width overflow:
+    min-width: 0px;
+    max-width: 100%;
+}
+
+html {
+    // iOS 5+ Momentum Scrolling:
+    -webkit-overflow-scrolling: touch;
+    // Prevent text from clipping out:
+    word-break: break-word;
+}
+
+pre {
+    // Fix Safari text wrapping:
+    word-break: normal;
+    // Prevent container overflow:
+    overflow-x: auto;
+}
+
+img {
+    // Fix flexbox shrink issues:
+    flex-shrink: 0;
+}
+
+iframe {
+    // Remove iframe border:
+    border-width: 0px;
+}
+
+table {
+    // Stretch table to fill:
+    min-width: 100%;
+    // Fix overflow caption in Safari:
+    max-width: none;
+    // Fix table header in Safari:
+    text-align: left;
+}
+
+th {
+    // Fix table header in IE:
+    text-align: inherit;
+}
+
+:disabled {
+    // Disable CSS pseudo states:
+    pointer-events: none;
+    // Correct Safari appearance:
+    color: gray;
+    opacity: 1;
+}
+
+select, textarea, button,
+[type="button"], [type="reset"], [type="submit"],
+[type="text"], [type="email"], [type="password"], [type="search"],
+[type="tel"], [type="url"], [type="number"], [type="time"],
+[type="week"], [type="month"], [type="date"],
+[type="datetime-local"] {
+    // Remove Safari appearance:
+    -webkit-appearance: none;
+    border-radius: 0px;
+    // Correct line-height: 
+    line-height: inherit;
+    // Correct appearance:
+    background-color: white;
+    border: 1px solid gray;
+    padding: 1px 4px;
+}
+
+select::-ms-expand {
+    // Remove IE appearance:
+    display: none;
+}
+
+button, [type="button"],
+[type="reset"], [type="submit"] {
+    // Correct appearance:
+    background-color: lightgray;
+}
+
+[type="range"] {
+    // Fix vertical alignment:
+    vertical-align: middle;
+}
+
+[type="range"]::-ms-track,
+[type="range"]::-ms-ticks-before,
+[type="range"]::-ms-ticks-after {
+    // Remove IE range ticks:
+    color: transparent;
+}
+
+progress {
+    // Add IE container styles:
+    background-color: gray;
+    border: 1px solid black;
+}
+
+progress::-ms-fill {
+    // Remove IE moving dots:
+    animation-name: none;
+}
+
+progress::-webkit-progress-value {
+    // Add more consistent fill:
+    background-color: RoyalBlue;
+}
+
+progress:indeterminate::-moz-progress-bar {
+    // Remove Firefox indeterminate fill:
+    background-color: transparent;
+}
+
+textarea {
+    // Correct vertical alignment:
+    vertical-align: top;
+    // Correct element resize:
+    resize: vertical;
+}
+
+details {
+    // Prevent IE from displaying bullet:
+    list-style: none;
+}

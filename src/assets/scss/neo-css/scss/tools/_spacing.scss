@@ -1,0 +1,31 @@
+// Tools/spacing.scss: Helper tools to space/size CSS properties.
+
+@forward "globals.scss" show $scale-baseline, $scale-ratio;
+@use "globals.scss" as *;
+@use "math.scss" as math;
+@use "media.scss" as media;
+@use "ruleset.scss" as ruleset;
+
+// ================
+// SCALE FUNCTIONS:
+// ================
+
+// Converts "px" units into "rem" units.
+@function px($value) {
+    @return $value / 16 * 1rem;
+}
+
+// Scales value based on $scale-baseline and $scale-ratio.
+@function size($step) {
+    @return math.step($scale-baseline, $scale-ratio, $step);
+}
+
+// Scales multiple $properties at once.
+@mixin size($properties, $step) {
+    @include ruleset.declare($properties, size($step));
+}
+
+// Scales multiple $properties across the viewport at once.
+@mixin size-viewport($properties, $tiny, $small, $medium, $large) {
+    @include media.viewport($properties, size($tiny), size($small), size($medium), size($large));
+}
