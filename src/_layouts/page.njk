@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include "../_includes/htmlhead.njk" %}
+    </head>
+    <body id="page">
+        {% include "../_includes/sitehead.njk" %}
+        <main id="sitecontent">
+            <div id="sitecontent-wrapper">
+                {{ content | safe }}
+            </div>
+        </main>
+        {% include "../_includes/sitefoot.njk" %}
+    </body>
+</html>
