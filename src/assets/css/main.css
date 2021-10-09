@@ -647,8 +647,34 @@ b, strong {
 /* https://github.com/joshuasand0val */
 .markdown {
   display: block;
-  max-width: 980.5px;
+  max-width: 1440.5px;
   margin: auto;
+}
+@media (min-width: 0px) {
+  .markdown {
+    padding: 1rem;
+  }
+}
+@media (min-width: 300.5px) {
+  .markdown {
+    padding: 1.33rem;
+  }
+}
+@media (min-width: 640.5px) {
+  .markdown {
+    padding: 1.7689rem;
+  }
+}
+.markdown > :first-child {
+  margin-top: 0;
+}
+.markdown > :not(img) {
+  display: block;
+  max-width: 980.5px;
+  margin: 1.5rem auto;
+}
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+  margin: 0.75rem auto;
 }
 @media (min-width: 0px) {
   .markdown h1 {
@@ -685,22 +711,6 @@ b, strong {
     font-size: 1.8020324707rem;
   }
 }
-@media (min-width: 0px) {
-  .markdown h3 {
-    font-size: 1.265625rem;
-  }
-}
-@media (min-width: 300.5px) {
-  .markdown h3 {
-    font-size: 1.423828125rem;
-  }
-}
-.markdown blockquote {
-  background-color: #e0e0e6;
-  border-left: 3px solid #727C83;
-  padding: 1rem 1.33rem;
-  margin: 1rem 0;
-}
 .markdown code {
   color: #a44e0e;
 }
@@ -710,24 +720,27 @@ b, strong {
   border: 1px solid #303037;
   border-radius: 3px;
   padding: 1rem;
-  margin: 1rem 0;
 }
 .markdown pre code {
   color: inherit;
 }
+.markdown blockquote {
+  background-color: #e0e0e6;
+  border-left: 3px solid #727C83;
+  padding: 1rem 1.33rem;
+}
 .markdown img {
   width: 100%;
   border-radius: 3px;
-  margin: 1rem 0;
+}
+.markdown hr {
+  max-width: 640.5px;
+  margin: 3rem auto;
 }
 .markdown table {
   display: block;
   border-collapse: collapse;
-  margin: 1rem 0;
   overflow-x: auto;
-}
-.markdown caption {
-  margin: 0.7518796992rem 0;
 }
 .markdown thead {
   border-bottom: 2px solid #18181C;
@@ -740,7 +753,7 @@ b, strong {
 }
 .markdown th, .markdown td {
   width: 5%;
-  padding: 0.7518796992rem;
+  padding: 0.5653230821rem 0.7518796992rem;
 }
 
 #sitefoot {
@@ -786,7 +799,6 @@ b, strong {
   display: flex;
   flex-flow: row wrap;
   max-width: 980.5px;
-  justify-content: space-between;
   align-items: center;
   padding: 1rem;
   margin: auto;
@@ -817,6 +829,7 @@ b, strong {
   flex-flow: row wrap;
   align-self: flex-end;
   font-size: 1.125rem;
+  margin-left: auto;
 }
 #sitehead-nav a {
   display: block;
@@ -847,22 +860,6 @@ b, strong {
   padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
   max-width: 1440.5px;
   margin: 0 auto auto;
-}
-
-@media (min-width: 0px) {
-  #sitecontent-wrapper {
-    padding: 1rem;
-  }
-}
-@media (min-width: 300.5px) {
-  #sitecontent-wrapper {
-    padding: 1.33rem;
-  }
-}
-@media (min-width: 640.5px) {
-  #sitecontent-wrapper {
-    padding: 1.7689rem;
-  }
 }
 
 ::-webkit-scrollbar,
