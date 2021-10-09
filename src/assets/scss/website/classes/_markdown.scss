@@ -4,8 +4,23 @@
 
 .markdown {
     display: block;
-    max-width: $lg;
+    max-width: $xxl;
     margin: auto;
+    @include breakpoints(padding, size(0), size(1), size(2));
+
+    & > :first-child {
+        margin-top: 0;
+    }
+
+    & > :not(img) {
+        display: block;
+        max-width: $lg;
+        margin: px(24) auto;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: px(12) auto;
+    }
 
     h1 {
         @include breakpoints(
@@ -26,21 +41,6 @@
         );
     }
 
-    h3 {
-        @include breakpoints(
-            font-size,
-            font-size(2),
-            font-size(3)
-        )
-    }
-
-    blockquote {
-        background-color: step-color($white, 1);
-        border-left: 3px solid accessible($gray, $white, 2);
-        padding: size(0) size(1);
-        margin: size(0) 0;
-    }
-
     code {
         color: text-color($orange, $white);
     }
@@ -51,28 +51,32 @@
         border: 1px solid step-color($black, 3);
         border-radius: $radius-xs;
         padding: size(0);
-        margin: size(0) 0;
     }
 
     pre code {
         color: inherit;
     }
 
+    blockquote {
+        background-color: step-color($white, 1);
+        border-left: 3px solid accessible($gray, $white, 2);
+        padding: size(0) size(1);
+    }
+
     img {
         width: 100%;
         border-radius: $radius-xs;
-        margin: size(0) 0;
+    }
+
+    hr {
+        max-width: $md;
+        margin: px(48) auto;
     }
 
     table {
         display: block;
         border-collapse: collapse;
-        margin: size(0) 0;
         overflow-x: auto;
-    }
-
-    caption {
-        margin: size(-1) 0;
     }
 
     thead {
@@ -89,6 +93,6 @@
 
     th, td {
         width: 5%;
-        padding: size(-1);
-    } 
+        padding: size(-2) size(-1);
+    }
 }
