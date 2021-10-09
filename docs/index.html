@@ -44,15 +44,49 @@
     headroom.init();
 </script>
         <main id="sitecontent">
-            <div id="sitecontent-wrapper">
-                
+            
 <div class="markdown">
     <h1>A modern, modular and extensible CSS boilerplate.</h1>
-<p>Unleash the power of Neo CSS by cloning the repo today:</p>
+<p><strong>Start your new project today by cloning the repo:</strong></p>
 <pre class="language-shell"><code class="language-shell">$ <span class="token function">git</span> clone https://github.com/JoshuaSand0val/Neo-CSS.git</code></pre>
+<hr>
+<h2>What does Neo CSS do?</h2>
+<ul>
+<li>Provides new CSS in addition to <a href="https://github.com/necolas/normalize.css/">normalize.css</a> to fix additional problems with browser CSS.</li>
+<li>Provides a consistent styled baseline for all elements.</li>
+<li>Provides easy to use <a href="/api/">API</a> to allow for effortless extension.</li>
+<li>Provides a modular design to allow developer choice in what components are included in compile.</li>
+</ul>
+<h2>Getting started with Neo CSS</h2>
+<p>To get started with Neo CSS, complete the following:</p>
+<ol>
+<li>Start your new project in a new directory and clone the repo.</li>
+</ol>
+<pre class="language-shell"><code class="language-shell">$ <span class="token function">mkdir</span> my-project<br>$ <span class="token builtin class-name">cd</span> my-project<br>$ <span class="token function">git</span> clone https://github.com/JoshuaSand0val/Neo-CSS.git</code></pre>
+<ol start="2">
+<li>Make a new <code>master.scss</code> file in a separate directory that links to Neo CSS.</li>
+</ol>
+<pre class="language-shell"><code class="language-shell">$ <span class="token function">mkdir</span> my-scss<br>$ <span class="token builtin class-name">cd</span> my-scss<br>$ <span class="token builtin class-name">echo</span> @forward <span class="token string">"../Neo-CSS/scss/neo"</span><span class="token punctuation">;</span> <span class="token operator">></span> master.scss</code></pre>
+<ol start="3">
+<li>(Optional) Configure the API in <code>master.scss</code> using the SASS <code>with</code> clause. <a href="https://sass-lang.com/documentation/at-rules/forward#configuring-modules">More info on SASS configuration</a>.</li>
+</ol>
+<pre class="language-scss"><code class="language-scss"><span class="token keyword">@forward</span> <span class="token string">"../Neo-CSS/scss/neo"</span> <span class="token module-modifier keyword">with</span> <span class="token punctuation">(</span><br>    &lt;variable><span class="token punctuation">:</span> &lt;value><span class="token punctuation">,</span><br>    &lt;variable><span class="token punctuation">:</span> &lt;value><br><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<ol start="4">
+<li>Compile using <a href="https://sass-lang.com/install">SASS</a>.</li>
+</ol>
+<pre class="language-shell"><code class="language-shell">$ sass master.scss output.scss</code></pre>
+<h2>Using Neo CSS API</h2>
+<p>The Neo CSS API uses the SASS module system.
+To begin using it, link the entry file with <code>@use</code>:</p>
+<pre class="language-scss"><code class="language-scss"><span class="token keyword">@use</span> <span class="token string">"../Neo-CSS/scss/neo-api"</span> <span class="token module-modifier keyword">as</span> *<span class="token punctuation">;</span></code></pre>
+<p><a href="/api/">Learn more on the API.</a></p>
+<h2>Acknowledgment</h2>
+<p>Neo CSS was built by Joshua Elijah Sandoval.
+Thanks to all those who worked on <a href="https://github.com/necolas/normalize.css/">normalize.css</a>.</p>
+<h2>License</h2>
+<p>Neo CSS is distributed under the <a href="https://choosealicense.com/licenses/mit/">MIT</a> License.</p>
 
 </div>
-            </div>
         </main>
         <footer id="sitefoot">
     <div id="sitefoot-wrapper">
