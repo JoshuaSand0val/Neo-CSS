@@ -68,10 +68,6 @@
 </ol>
 <pre class="language-shell"><code class="language-shell">$ <span class="token function">mkdir</span> my-scss<br>$ <span class="token builtin class-name">cd</span> my-scss<br>$ <span class="token builtin class-name">echo</span> @forward <span class="token string">"../Neo-CSS/scss/neo"</span><span class="token punctuation">;</span> <span class="token operator">></span> master.scss</code></pre>
 <ol start="3">
-<li>(Optional) Configure the API in <code>master.scss</code> using the SASS <code>with</code> clause. <a href="https://sass-lang.com/documentation/at-rules/forward#configuring-modules">More info on SASS configuration</a>.</li>
-</ol>
-<pre class="language-scss"><code class="language-scss"><span class="token keyword">@forward</span> <span class="token string">"../Neo-CSS/scss/neo"</span> <span class="token module-modifier keyword">with</span> <span class="token punctuation">(</span><br>    &lt;variable><span class="token punctuation">:</span> &lt;value><span class="token punctuation">,</span><br>    &lt;variable><span class="token punctuation">:</span> &lt;value><br><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<ol start="4">
 <li>Compile using <a href="https://sass-lang.com/install">SASS</a>.</li>
 </ol>
 <pre class="language-shell"><code class="language-shell">$ sass master.scss output.scss</code></pre>
@@ -79,7 +75,7 @@
 <p>The Neo CSS API uses the SASS module system.
 To begin using it, link the entry file with <code>@use</code>:</p>
 <pre class="language-scss"><code class="language-scss"><span class="token keyword">@use</span> <span class="token string">"../Neo-CSS/scss/neo-api"</span> <span class="token module-modifier keyword">as</span> *<span class="token punctuation">;</span></code></pre>
-<p><a href="/api/">Learn more on the API.</a></p>
+<p><a href="/api/">Learn more about the API.</a></p>
 <h2>Acknowledgment</h2>
 <p>Neo CSS was built by Joshua Elijah Sandoval.
 Thanks to all those who worked on <a href="https://github.com/necolas/normalize.css/">normalize.css</a>.</p>

@@ -33,16 +33,7 @@ $ cd my-scss
 $ echo @forward "../Neo-CSS/scss/neo"; > master.scss
 ```
 
-3. (Optional) Configure the API in `master.scss` using the SASS `with` clause. [More info on SASS configuration](https://sass-lang.com/documentation/at-rules/forward#configuring-modules).
-
-```scss
-@forward "../Neo-CSS/scss/neo" with (
-    <variable>: <value>,
-    <variable>: <value>
-);
-```
-
-4. Compile using [SASS](https://sass-lang.com/install).
+3. Compile using [SASS](https://sass-lang.com/install).
 
 ```shell
 $ sass master.scss output.scss
@@ -56,7 +47,7 @@ To begin using it, link the entry file with `@use`:
 @use "../Neo-CSS/scss/neo-api" as *;
 ```
 
-[Learn more on the API.](/api/)
+[Learn more about the API.](/api/)
 
 ## Acknowledgment
 Neo CSS was built by Joshua Elijah Sandoval.
