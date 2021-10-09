@@ -6,9 +6,7 @@
     <body id="page">
         {% include "../_includes/sitehead.njk" %}
         <main id="sitecontent">
-            <div id="sitecontent-wrapper">
-                {{ content | safe }}
-            </div>
+            {{ content | safe }}
         </main>
         {% include "../_includes/sitefoot.njk" %}
     </body>

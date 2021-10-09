@@ -20,7 +20,3 @@
     max-width: $xxl;
     margin: 0 auto auto;
 }
-
-#sitecontent-wrapper {
-    @include breakpoints(padding, size(0), size(1), size(2));
-}
