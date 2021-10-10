@@ -7,7 +7,7 @@
 	transition: all 300ms ease-out;
 	background-color: $white;
 	border-bottom: 1px solid step-color($white, 3);
-	padding: $safe-top $safe-right 0 $safe-left;
+	padding: size(0);
 	overflow: visible;
 	@media (min-height: 480px), (min-width: $lg) {
 		position: sticky;
@@ -26,7 +26,7 @@
 	flex-flow: row wrap;
 	max-width: $lg;
 	align-items: center;
-	padding: size(0);
+	padding: $safe-top $safe-right 0 $safe-left;
 	margin: auto;
 }
 
