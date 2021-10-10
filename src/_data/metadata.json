@@ -4,5 +4,5 @@
 	"description": "A modern, modular and extensible CSS boilerplate built with SASS/SCSS.",
     "keywords": "Neo CSS, CSS Boilerplate, SCSS, CSS",
 	"author": "Joshua Elijah Sandoval",
-	"license": "MIT"
+	"codeVersion": "v2.0"
 }
