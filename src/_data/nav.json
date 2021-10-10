@@ -4,5 +4,9 @@
         "API": "/api/",
         "Github": "https://github.com/JoshuaSand0val/Neo-CSS/"
     },
-    "sitefoot": {}
+    "sitefoot": {
+		"Home": "/",
+		"Neo CSS API": "/api/",
+		"v1 toolkit docs": "/tools/"
+	}
 }
