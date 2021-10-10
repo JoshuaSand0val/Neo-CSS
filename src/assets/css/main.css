@@ -792,9 +792,15 @@ b, strong {
 #sitefoot-nav a {
   color: #5490b8;
 }
-#sitefoot-info a[aria-current=page],
+#sitefoot-info a:hover, #sitefoot-info a:focus, #sitefoot-info a[aria-current=page],
+#sitefoot-nav a:hover,
+#sitefoot-nav a:focus,
 #sitefoot-nav a[aria-current=page] {
-  color: #EE8434;
+  color: #EBEBEF;
+}
+#sitefoot-info a:active,
+#sitefoot-nav a:active {
+  color: #7c868d;
 }
 
 #sitehead {

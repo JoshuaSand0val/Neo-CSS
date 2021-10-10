@@ -29,8 +29,11 @@
     }
     a {
         color: text-color($blue, $black);
-        &[aria-current="page"] {
-            color: text-color($orange, $black);
+        &:hover, &:focus, &[aria-current="page"] {
+            color: text-color($white, $black);
+        }
+        &:active {
+            color: text-color($gray, $black);
         }
     }
 }
