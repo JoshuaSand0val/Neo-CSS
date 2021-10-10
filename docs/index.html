@@ -36,7 +36,6 @@
 <script>
     var header = document.getElementById("sitehead");
     var headroom  = new Headroom(header, {
-        offset: header.offsetHeight,
         classes : {
             unpinned : "hidden"
         },
@@ -86,9 +85,14 @@ Thanks to all those who worked on <a href="https://github.com/necolas/normalize.
         </main>
         <footer id="sitefoot">
     <div id="sitefoot-wrapper">
-        <div id="sitefoot-copy">
+        <div id="sitefoot-info">
+            <h4>About Neo CSS</h4>
             <span>&copy; 2021 Joshua Elijah Sandoval.</span>
+            <span>Site built with <a href="https://www.11ty.dev/">11ty</a> static site generator.</span>
+            <span>Code currently v2.0.</span>
         </div>
+        <nav id="sitefoot-nav">
+            <h4>Navigation</h4><a href="/"  aria-current="page">Home</a><a href="/api/" >Neo CSS API</a><a href="/tools/" >v1 toolkit docs</a></nav>
     </div>
 </footer>
     </body>
