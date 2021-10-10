@@ -42,7 +42,10 @@
     }
 
     code {
-        color: text-color($orange, $white);
+        background-color: step-color($white, 2);
+        color: text-color($orange, step-color($white, 2));
+        border-radius: $radius-xs;
+        padding: px(2) px(4);
     }
 
     pre {
@@ -54,7 +57,9 @@
     }
 
     pre code {
+        background-color: transparent;
         color: inherit;
+        padding: 0;
     }
 
     blockquote {
