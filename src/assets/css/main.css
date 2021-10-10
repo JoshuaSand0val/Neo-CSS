@@ -712,7 +712,10 @@ b, strong {
   }
 }
 .markdown code {
-  color: #a44e0e;
+  background-color: #d4d4dd;
+  color: #91450c;
+  border-radius: 3px;
+  padding: 0.125rem 0.25rem;
 }
 .markdown pre {
   background-color: #212127;
@@ -722,7 +725,9 @@ b, strong {
   padding: 1rem;
 }
 .markdown pre code {
+  background-color: transparent;
   color: inherit;
+  padding: 0;
 }
 .markdown blockquote {
   background-color: #e0e0e6;
@@ -760,18 +765,36 @@ b, strong {
   display: block;
   background-color: #18181C;
   color: #EBEBEF;
-  padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  padding: 1rem 1.33rem 4.1615795893rem;
 }
 
 #sitefoot-wrapper {
-  display: block;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   max-width: 980.5px;
-  padding: 1rem 1.33rem 4.1615795893rem;
+  padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   margin: auto;
 }
 
-#sitefoot-copy {
-  text-align: center;
+#sitefoot-info,
+#sitefoot-nav {
+  display: flex;
+  flex-flow: column nowrap;
+  line-height: 1.8;
+  color: #7c868d;
+}
+#sitefoot-info h4,
+#sitefoot-nav h4 {
+  color: #EBEBEF;
+}
+#sitefoot-info a,
+#sitefoot-nav a {
+  color: #5490b8;
+}
+#sitefoot-info a[aria-current=page],
+#sitefoot-nav a[aria-current=page] {
+  color: #EE8434;
 }
 
 #sitehead {
@@ -779,7 +802,7 @@ b, strong {
   transition: all 300ms ease-out;
   background-color: #EBEBEF;
   border-bottom: 1px solid #c9c9d4;
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  padding: 1rem;
   overflow: visible;
 }
 @media (min-height: 480px), (min-width: 980.5px) {
@@ -800,7 +823,7 @@ b, strong {
   flex-flow: row wrap;
   max-width: 980.5px;
   align-items: center;
-  padding: 1rem;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
   margin: auto;
 }
 
