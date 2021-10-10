@@ -36,7 +36,7 @@ $ echo @forward "../Neo-CSS/scss/neo"; > master.scss
 3. Compile using [SASS](https://sass-lang.com/install).
 
 ```shell
-$ sass master.scss output.scss
+$ sass master.scss output.css
 ```
 
 ## Using Neo CSS API
