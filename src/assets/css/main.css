@@ -712,8 +712,8 @@ b, strong {
   }
 }
 .markdown code {
-  background-color: #d4d4dd;
-  color: #91450c;
+  background-color: #e0e0e6;
+  color: #9b4a0d;
   border-radius: 3px;
   padding: 0.125rem 0.25rem;
 }
@@ -743,8 +743,7 @@ b, strong {
   margin: 3rem auto;
 }
 .markdown table {
-  display: block;
-  border-collapse: collapse;
+  min-width: 0;
   overflow-x: auto;
 }
 .markdown thead {
@@ -753,11 +752,8 @@ b, strong {
 .markdown tr {
   border-bottom: 1px solid #c9c9d4;
 }
-.markdown th {
-  white-space: nowrap;
-}
 .markdown th, .markdown td {
-  width: 5%;
+  width: 2%;
   padding: 0.5653230821rem 0.7518796992rem;
 }
 

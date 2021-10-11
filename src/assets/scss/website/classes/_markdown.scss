@@ -42,8 +42,8 @@
     }
 
     code {
-        background-color: step-color($white, 2);
-        color: text-color($orange, step-color($white, 2));
+        background-color: step-color($white, 1);
+        color: text-color($orange, step-color($white, 1));
         border-radius: $radius-xs;
         padding: px(2) px(4);
     }
@@ -79,8 +79,7 @@
     }
 
     table {
-        display: block;
-        border-collapse: collapse;
+        min-width: 0;
         overflow-x: auto;
     }
 
@@ -92,12 +91,8 @@
         border-bottom: 1px solid step-color($white, 3);
     }
 
-    th {
-        white-space: nowrap;
-    }
-
     th, td {
-        width: 5%;
+        width: 2%;
         padding: size(-2) size(-1);
     }
 }
