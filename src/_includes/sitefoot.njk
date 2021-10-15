@@ -5,10 +5,11 @@
             <span>&copy; {% year %} {{ metadata.author }}.</span>
             <span>Site built with <a href="https://www.11ty.dev/">11ty</a> static site generator.</span>
             <span>Code currently {{ metadata.codeVersion }}.</span>
+            <span>Distributed under the <a href="{{ metadata.license.url }}">{{ metadata.license.type }}</a> License.</span>
         </div>
         <nav id="sitefoot-nav">
             <h4>Navigation</h4>
-            {%- for name, link in nav.sitefoot -%}
+            {%- for name, link in navdata.sitefoot -%}
                 <a href="{{ link }}" {% if page.url == link %} aria-current="page"{% endif %}>{{ name }}</a>
             {%- endfor -%}
         </nav>
