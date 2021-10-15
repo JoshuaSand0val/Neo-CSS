@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -665,13 +666,13 @@ b, strong {
     padding: 1.7689rem;
   }
 }
-.markdown > :first-child {
-  margin-top: 0;
-}
 .markdown > :not(img) {
   display: block;
   max-width: 980.5px;
   margin: 1.5rem auto;
+}
+.markdown > :first-child {
+  margin-top: 0;
 }
 .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
   margin: 0.75rem auto;
@@ -712,13 +713,13 @@ b, strong {
   }
 }
 .markdown code {
-  background-color: #d4d4dd;
-  color: #91450c;
+  background-color: #e0e0e6;
+  color: #9b4a0d;
   border-radius: 3px;
   padding: 0.125rem 0.25rem;
 }
 .markdown pre {
-  background-color: #212127;
+  background-color: #18181C;
   color: #EBEBEF;
   border: 1px solid #303037;
   border-radius: 3px;
@@ -744,7 +745,8 @@ b, strong {
 }
 .markdown table {
   display: block;
-  border-collapse: collapse;
+  width: 100%;
+  min-width: 0;
   overflow-x: auto;
 }
 .markdown thead {
@@ -753,12 +755,31 @@ b, strong {
 .markdown tr {
   border-bottom: 1px solid #c9c9d4;
 }
-.markdown th {
-  white-space: nowrap;
-}
 .markdown th, .markdown td {
-  width: 5%;
-  padding: 0.5653230821rem 0.7518796992rem;
+  width: 1%;
+  min-width: 180.5px;
+  vertical-align: top;
+  padding: 0.7518796992rem 0.5653230821rem;
+}
+
+#nav {
+  display: block;
+  text-align: center;
+  max-width: 980.5px;
+  padding: 0;
+  margin: 1rem auto;
+}
+
+#nav li {
+  display: inline;
+}
+#nav li::before {
+  content: "• ";
+}
+
+#nav a[aria-current=page] {
+  color: #18181C;
+  font-weight: 600;
 }
 
 #sitefoot {
@@ -792,9 +813,15 @@ b, strong {
 #sitefoot-nav a {
   color: #5490b8;
 }
-#sitefoot-info a[aria-current=page],
+#sitefoot-info a:hover, #sitefoot-info a:focus, #sitefoot-info a[aria-current=page],
+#sitefoot-nav a:hover,
+#sitefoot-nav a:focus,
 #sitefoot-nav a[aria-current=page] {
-  color: #EE8434;
+  color: #EBEBEF;
+}
+#sitefoot-info a:active,
+#sitefoot-nav a:active {
+  color: #7c868d;
 }
 
 #sitehead {

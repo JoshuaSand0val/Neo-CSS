@@ -3,7 +3,7 @@
     <head>
         <title>
     
-        API | Neo CSS
+        API Mixins | Neo CSS
     
 </title>
 <meta charset="UTF-8" />
@@ -29,7 +29,7 @@
             <h2>Neo CSS</h2>
             <h4><em>Modern CSS Boilerplate</em></h3>
         </a>
-        <nav id="sitehead-nav"><a href="/" >Home</a><a href="/api/"  aria-current="page">API</a><a href="https://github.com/JoshuaSand0val/Neo-CSS/" >Github</a></nav>
+        <nav id="sitehead-nav"><a href="/" >Home</a><a href="/api/" >API</a><a href="https://github.com/JoshuaSand0val/Neo-CSS/" >Github</a></nav>
     </div>
 </header>
 <script src="/assets/js/headroom/headroom.min.js"></script>
@@ -48,7 +48,7 @@
 <div class="markdown">
     <ul id="nav">
         
-            <li><a href="/api/" aria-current="page"><b>API</b></a></li>
+            <li><a href="/api/">API</a></li>
         
     
         
@@ -60,13 +60,74 @@
         
     
         
-            <li><a href="/api/mixins/">Mixins</a></li>
+            <li><a href="/api/mixins/" aria-current="page"><b>Mixins</b></a></li>
         
     </ul>
-    <h1>Supercharge your CSS with the Neo CSS API</h1>
-<p><strong>Add it to your project today by linking the entry file with <code>@use</code>:</strong></p>
+    <h1>API Mixins</h1>
+<p><strong>All global API mixins by name, parameters and description.</strong></p>
 <pre class="language-scss"><code class="language-scss"><span class="token keyword">@use</span> <span class="token string">"../Neo-CSS/scss/neo-api"</span> <span class="token module-modifier keyword">as</span> *<span class="token punctuation">;</span></code></pre>
 <hr>
+<table>
+<thead>
+<tr>
+<th>Mixin Name</th>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>breakpoints</code></td>
+<td><code>$properties, $values...</code></td>
+<td>Scales <code>$properties</code> across the viewport breakpoints.</td>
+</tr>
+<tr>
+<td><code>dark</code></td>
+<td><code>@content</code></td>
+<td>A query for devices requesting dark mode.</td>
+</tr>
+<tr>
+<td><code>declare</code></td>
+<td><code>$properties, $value</code></td>
+<td>Set multiple <code>$properties</code> to <code>$value</code>.</td>
+</tr>
+<tr>
+<td><code>inset</code></td>
+<td><code>$value</code></td>
+<td>Set CSS top, right, bottom, left to <code>$value</code>.</td>
+</tr>
+<tr>
+<td><code>light</code></td>
+<td><code>@content</code></td>
+<td>A query for devices requesting light mode.</td>
+</tr>
+<tr>
+<td><code>max-vh</code></td>
+<td><code>$vh</code>, <code>@content</code></td>
+<td>A query for a maximum viewport height.</td>
+</tr>
+<tr>
+<td><code>max-vw</code></td>
+<td><code>$vw</code>, <code>@content</code></td>
+<td>A query for a maximum viewport width.</td>
+</tr>
+<tr>
+<td><code>min-vh</code></td>
+<td><code>$vh</code>, <code>@content</code></td>
+<td>A query for a minimum viewport height.</td>
+</tr>
+<tr>
+<td><code>min-vw</code></td>
+<td><code>$vw</code>, <code>@content</code></td>
+<td>A query for a minimum viewport width.</td>
+</tr>
+<tr>
+<td><code>reduced-motion</code></td>
+<td><code>@content</code></td>
+<td>A query for when the user requests reduced motion.</td>
+</tr>
+</tbody>
+</table>
 
 </div>
         </main>
@@ -80,7 +141,7 @@
             <span>Distributed under the <a href="https://choosealicense.com/licenses/mit/">MIT</a> License.</span>
         </div>
         <nav id="sitefoot-nav">
-            <h4>Navigation</h4><a href="/" >Home</a><a href="/api/"  aria-current="page">Neo CSS API</a><a href="/tools/" >V1 Toolkit Docs</a></nav>
+            <h4>Navigation</h4><a href="/" >Home</a><a href="/api/" >Neo CSS API</a><a href="/tools/" >V1 Toolkit Docs</a></nav>
     </div>
 </footer>
     </body>

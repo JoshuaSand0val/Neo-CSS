@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+    
+        API Variables | Neo CSS
+    
+</title>
+<meta charset="UTF-8" />
+<!-- Metadata -->
+<meta name="author" content="Joshua Elijah Sandoval" />
+<meta name="description" content="A modern, modular and extensible CSS boilerplate built with SASS/SCSS." />
+<meta name="keywords" content="Neo CSS, CSS Boilerplate, SCSS, CSS" />
+<!-- Shortcut favicon: -->
+<link rel="shortcut icon" href="/assets/images/logo/favicon.ico" type="image/x-icon" />
+<!-- Apple -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/logo/appicon.png" />
+<!-- Stylesheet -->
+<link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+<!-- Apple Watch OS5 WebKit support!!! -->
+<meta name="disabled-adaptations" content="watch" />
+<!-- Initial viewport for mobile (including irregular displays): -->
+<meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    </head>
+    <body id="page">
+        <header id="sitehead">
+    <div id="sitehead-wrapper">
+        <a href="/" id="sitehead-title">
+            <h2>Neo CSS</h2>
+            <h4><em>Modern CSS Boilerplate</em></h3>
+        </a>
+        <nav id="sitehead-nav"><a href="/" >Home</a><a href="/api/" >API</a><a href="https://github.com/JoshuaSand0val/Neo-CSS/" >Github</a></nav>
+    </div>
+</header>
+<script src="/assets/js/headroom/headroom.min.js"></script>
+<script>
+    var header = document.getElementById("sitehead");
+    var headroom  = new Headroom(header, {
+        offset: header.offsetHeight,
+        classes : {
+            unpinned : "hidden"
+        },
+    });
+    headroom.init();
+</script>
+        <main id="sitecontent">
+            
+<div class="markdown">
+    <ul id="nav">
+        
+            <li><a href="/api/">API</a></li>
+        
+    
+        
+            <li><a href="/api/variables/" aria-current="page"><b>Variables</b></a></li>
+        
+    
+        
+            <li><a href="/api/functions/">Functions</a></li>
+        
+    
+        
+            <li><a href="/api/mixins/">Mixins</a></li>
+        
+    </ul>
+    <h1>API Variables</h1>
+<p><strong>All global API variables by name, value and description.</strong></p>
+<pre class="language-scss"><code class="language-scss"><span class="token keyword">@use</span> <span class="token string">"../Neo-CSS/scss/neo-api"</span> <span class="token module-modifier keyword">as</span> *<span class="token punctuation">;</span></code></pre>
+<hr>
+<h2>Color Palette</h2>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$white</code></td>
+<td><code>#EBEBEF</code></td>
+<td>The color white.</td>
+</tr>
+<tr>
+<td><code>$black</code></td>
+<td><code>#18181C</code></td>
+<td>The color black.</td>
+</tr>
+<tr>
+<td><code>$gray</code></td>
+<td><code>#727C83</code></td>
+<td>The color gray.</td>
+</tr>
+<tr>
+<td><code>$red</code></td>
+<td><code>#EF6461</code></td>
+<td>The color red.</td>
+</tr>
+<tr>
+<td><code>$orange</code></td>
+<td><code>#EE8434</code></td>
+<td>The color orange.</td>
+</tr>
+<tr>
+<td><code>$yellow</code></td>
+<td><code>#FFCB47</code></td>
+<td>The color yellow.</td>
+</tr>
+<tr>
+<td><code>$brown</code></td>
+<td><code>#BB946C</code></td>
+<td>The color brown.</td>
+</tr>
+<tr>
+<td><code>$green</code></td>
+<td><code>#74bf80</code></td>
+<td>The color green.</td>
+</tr>
+<tr>
+<td><code>$blue</code></td>
+<td><code>#5490b8</code></td>
+<td>The color blue.</td>
+</tr>
+<tr>
+<td><code>$teal</code></td>
+<td><code>#2a9186</code></td>
+<td>The color teal.</td>
+</tr>
+<tr>
+<td><code>$cyan</code></td>
+<td><code>#6bcee7</code></td>
+<td>The color cyan.</td>
+</tr>
+<tr>
+<td><code>$purple</code></td>
+<td><code>#b350ed</code></td>
+<td>The color purple.</td>
+</tr>
+<tr>
+<td><code>$indigo</code></td>
+<td><code>#9892C8</code></td>
+<td>The color indigo.</td>
+</tr>
+<tr>
+<td><code>$pink</code></td>
+<td><code>#F47C98</code></td>
+<td>The color pink.</td>
+</tr>
+<tr>
+<td><code>$colors</code></td>
+<td><code>(&lt;color&gt;: &lt;value&gt;, ...)</code></td>
+<td>A color:value map of all color variables.</td>
+</tr>
+</tbody>
+</table>
+<h2>Color Contrast</h2>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$contrast-text-ratio</code></td>
+<td><code>4.5</code></td>
+<td>The default color contrast ratio for text, matching the WCAG requirement of 4.5.</td>
+</tr>
+<tr>
+<td><code>$contrast-step-ratio</code></td>
+<td><code>1.1</code></td>
+<td>The ratio for stepping up the contrast of a color.</td>
+</tr>
+</tbody>
+</table>
+<h2>Scaling Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$scale-baseline</code></td>
+<td><code>1rem</code></td>
+<td>The baseline size for padding/margin/ect. Typically in <strong>rem</strong> units.</td>
+</tr>
+<tr>
+<td><code>$scale-ratio</code></td>
+<td><code>1.33</code></td>
+<td>The ratio for upscaling CSS properties.</td>
+</tr>
+</tbody>
+</table>
+<h2>Font/Text Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$font-size</code></td>
+<td><code>1rem</code></td>
+<td>The default font size. Typically in <strong>rem</strong> units.</td>
+</tr>
+<tr>
+<td><code>$font-size-ratio</code></td>
+<td><code>1.125</code></td>
+<td>The ratio for upscaling text.</td>
+</tr>
+<tr>
+<td><code>$font</code></td>
+<td><code>-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Roboto&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;</code></td>
+<td>The default font family stack.</td>
+</tr>
+<tr>
+<td><code>$font-heading</code></td>
+<td><code>$font</code></td>
+<td>The font stack for headings.</td>
+</tr>
+<tr>
+<td><code>$font-mono</code></td>
+<td><code>Consolas, Monaco, monospace</code></td>
+<td>The monospaced font stack.</td>
+</tr>
+<tr>
+<td><code>$weight</code></td>
+<td><code>400</code></td>
+<td>The default text font weight.</td>
+</tr>
+<tr>
+<td><code>$weight-thin</code></td>
+<td><code>200</code></td>
+<td>Thinner text font weight.</td>
+</tr>
+<tr>
+<td><code>$weight-bold</code></td>
+<td><code>600</code></td>
+<td>Bolder text font weight.</td>
+</tr>
+<tr>
+<td><code>$weight-heavy</code></td>
+<td><code>800</code></td>
+<td>Heavy text font weight.</td>
+</tr>
+<tr>
+<td><code>$line-height</code></td>
+<td><code>1.5</code></td>
+<td>The default text CSS line-height.</td>
+</tr>
+<tr>
+<td><code>$line-height-heading</code></td>
+<td><code>1.33</code></td>
+<td>The CSS line-height for headings.</td>
+</tr>
+</tbody>
+</table>
+<h2>Viewport Breakpoints</h2>
+<p><strong>Note: Add the following. Breakpoints are designed to work on every device. Including smart-watches!</strong></p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>disabled-adaptations<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>watch<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$xs</code></td>
+<td><code>180.5px</code></td>
+<td>An extra small device breakpoint width.</td>
+</tr>
+<tr>
+<td><code>$sm</code></td>
+<td><code>300.5px</code></td>
+<td>A small device breakpoint width.</td>
+</tr>
+<tr>
+<td><code>$md</code></td>
+<td><code>640.5px</code></td>
+<td>A medium-sized device breakpoint width.</td>
+</tr>
+<tr>
+<td><code>$lg</code></td>
+<td><code>980.5px</code></td>
+<td>A large device breakpoint width.</td>
+</tr>
+<tr>
+<td><code>$xl</code></td>
+<td><code>1280.5px</code></td>
+<td>An extra large device breakpoint width.</td>
+</tr>
+<tr>
+<td><code>$xxl</code></td>
+<td><code>1440.5px</code></td>
+<td>An extra extra large device breakpoint width.</td>
+</tr>
+<tr>
+<td><code>$vw-map</code></td>
+<td><code>(&lt;variable&gt;: &lt;value&gt;, ...)</code></td>
+<td>A variable:value map of all viewport width variables.</td>
+</tr>
+<tr>
+<td><code>$breakpoints</code></td>
+<td><code>(0px, $sm, $md, $lg, $xl, $xxl)</code></td>
+<td>A list, each value being a viewport width breakpoint.</td>
+</tr>
+</tbody>
+</table>
+<h2>Corner Radius</h2>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$radius-xs</code></td>
+<td><code>3px</code></td>
+<td>An extra small radius value.</td>
+</tr>
+<tr>
+<td><code>$radius-sm</code></td>
+<td><code>6px</code></td>
+<td>A small radius value.</td>
+</tr>
+<tr>
+<td><code>$radius-md</code></td>
+<td><code>9px</code></td>
+<td>A medium-sized radius value.</td>
+</tr>
+<tr>
+<td><code>$radius-lg</code></td>
+<td><code>12px</code></td>
+<td>A large radius value.</td>
+</tr>
+<tr>
+<td><code>$radius-xl</code></td>
+<td><code>16px</code></td>
+<td>An extra large radius value.</td>
+</tr>
+<tr>
+<td><code>$radius-xxl</code></td>
+<td><code>24px</code></td>
+<td>An extra extra large radius value.</td>
+</tr>
+</tbody>
+</table>
+<h2>Z-Index Positioning</h2>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$z-dropdown</code></td>
+<td><code>100</code></td>
+<td>An index for drop-down content containers.</td>
+</tr>
+<tr>
+<td><code>$z-sticky</code></td>
+<td><code>200</code></td>
+<td>An index for <code>position: sticky</code> containers, or anything that sticks to the page scroll that is in normal document flow.</td>
+</tr>
+<tr>
+<td><code>$z-fixed</code></td>
+<td><code>300</code></td>
+<td>An index for inline <code>position: fixed</code> containers.</td>
+</tr>
+<tr>
+<td><code>$z-modal-backdrop</code></td>
+<td><code>400</code></td>
+<td>An index for <code>position: fixed</code> menu backdrops.</td>
+</tr>
+<tr>
+<td><code>$z-modal</code></td>
+<td><code>500</code></td>
+<td>An index for <code>position: fixed</code> menus.</td>
+</tr>
+<tr>
+<td><code>$z-popover</code></td>
+<td><code>600</code></td>
+<td>An index for pop-ups or popovers.</td>
+</tr>
+<tr>
+<td><code>$z-tooltip</code></td>
+<td><code>700</code></td>
+<td>An index for mouse-over tooltips.</td>
+</tr>
+</tbody>
+</table>
+<h2>Safe Areas</h2>
+<p><strong>Note: A special viewport meta content value is needed for these variables.</strong></p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>..., viewport-fit=cover<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$safe-top</code></td>
+<td><code>env(safe-area-inset-top)</code></td>
+<td>Top-side padding for irregular screen shapes.</td>
+</tr>
+<tr>
+<td><code>$safe-right</code></td>
+<td><code>env(safe-area-inset-right)</code></td>
+<td>Right-side padding for irregular screen shapes.</td>
+</tr>
+<tr>
+<td><code>$safe-bottom</code></td>
+<td><code>env(safe-area-inset-bottom)</code></td>
+<td>Bottom-side padding for irregular screen shapes.</td>
+</tr>
+<tr>
+<td><code>$safe-left</code></td>
+<td><code>env(safe-area-inset-left)</code></td>
+<td>Left-side padding for irregular screen shapes.</td>
+</tr>
+<tr>
+<td><code>$safe</code></td>
+<td><code>$safe-top $safe-right $safe-bottom $safe-left</code></td>
+<td>Padding for irregular screen shapes.</td>
+</tr>
+<tr>
+<td><code>$safe-x</code></td>
+<td><code>0 $safe-right 0 $safe-left</code></td>
+<td>X-Axis padding for irregular screen shapes.</td>
+</tr>
+<tr>
+<td><code>$safe-y</code></td>
+<td><code>$safe-top 0 $safe-bottom 0</code></td>
+<td>Y-Axis padding for irregular screen shapes.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+        </main>
+        <footer id="sitefoot">
+    <div id="sitefoot-wrapper">
+        <div id="sitefoot-info">
+            <h4>About Neo CSS</h4>
+            <span>&copy; 2021 Joshua Elijah Sandoval.</span>
+            <span>Site built with <a href="https://www.11ty.dev/">11ty</a> static site generator.</span>
+            <span>Code currently v2.0.</span>
+            <span>Distributed under the <a href="https://choosealicense.com/licenses/mit/">MIT</a> License.</span>
+        </div>
+        <nav id="sitefoot-nav">
+            <h4>Navigation</h4><a href="/" >Home</a><a href="/api/" >Neo CSS API</a><a href="/tools/" >V1 Toolkit Docs</a></nav>
+    </div>
+</footer>
+    </body>
+</html>
