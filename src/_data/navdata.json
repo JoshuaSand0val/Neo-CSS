@@ -13,6 +13,7 @@
         "API": "/api/",
         "Variables": "/api/variables/",
         "Functions": "/api/functions/",
-        "Mixins": "/api/mixins/"
+        "Mixins": "/api/mixins/",
+        "Built-In": "/api/built-in/"
     }
 }
