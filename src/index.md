@@ -5,9 +5,11 @@ layout: post.njk
 
 # A modern, modular and extensible CSS boilerplate.
 **Start your new project today by cloning the repo:**
+
 ```shell
 $ git clone https://github.com/JoshuaSand0val/Neo-CSS.git
 ```
+
 ---
 
 ## What does Neo CSS do?
@@ -20,6 +22,7 @@ $ git clone https://github.com/JoshuaSand0val/Neo-CSS.git
 To get started with Neo CSS, complete the following:
 
 1. Start your new project in a new directory and clone the repo.
+
 ```shell
 $ mkdir my-project
 $ cd my-project
@@ -27,6 +30,7 @@ $ git clone https://github.com/JoshuaSand0val/Neo-CSS.git
 ```
 
 2. Make a new `master.scss` file in a separate directory that links to Neo CSS.
+
 ```shell
 $ mkdir my-scss
 $ cd my-scss
@@ -54,4 +58,4 @@ Neo CSS was built by Joshua Elijah Sandoval.
 Thanks to all those who worked on [normalize.css](https://github.com/necolas/normalize.css/).
 
 ## License
-Neo CSS is distributed under the [MIT](https://choosealicense.com/licenses/mit/) License.
+Neo CSS is distributed under the [{{ metadata.license.type }}]({{ metadata.license.url }}) License.
