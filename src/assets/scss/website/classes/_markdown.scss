@@ -5,17 +5,17 @@
 .markdown {
     display: block;
     max-width: $xxl;
-    margin: auto;
-    @include breakpoints(padding, size(0), size(1), size(2));
+    @include declare(margin-right margin-left, auto);
+    @include breakpoints(
+        padding-right padding-left
+        margin-top margin-bottom,
+        size(0), size(1), size(2)
+    );
 
     & > :not(img) {
         display: block;
         max-width: $lg;
         margin: px(24) auto;
-    }
-
-    & > :first-child {
-        margin-top: 0;
     }
 
     h1, h2, h3, h4, h5, h6 {

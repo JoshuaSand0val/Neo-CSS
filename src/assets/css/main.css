@@ -649,30 +649,37 @@ b, strong {
 .markdown {
   display: block;
   max-width: 1440.5px;
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 @media (min-width: 0px) {
   .markdown {
-    padding: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
 @media (min-width: 300.5px) {
   .markdown {
-    padding: 1.33rem;
+    padding-right: 1.33rem;
+    padding-left: 1.33rem;
+    margin-top: 1.33rem;
+    margin-bottom: 1.33rem;
   }
 }
 @media (min-width: 640.5px) {
   .markdown {
-    padding: 1.7689rem;
+    padding-right: 1.7689rem;
+    padding-left: 1.7689rem;
+    margin-top: 1.7689rem;
+    margin-bottom: 1.7689rem;
   }
 }
 .markdown > :not(img) {
   display: block;
   max-width: 980.5px;
   margin: 1.5rem auto;
-}
-.markdown > :first-child {
-  margin-top: 0;
 }
 .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
   margin: 0.75rem auto;
