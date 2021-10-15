@@ -1,3 +1,4 @@
+{% if navdata[nav] %}
 <ul id="nav">
     {%- for name, link in navdata[nav] %}
         {% if page.url == link %}
@@ -7,3 +8,4 @@
         {% endif %}
     {% endfor -%}
 </ul>
+{% endif %}
