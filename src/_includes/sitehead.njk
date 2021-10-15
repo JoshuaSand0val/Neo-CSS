@@ -5,7 +5,7 @@
             <h4><em>{{ metadata.subtitle }}</em></h3>
         </a>
         <nav id="sitehead-nav">
-            {%- for name, link in nav.sitehead -%}
+            {%- for name, link in navdata.sitehead -%}
                 <a href="{{ link }}" {% if page.url == link %} aria-current="page"{% endif %}>{{ name }}</a>
             {%- endfor -%}
         </nav>
@@ -15,6 +15,7 @@
 <script>
     var header = document.getElementById("sitehead");
     var headroom  = new Headroom(header, {
+        offset: header.offsetHeight,
         classes : {
             unpinned : "hidden"
         },
