@@ -7,6 +7,12 @@
     "sitefoot": {
 		"Home": "/",
 		"Neo CSS API": "/api/",
-		"v1 toolkit docs": "/tools/"
-	}
+		"V1 Toolkit Docs": "/tools/"
+	},
+    "api": {
+        "API": "/api/",
+        "Variables": "/api/variables/",
+        "Functions": "/api/functions/",
+        "Mixins": "/api/mixins/"
+    }
 }
