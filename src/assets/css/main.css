@@ -949,3 +949,8 @@ b, strong {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #18181C;
 }
+
+#_404 #sitecontent {
+  text-align: center;
+  margin: auto;
+}

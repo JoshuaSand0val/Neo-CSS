@@ -1,0 +1,8 @@
+// 404: Styles that effect the "Not Found" page.
+
+@use "../api" as *;
+
+#_404 #sitecontent {
+    text-align: center;
+    margin: auto;
+}
