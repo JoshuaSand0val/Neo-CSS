@@ -51,7 +51,7 @@ To begin using it, link the entry file with `@use`:
 @use "../Neo-CSS/scss/neo-api" as *;
 ```
 
-[Learn more about the API.](/api/)
+[Learn more about the API.]({{ '/api/' | url }})
 
 ## Acknowledgment
 Neo CSS was built by Joshua Elijah Sandoval.
