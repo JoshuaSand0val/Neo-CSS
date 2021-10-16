@@ -1,8 +1,0 @@
-// Tools/math.scss: Helper tools to perform calculations.
-
-@use "sass:math" as MATH;
-
-// Steps $value up/down based on $ratio.
-@function step($value, $ratio, $step) {
-    @return $value * MATH.pow($ratio, $step);
-}
