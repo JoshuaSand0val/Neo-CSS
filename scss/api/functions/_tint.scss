@@ -1,0 +1,7 @@
+// Tint: Lightens $color by $perc.
+
+@use "../sass" as *;
+
+@function tint($color, $perc) {
+    @return COLOR-adjust($color, $lightness: +$perc);
+}

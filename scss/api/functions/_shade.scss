@@ -1,0 +1,7 @@
+// Shade: Darkens $color by $perc.
+
+@use "../sass" as *;
+
+@function shade($color, $perc) {
+    @return COLOR-adjust($color, $lightness: -$perc);
+}

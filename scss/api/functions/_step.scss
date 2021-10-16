@@ -1,0 +1,7 @@
+// Step: Steps $value up/down based on $ratio.
+
+@use "../sass" as *;
+
+@function step($value, $ratio, $step) {
+    @return $value * MATH-pow($ratio, $step);
+}

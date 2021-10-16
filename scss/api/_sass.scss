@@ -1,0 +1,8 @@
+// Sass: Sass language built-in modules forwarded.
+@forward "sass:color" as COLOR-*;
+@forward "sass:list" as LIST-*;
+@forward "sass:map" as MAP-*;
+@forward "sass:math" as MATH-*;
+@forward "sass:meta" as META-*;
+@forward "sass:selector" as SELECTOR-*;
+@forward "sass:string" as STRING-*;

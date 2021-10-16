@@ -1,9 +1,6 @@
-// Presets/form.scss: Presets to HTML form elements.
+// Form: Presets to HTML form elements.
 
-@use "../tools/gui.scss" as gui;
-@use "../tools/palette.scss" as palette;
-@use "../tools/spacing.scss" as spacing;
-@use "../tools/text.scss" as text;
+@use "../api/" as *;
 
 // Form formatting:
 
@@ -14,7 +11,7 @@ fieldset {
 }
 
 legend {
-    font-size: text.size(1);
+    font-size: font-size(1);
 }
 
 label {
@@ -24,40 +21,40 @@ label {
 // Basic input types:
 
 %textfield, %button, textarea, select {
-    background-color: palette.get("white");
-    color: palette.text("black", "white");
-    border: 1px solid palette.accessible("gray", "white", 3);
-    border-radius: gui.$radius-tiny;
-    padding: spacing.px(4) spacing.px(6);
+    background-color: $white;
+    color: text-color($black, $white);
+    border: 1px solid accessible($gray, $white, 3);
+    border-radius: $radius-xs;
+    padding: px(4) px(6);
 }
 
 // Input states:
 
 :invalid:focus {
-    border-color: palette.accessible("red", "white", 3);
+    border-color: accessible($red, $white, 3);
 }
 
 :disabled {
-    color: palette.text("gray", "white");
+    color: text-color($gray, $white);
 }
 
 // Button input:
 
 %button {
-    font-weight: text.$weight-bold;
-    background-color: palette.step("white", 1);
-    color: palette.text("black", palette.step("white", 1));
-    padding: spacing.px(4) spacing.px(12);
+    font-weight: $weight-bold;
+    background-color: step-color($white, 1);
+    color: text-color($black, step-color($white, 1));
+    padding: px(4) px(12);
     cursor: pointer;
 }
 
 // Select arrow:
 
 select {
-    padding-right: spacing.px(24);
+    padding-right: px(24);
     background-repeat: no-repeat;
-    background-position: right spacing.px(4) center;
-    background-size: spacing.px(16) spacing.px(16);
+    background-position: right px(4) center;
+    background-size: px(16) px(16);
     background-image: url("data:image/svg+xml, \
     %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E \
     %3Cpath d='M 3,4 8,12 13,4 Z' fill='%23000'/%3E \

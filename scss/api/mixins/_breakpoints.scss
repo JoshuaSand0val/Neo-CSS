@@ -1,0 +1,14 @@
+// Breakpoints: Scales $properties across the viewport breakpoints.
+
+@use "../variables/" as *;
+@use "../sass" as *;
+@use "declare" as *;
+@use "min-vw" as *;
+
+@mixin breakpoints($properties, $values...) {
+    @for $i from 1 through LIST-length($values) {
+        @include min-vw(LIST-nth($breakpoints, $i)) {
+            @include declare($properties, LIST-nth($values, $i));
+        }
+    }
+}
