@@ -83,6 +83,9 @@
         width: 100%;
         min-width: 0;
         overflow-x: auto;
+        @include max-vw($md) {
+            font-size: font-size(-1);
+        }
     }
 
     thead {
@@ -95,8 +98,10 @@
 
     th, td {
         width: 1%;
-        min-width: $xs;
+        min-width: 100px;
+        max-width: $sm;
         vertical-align: top;
-        padding: size(-1) size(-2);
+        white-space: normal;
+        padding: size(-1) px(4);
     }
 }
