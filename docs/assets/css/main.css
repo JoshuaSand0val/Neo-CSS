@@ -649,30 +649,37 @@ b, strong {
 .markdown {
   display: block;
   max-width: 1440.5px;
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 @media (min-width: 0px) {
   .markdown {
-    padding: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
 @media (min-width: 300.5px) {
   .markdown {
-    padding: 1.33rem;
+    padding-right: 1.33rem;
+    padding-left: 1.33rem;
+    margin-top: 1.33rem;
+    margin-bottom: 1.33rem;
   }
 }
 @media (min-width: 640.5px) {
   .markdown {
-    padding: 1.7689rem;
+    padding-right: 1.7689rem;
+    padding-left: 1.7689rem;
+    margin-top: 1.7689rem;
+    margin-bottom: 1.7689rem;
   }
 }
 .markdown > :not(img) {
   display: block;
   max-width: 980.5px;
   margin: 1.5rem auto;
-}
-.markdown > :first-child {
-  margin-top: 0;
 }
 .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
   margin: 0.75rem auto;
@@ -740,6 +747,7 @@ b, strong {
   border-radius: 3px;
 }
 .markdown hr {
+  width: 90%;
   max-width: 640.5px;
   margin: 3rem auto;
 }
@@ -749,6 +757,11 @@ b, strong {
   min-width: 0;
   overflow-x: auto;
 }
+@media (max-width: 640.5px) {
+  .markdown table {
+    font-size: 0.8888888889rem;
+  }
+}
 .markdown thead {
   border-bottom: 2px solid #18181C;
 }
@@ -757,9 +770,11 @@ b, strong {
 }
 .markdown th, .markdown td {
   width: 1%;
-  min-width: 180.5px;
+  min-width: 100px;
+  max-width: 300.5px;
   vertical-align: top;
-  padding: 0.7518796992rem 0.5653230821rem;
+  white-space: normal;
+  padding: 0.7518796992rem 0.25rem;
 }
 
 #nav {
@@ -829,7 +844,7 @@ b, strong {
   transition: all 300ms ease-out;
   background-color: #EBEBEF;
   border-bottom: 1px solid #c9c9d4;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   overflow: visible;
 }
 @media (min-height: 480px), (min-width: 980.5px) {
@@ -856,21 +871,21 @@ b, strong {
 
 #sitehead-title {
   display: block;
-  flex: 0 0 auto;
-  padding: 0.5653230821rem;
+  flex: 0 1 auto;
   color: #5f676d;
+  padding: 0.5rem;
 }
 #sitehead-title h2, #sitehead-title h4 {
   margin: 0;
 }
 #sitehead-title h2 {
   color: #a44e0e;
-  font-size: 1.6018066406rem;
+  font-size: 1.423828125rem;
   font-weight: 600;
 }
 #sitehead-title h4 {
   color: #18181C;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -878,13 +893,13 @@ b, strong {
   display: flex;
   flex-flow: row wrap;
   align-self: flex-end;
-  font-size: 1.125rem;
+  flex: 0 0 auto;
   margin-left: auto;
 }
 #sitehead-nav a {
   display: block;
   color: #5f676d;
-  padding: 0.5653230821rem;
+  padding: 0.5rem;
 }
 #sitehead-nav a:hover, #sitehead-nav a:focus, #sitehead-nav a[aria-current=page] {
   color: #18181C;
@@ -933,4 +948,9 @@ b, strong {
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #18181C;
+}
+
+#_404 #sitecontent {
+  text-align: center;
+  margin: auto;
 }

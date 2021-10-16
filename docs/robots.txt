@@ -1,0 +1,7 @@
+Sitemap: https://joshuasand0val.github.io/Neo-CSS/sitemap.xml
+
+User-agent: *
+Disallow:
+
+User-agent: Googlebot-Image
+Disallow: /
