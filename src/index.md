@@ -15,7 +15,7 @@ $ git clone https://github.com/JoshuaSand0val/Neo-CSS.git
 ## What does Neo CSS do?
 - Provides new CSS in addition to [normalize.css](https://github.com/necolas/normalize.css/) to fix additional problems with browser CSS.
 - Provides a consistent styled baseline for all elements.
-- Provides easy to use [API](/api/) to allow for effortless extension.
+- Provides easy to use [API]({{ '/api/' | url }}) to allow for effortless extension.
 - Provides a modular design to allow developer choice in what components are included in compile.
 
 ## Getting started with Neo CSS
