@@ -747,6 +747,7 @@ b, strong {
   border-radius: 3px;
 }
 .markdown hr {
+  width: 90%;
   max-width: 640.5px;
   margin: 3rem auto;
 }
