@@ -7,7 +7,7 @@
     "sitefoot": {
 		"Home": "/",
 		"Neo CSS API": "/api/",
-		"V1 Toolkit Docs": "/tools/"
+		"Back To Top": "#"
 	},
     "api": {
         "API": "/api/",
