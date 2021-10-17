@@ -1,4 +1,4 @@
-Sitemap: https://joshuasand0val.github.io/Neo-CSS/sitemap.xml
+Sitemap: https://neo.joshuasandoval.me/sitemap.xml
 
 User-agent: *
 Disallow:
