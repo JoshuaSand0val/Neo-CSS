@@ -10,11 +10,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/assets/js/");
 	// Add year shortcode, used for copyright.
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-	// Add URL prefix for Github pages.
 	// Add custom includes and layouts directories.
 	// Change output directory to docs, and input to src.
 	return {
-		pathPrefix: "/Neo-CSS/",
 		dir: {
 			includes: "_includes",
 			layouts: "_layouts",
