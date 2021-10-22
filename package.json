@@ -1,5 +1,5 @@
 {
-	"name": "neo-css",
+	"name": "@joshuasand0val/neo-css",
 	"version": "2.0.0",
 	"description": "A modern, modular and extensible CSS boilerplate built with SASS/SCSS.",
 	"keywords": [
@@ -23,6 +23,6 @@
 		"url": "git://github.com/JoshuaSand0val/Neo-CSS.git"
 	},
 	"publishConfig": {
-		"registry": "https://npm.pkg.github.com"
+		"registry": "https://npm.pkg.github.com/joshuasand0val"
 	}
 }
