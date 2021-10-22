@@ -1,0 +1,28 @@
+{
+	"name": "neo-css",
+	"version": "2.0.0",
+	"description": "A modern, modular and extensible CSS boilerplate built with SASS/SCSS.",
+	"keywords": [
+		"Neo CSS",
+		"CSS Boilerplate",
+		"SCSS",
+		"CSS"
+	],
+	"homepage": "https://joshuasand0val.github.io/Neo-CSS/",
+	"license": "MIT",
+	"author": "Joshua Elijah Sandoval",
+	"files": [
+		"scss",
+		"LICENSE.md",
+		"README.md"
+	],
+	"main": "scss/neo.scss",
+	"style": "scss/neo.scss",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/JoshuaSand0val/Neo-CSS.git"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	}
+}
