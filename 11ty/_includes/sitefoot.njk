@@ -10,7 +10,7 @@
         <nav id="footer-nav">
             <h4>Navigation</h4>
             {%- for name, link in nav.footer -%}
-                <a href="{{ link | url }}" {% if page.url == link %} aria-current="page"{% endif %}>{{ name }}</a>
+            <a href="{{ link | url }}" {% if page.url == link %} aria-current="page"{% endif %}>{{ name }}</a>
             {%- endfor -%}
         </nav>
     </div>

@@ -6,7 +6,7 @@
         </a>
         <nav id="header-nav">
             {%- for name, link in nav.header -%}
-                <a href="{{ link | url }}" {% if page.url == link %} aria-current="page"{% endif %}>{{ name }}</a>
+            <a href="{{ link | url }}" {% if page.url == link %} aria-current="page"{% endif %}>{{ name }}</a>
             {%- endfor -%}
         </nav>
     </div>
