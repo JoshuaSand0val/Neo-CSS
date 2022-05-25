@@ -1,6 +1,6 @@
 {% if chapterNavigation %}
 <ul class="chapter-navigation">
-{%- for name, link in chapterNavigation or nav[chapterNavigation] %}
+{%- for name, link in nav[chapterNavigation] or chapterNavigation %}
     {% if page.url == link %}
     <li><a href="{{ link | url }}" aria-current="page"><b>{{ name }}</b></a></li>
     {% else %}
