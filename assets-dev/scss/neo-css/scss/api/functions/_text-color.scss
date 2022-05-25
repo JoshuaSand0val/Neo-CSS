@@ -1,8 +1,0 @@
-// Text Color: Adjusts $color1 contrast to be legible on $color2.
-
-@use "../variables/" as *;
-@use "accessible" as *;
-
-@function text-color($color1, $color2, $ratio: $contrast-text-ratio) {
-    @return accessible($color1, $color2, $ratio);
-}

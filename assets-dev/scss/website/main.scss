@@ -1,7 +1,7 @@
 // Main: Main stylesheet for the website.
 
 // Forward boilerplate...
-@forward "../neo-css/scss/neo" with (
+@forward "api" with (
     $font: #{'Merriweather Sans', sans-serif},
     $font-heading: #{'Merriweather', serif}
 );

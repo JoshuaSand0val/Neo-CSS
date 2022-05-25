@@ -1,7 +1,0 @@
-// Inset: Set CSS top, right, bottom, left to $value.
-
-@use "declare" as *;
-
-@mixin inset($value) {
-    @include declare(top right bottom left, $value);
-}

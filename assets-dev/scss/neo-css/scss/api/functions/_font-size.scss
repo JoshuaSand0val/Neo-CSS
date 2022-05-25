@@ -1,8 +1,0 @@
-// Font Size: Scales font based on $step.
-
-@use "../variables/" as *;
-@use "step" as *;
-
-@function font-size($step) {
-    @return step($font-size, $font-size-ratio, $step);
-}
