@@ -3,9 +3,11 @@
 @use "../api" as *;
 
 .layout-page {
+    position: absolute;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
+    @include inset(0);
 }
 
 #header,
