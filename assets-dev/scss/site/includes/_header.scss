@@ -1,8 +1,8 @@
-// Sitehead: Styles for the global site header.
+// Header: Styles for the global site header.
 
 @use "../api" as *;
 
-#sitehead {
+#header {
 	position: relative;
 	transition: all 300ms ease-out;
 	background-color: $white;
@@ -21,7 +21,7 @@
 	}
 }
 
-#sitehead-wrapper {
+#header-wrapper {
 	display: flex;
 	flex-flow: row wrap;
 	max-width: $lg;
@@ -30,7 +30,7 @@
 	margin: auto;
 }
 
-#sitehead-title {
+#header-title {
 	display: block;
 	flex: 0 1 auto;
 	color: text-color($gray, $white);
@@ -50,7 +50,7 @@
 	}
 }
 
-#sitehead-nav {
+#header-nav {
 	display: flex;
 	flex-flow: row wrap;
 	align-self: flex-end;
