@@ -1,7 +1,7 @@
 ---
 title: API Mixins
 layout: post.njk
-nav: api
+chapterNavigation: api
 ---
 
 # API Mixins

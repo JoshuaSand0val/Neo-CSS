@@ -1,7 +1,7 @@
 ---
 title: API Functions
 layout: post.njk
-nav: api
+chapterNavigation: api
 ---
 
 # API Functions

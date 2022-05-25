@@ -1,7 +1,7 @@
 ---
 title: API
 layout: post.njk
-nav: api
+chapterNavigation: api
 ---
 
 # Supercharge your CSS with the Neo CSS API.
