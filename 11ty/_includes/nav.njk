@@ -1,6 +1,6 @@
-{% if navdata[nav] %}
-<ul id="nav">
-    {%- for name, link in navdata[nav] %}
+{% if indexLinks %}
+<ul class="index-links">
+    {%- for name, link in indexLinks or nav[indexLinks] %}
         {% if page.url == link %}
             <li><a href="{{ link | url }}" aria-current="page"><b>{{ name }}</b></a></li>
         {% else %}
