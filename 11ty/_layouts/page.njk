@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html id="{{ rootID }}">
-    <head>
-        {% include "../_includes/htmlhead.njk" %}
-    </head>
-    <body id="page">
-        {% include "../_includes/sitehead.njk" %}
-        <main id="sitecontent">
-            {{ content | safe }}
-        </main>
-        {% include "../_includes/sitefoot.njk" %}
-    </body>
-</html>
+---
+layout: base
+---
+<div class="page">
+    {% include "header.njk" %}
+    <div class="page-content">
+        {{ content | safe }}
+    </div>
+    {% include "footer.njk" %}
+</div>

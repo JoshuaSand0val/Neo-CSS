@@ -1,8 +1,9 @@
 ---
-layout: page.njk
+layout: page
 ---
-
-<div class="markdown">
-    {% include "../_includes/nav.njk" %}
-    {{ content | safe }}
+<div class="post">
+    {% include "nav.njk" %}
+    <div class="markdown">
+        {{ content | safe }}
+    </div>
 </div>
