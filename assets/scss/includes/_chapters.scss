@@ -1,0 +1,20 @@
+// Chapters: Styles for quick chapter links at the top of a page.
+
+@use "../api" as *;
+
+.chapters {
+    display: block;
+    text-align: center;
+    max-width: $lg;
+    padding: 0;
+    margin: size(0) auto;
+}
+
+.chapters > :not(:first-child)::before {
+    content: "\2022\00a0";
+}
+
+.chapters a[aria-current="page"] {
+    color: text-color($black, $white);
+    font-weight: $weight-bold;
+}

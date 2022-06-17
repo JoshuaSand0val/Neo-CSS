@@ -1,0 +1,15 @@
+{% if chapters %}
+<nav class="chapters">
+{%- for name, link in chapters %}
+    {% if page.url == link %}
+    <span>
+        <a href="{{ link | url }}" aria-current="page"><b>{{ name }}</b></a>
+    </span>
+    {% else %}
+    <span>
+        <a href="{{ link | url }}">{{ name }}</a>
+    </span>
+    {% endif %}
+{% endfor -%}
+</nav>
+{% endif %}

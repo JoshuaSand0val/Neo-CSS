@@ -1,7 +1,5 @@
 ---
 title: API Variables
-layout: post.njk
-chapterNavigation: api
 ---
 
 # API Variables

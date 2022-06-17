@@ -1,7 +1,5 @@
 ---
 title: API Built-In SASS Modules
-layout: post.njk
-chapterNavigation: api
 ---
 
 # API Built-In SASS Modules

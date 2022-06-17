@@ -775,7 +775,7 @@ b, strong {
   padding: 0.7518796992rem 0.25rem;
 }
 
-.chapter-navigation {
+.chapters {
   display: block;
   text-align: center;
   max-width: 980.5px;
@@ -783,14 +783,11 @@ b, strong {
   margin: 1rem auto;
 }
 
-.chapter-navigation li {
-  display: inline;
-}
-.chapter-navigation li::before {
+.chapters > :not(:first-child)::before {
   content: "• ";
 }
 
-.chapter-navigation a[aria-current=page] {
+.chapters a[aria-current=page] {
   color: #18181C;
   font-weight: 600;
 }

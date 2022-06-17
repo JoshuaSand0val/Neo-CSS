@@ -1,7 +1,5 @@
 ---
 title: API Functions
-layout: post.njk
-chapterNavigation: api
 ---
 
 # API Functions
