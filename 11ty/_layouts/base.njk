@@ -2,23 +2,23 @@
 <html lang="en-US" class="{{ HTMLClass }}">
     <head>
         <!-- Title and character set: -->
-        <title>{{ title }}{% if page.url != '/' %} | {{ meta.site.title }}{% endif %}</title>
+        <title>{{ title }}{% if page.url != '/' %} | {{ code.title }}{% endif %}</title>
         <meta charset="UTF-8" />
         <!-- Metadata: -->
-        <meta name="description" content="{{ description or meta.site.description }}" />
-        <meta name="author" content="{{ author or meta.site.author }}" />
+        <meta name="description" content="{{ description or code.description }}" />
+        <meta name="author" content="{{ author or code.author }}" />
         <!-- Open Graph: -->
         <meta property="og:title" content="{{ title }}" />
-        <meta property="og:site_name" content="{{ meta.site.title }}" />
+        <meta property="og:site_name" content="{{ code.title }}" />
         <meta property="og:type" content="{{ 'website' or openGraphType }}" />
         <meta property="og:image" content="{{ '/assets/images/logo/opengraph.png' | url }}" />
-        <meta property="og:url" content="{{ [meta.site.url, page.url] | join | trimURLslashes | url }}" />
+        <meta property="og:url" content="{{ [code.website, page.url] | join | trimURLslashes | url }}" />
         <!-- Viewport: -->
         <meta name="disabled-adaptations" content="watch" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         {% if (noIndex != true) %}
         <!-- Canonical URL: -->
-        <link rel="canonical" href="{{ [meta.site.url, page.url] | join | trimURLslashes | url }}" />
+        <link rel="canonical" href="{{ [code.website, page.url] | join | trimURLslashes | url }}" />
         {% endif %}
         {% if (noIndex == true) %}
         <!-- Do not index this page: -->
