@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en-US" class="{{ HTMLClass }}">
+<html lang="en-US">
     <head>
         <!-- Title and character set: -->
-        <title>{{ title }}{% if page.url != '/' %} | {{ code.title }}{% endif %}</title>
+        <title>{{ title }}{% if page.url != '/' %} | {{ site.title }}{% endif %}</title>
         <meta charset="UTF-8" />
         <!-- Metadata: -->
-        <meta name="description" content="{{ description or code.description }}" />
-        <meta name="author" content="{{ author or code.author }}" />
+        <meta name="description" content="{{ description or site.description }}" />
+        <meta name="author" content="{{ author or site.author }}" />
         <!-- Open Graph: -->
         <meta property="og:title" content="{{ title }}" />
-        <meta property="og:site_name" content="{{ code.title }}" />
+        <meta property="og:site_name" content="{{ site.title }}" />
         <meta property="og:type" content="{{ 'website' or openGraphType }}" />
         <meta property="og:image" content="{{ '/assets/images/logo/opengraph.png' | url }}" />
-        <meta property="og:url" content="{{ [code.website, page.url] | join | trimURLslashes | url }}" />
+        <meta property="og:url" content="{{ [site.url, page.url] | join | trimURLslashes | url }}" />
         <!-- Viewport: -->
         <meta name="disabled-adaptations" content="watch" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-        {% if (noIndex != true) %}
+        {% if (eleventyExcludeFromCollections != true) %}
         <!-- Canonical URL: -->
-        <link rel="canonical" href="{{ [code.website, page.url] | join | trimURLslashes | url }}" />
+        <link rel="canonical" href="{{ [site.url, page.url] | join | trimURLslashes | url }}" />
         {% endif %}
-        {% if (noIndex == true) %}
+        {% if (eleventyExcludeFromCollections == true) %}
         <!-- Do not index this page: -->
         <meta name="robots" content="noindex">
         {% endif %}

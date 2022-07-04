@@ -1,11 +1,11 @@
 <header id="header">
     <div id="header-wrapper">
         <a href="{{ '/' | url }}" id="header-title">
-            <h2>{{ code.title }}</h2>
-            <h4><em>{{ code.subtitle }}</em></h3>
+            <h2>{{ site.title }}</h2>
+            <h4><em>{{ site.subtitle }}</em></h3>
         </a>
         <nav id="header-nav">
-            {%- for name, link in nav.header -%}
+            {%- for name, link in navigation.header -%}
             <a href="{{ link | url }}" {% if page.url == link %} aria-current="page"{% endif %}>{{ name }}</a>
             {%- endfor -%}
         </nav>
