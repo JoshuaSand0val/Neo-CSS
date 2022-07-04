@@ -1,0 +1,30 @@
+// Base: Styles that effect the base layout.
+
+@use "../api" as *;
+
+@mixin palette($bg-color) {
+    @each $name, $color in $colors {
+        #{--#{$name}}: text-color($color, $bg-color);
+    }
+    #{--bg-color}: $bg-color;
+    #{--color}: if(
+        COLOR-lightness($bg-color) > 50,
+        var(--black), var(--white)
+    );
+}
+
+:root {
+    @include palette($white);
+    @include dark {
+        @include palette($black);
+    }
+}
+
+html {
+    background-color: var(--bg-color);
+    color: var(--color);
+}
+
+a, a:hover, a:focus, a:active {
+    color: var(--blue);
+}
