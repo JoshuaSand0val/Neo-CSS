@@ -1,11 +1,6 @@
 {
-    "title": "Neo CSS",
-    "subtitle": "Modern CSS Boilerplate",
-    "description": "A modern, modular and extensible CSS boilerplate built with SASS/SCSS.",
-    "author": "Joshua Elijah Sandoval",
-    "website": "https://neo.joshuasandoval.me/",
-    "version": "v2.0.0",
     "github": "https://github.com/JoshuaSand0val/Neo-CSS/",
+    "version": "v2.0.0",
     "license": {
         "type": "MIT",
         "url": "https://choosealicense.com/licenses/mit/"
