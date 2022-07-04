@@ -5,21 +5,15 @@
 .markdown {
     display: block;
     max-width: $xxl;
-    @include declare(margin-right margin-left, auto);
-    @include breakpoints(
-        padding-right padding-left
-        margin-top margin-bottom,
+    margin: 0 auto;
+    @include breakpoints(padding,
         size(0), size(1), size(2)
     );
 
-    & > :not(img) {
+    & > * {
         display: block;
-        max-width: $lg;
+        max-width: $xl;
         margin: px(24) auto;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        margin: px(12) auto;
     }
 
     h1 {
@@ -42,10 +36,9 @@
     }
 
     code {
-        background-color: step-color($white, 1);
-        color: text-color($orange, step-color($white, 1));
-        border-radius: $radius-xs;
-        padding: px(2) px(4);
+        color: var(--pink);
+        padding: px(1) px(3);
+        hyphens: none;
     }
 
     pre {
@@ -53,35 +46,86 @@
         color: text-color($white, $black);
         border: 1px solid step-color($black, 3);
         border-radius: $radius-xs;
+        box-shadow:
+            inset 2px 2px 4px shade($black, 5%),
+            inset -2px -2px 4px tint($black, 5%);
         padding: size(0);
     }
 
     pre code {
         background-color: transparent;
         color: inherit;
+        tab-size: 4;
         padding: 0;
+    }
+
+    pre code {
+        // Syntax highlighting for code blocks using Prism.js:
+        .comment, .prolog, .doctype, .cdata {
+           color: text-color($gray, $black);
+        }
+        
+        .namespace {
+           opacity: 0.66;
+        }
+        
+        .property, .tag, .constant, .symbol,
+        .deleted {
+           color: text-color($pink, $black);
+        }
+        
+        .boolean, .number {
+           color: text-color($purple, $black);
+        }
+        
+        .selector, .attr-name, .string, .char,
+        .builtin, .inserted {
+           color: text-color($green, $black);
+        }
+        
+        .atrule, .attr-value, .function, .class-name {
+           color: text-color($yellow, $black);
+        }
+        
+        .keyword {
+           color: text-color($cyan, $black);
+        }
+        
+        .regex, .important {
+           color: text-color($orange, $black);
+        }
+
+        .important, .bold {
+           font-weight: bold;
+        }
+  
+        .italic {
+           font-style: italic;
+        }
     }
 
     blockquote {
         background-color: step-color($white, 1);
         border-left: 3px solid accessible($gray, $white, 2);
         padding: size(0) size(1);
+        @include dark {
+            background-color: step-color($black, 1);
+            border-left-color: accessible($gray, $black, 2);
+        }
     }
 
     img {
-        width: 100%;
         border-radius: $radius-xs;
     }
 
     hr {
-        width: 90%;
+        width: 80%;
         max-width: $md;
         margin: px(48) auto;
     }
 
     table {
-        display: block;
-        width: 100%;
+        max-width: $xxl;
         min-width: 0;
         overflow-x: auto;
         @include max-vw($md) {
@@ -91,10 +135,16 @@
 
     thead {
         border-bottom: 2px solid text-color($black, $white);
+        @include dark {
+            border-bottom-color: text-color($white, $black);
+        }
     }
 
     tr {
         border-bottom: 1px solid step-color($white, 3);
+        @include dark {
+            border-bottom-color: step-color($black, 3);
+        }
     }
 
     th, td {
