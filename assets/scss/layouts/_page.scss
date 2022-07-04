@@ -1,8 +1,8 @@
-// Page: Styles that effect the base page layout.
+// Page: Styles that effect the page type layout.
 
 @use "../api" as *;
 
-.layout-page {
+#layout-page {
     position: absolute;
     display: flex;
     flex-flow: column nowrap;
@@ -10,17 +10,16 @@
     @include inset(0);
 }
 
-#header,
-#footer,
-.layout-page-content {
+#header, #footer,
+#layout-page-content {
     display: block;
     width: 100%;
     flex: 0 0 auto;
 }
 
-.layout-page-content {
+#layout-page-content {
     display: block;
+    flex: 1 0 auto;
     padding: $safe-x;
-    max-width: $xxl;
-    margin: 0 auto auto;
+    margin: 0 auto;
 }
