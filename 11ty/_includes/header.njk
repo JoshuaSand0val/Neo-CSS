@@ -12,6 +12,7 @@
     </div>
 </header>
 <script>
+document.addEventListener("DOMContentLoaded", function() {
     var header = document.getElementById("header");
     var headroom  = new Headroom(header, {
         offset: header.offsetHeight,
@@ -20,4 +21,5 @@
         },
     });
     headroom.init();
+});
 </script>
