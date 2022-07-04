@@ -1,3 +1,4 @@
 // Layouts: Forwarded styles for website layout includes.
+@forward "base";
+@forward "error";
 @forward "page";
-@forward "webkit-scrollbar";
