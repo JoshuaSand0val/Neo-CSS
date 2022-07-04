@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import url("https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -9,10 +8,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -47,12 +44,9 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -60,10 +54,8 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -80,12 +72,9 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -103,10 +92,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -156,14 +143,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -171,8 +154,7 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -181,8 +163,7 @@ input {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -231,18 +212,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -265,10 +240,8 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
@@ -284,10 +257,8 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -302,10 +273,8 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /* Interactive
@@ -647,40 +616,27 @@ b, strong {
 .markdown {
   display: block;
   max-width: 1440.5px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 }
 @media (min-width: 0px) {
   .markdown {
-    padding-right: 1rem;
-    padding-left: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding: 1rem;
   }
 }
 @media (min-width: 300.5px) {
   .markdown {
-    padding-right: 1.33rem;
-    padding-left: 1.33rem;
-    margin-top: 1.33rem;
-    margin-bottom: 1.33rem;
+    padding: 1.33rem;
   }
 }
 @media (min-width: 640.5px) {
   .markdown {
-    padding-right: 1.7689rem;
-    padding-left: 1.7689rem;
-    margin-top: 1.7689rem;
-    margin-bottom: 1.7689rem;
+    padding: 1.7689rem;
   }
 }
-.markdown > :not(img) {
+.markdown > * {
   display: block;
-  max-width: 980.5px;
+  max-width: 1280.5px;
   margin: 1.5rem auto;
-}
-.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
-  margin: 0.75rem auto;
 }
 @media (min-width: 0px) {
   .markdown h1 {
@@ -718,40 +674,77 @@ b, strong {
   }
 }
 .markdown code {
-  background-color: #e0e0e6;
-  color: #9b4a0d;
-  border-radius: 3px;
-  padding: 0.125rem 0.25rem;
+  color: var(--pink);
+  padding: 0.0625rem 0.1875rem;
+  hyphens: none;
 }
 .markdown pre {
   background-color: #18181C;
   color: #EBEBEF;
   border: 1px solid #303037;
   border-radius: 3px;
+  box-shadow: inset 2px 2px 4px #0c0c0e, inset -2px -2px 4px #24242a;
   padding: 1rem;
 }
 .markdown pre code {
   background-color: transparent;
   color: inherit;
+  tab-size: 4;
   padding: 0;
+}
+.markdown pre code .comment, .markdown pre code .prolog, .markdown pre code .doctype, .markdown pre code .cdata {
+  color: #7c868d;
+}
+.markdown pre code .namespace {
+  opacity: 0.66;
+}
+.markdown pre code .property, .markdown pre code .tag, .markdown pre code .constant, .markdown pre code .symbol,
+.markdown pre code .deleted {
+  color: #F47C98;
+}
+.markdown pre code .boolean, .markdown pre code .number {
+  color: #b759ee;
+}
+.markdown pre code .selector, .markdown pre code .attr-name, .markdown pre code .string, .markdown pre code .char,
+.markdown pre code .builtin, .markdown pre code .inserted {
+  color: #74bf80;
+}
+.markdown pre code .atrule, .markdown pre code .attr-value, .markdown pre code .function, .markdown pre code .class-name {
+  color: #FFCB47;
+}
+.markdown pre code .keyword {
+  color: #6bcee7;
+}
+.markdown pre code .regex, .markdown pre code .important {
+  color: #EE8434;
+}
+.markdown pre code .important, .markdown pre code .bold {
+  font-weight: bold;
+}
+.markdown pre code .italic {
+  font-style: italic;
 }
 .markdown blockquote {
   background-color: #e0e0e6;
   border-left: 3px solid #727C83;
   padding: 1rem 1.33rem;
 }
+@media (prefers-color-scheme: dark) {
+  .markdown blockquote {
+    background-color: #212127;
+    border-left-color: #727C83;
+  }
+}
 .markdown img {
-  width: 100%;
   border-radius: 3px;
 }
 .markdown hr {
-  width: 90%;
+  width: 80%;
   max-width: 640.5px;
   margin: 3rem auto;
 }
 .markdown table {
-  display: block;
-  width: 100%;
+  max-width: 1440.5px;
   min-width: 0;
   overflow-x: auto;
 }
@@ -763,8 +756,18 @@ b, strong {
 .markdown thead {
   border-bottom: 2px solid #18181C;
 }
+@media (prefers-color-scheme: dark) {
+  .markdown thead {
+    border-bottom-color: #EBEBEF;
+  }
+}
 .markdown tr {
   border-bottom: 1px solid #c9c9d4;
+}
+@media (prefers-color-scheme: dark) {
+  .markdown tr {
+    border-bottom-color: #303037;
+  }
 }
 .markdown th, .markdown td {
   width: 1%;
@@ -777,18 +780,32 @@ b, strong {
 
 .chapters {
   display: block;
+  border-width: 1px 0;
+  border-style: dashed;
+  border-color: #c9c9d4;
+  list-style: none;
   text-align: center;
-  max-width: 980.5px;
-  padding: 0;
-  margin: 1rem auto;
+  padding: 1.33rem;
+  margin: 0 auto;
+}
+@media (prefers-color-scheme: dark) {
+  .chapters {
+    border-color: #303037;
+  }
 }
 
 .chapters > :not(:first-child)::before {
   content: "• ";
+  display: inline-block;
+  margin: 0 0.375rem;
+}
+
+.chapters li {
+  display: inline;
 }
 
 .chapters a[aria-current=page] {
-  color: #18181C;
+  color: inherit;
   font-weight: 600;
 }
 
@@ -797,6 +814,11 @@ b, strong {
   background-color: #18181C;
   color: #EBEBEF;
   padding: 1rem 1.33rem 4.1615795893rem;
+}
+@media (prefers-color-scheme: dark) {
+  #footer {
+    background-color: #131317;
+  }
 }
 
 #footer-wrapper {
@@ -837,10 +859,15 @@ b, strong {
 #header {
   position: relative;
   transition: all 300ms ease-out;
-  background-color: #EBEBEF;
-  border-bottom: 1px solid #c9c9d4;
+  background-color: var(--bg-color);
+  box-shadow: 2px 0 4px 2px #727C83;
   padding: 0.5rem 1rem;
   overflow: visible;
+}
+@media (prefers-color-scheme: dark) {
+  #header {
+    box-shadow: 2px 0 4px 2px #000;
+  }
 }
 @media (min-height: 480px), (min-width: 980.5px) {
   #header {
@@ -867,19 +894,19 @@ b, strong {
 #header-title {
   display: block;
   flex: 0 1 auto;
-  color: #5f676d;
+  color: var(--gray);
   padding: 0.5rem;
 }
 #header-title h2, #header-title h4 {
   margin: 0;
 }
 #header-title h2 {
-  color: #a44e0e;
+  color: var(--orange);
   font-size: 1.423828125rem;
   font-weight: 600;
 }
 #header-title h4 {
-  color: #18181C;
+  color: var(--color);
   font-size: 1rem;
   font-weight: 400;
 }
@@ -893,17 +920,117 @@ b, strong {
 }
 #header-nav a {
   display: block;
-  color: #5f676d;
+  color: var(--gray);
   padding: 0.5rem;
 }
 #header-nav a:hover, #header-nav a:focus, #header-nav a[aria-current=page] {
-  color: #18181C;
+  color: var(--color);
 }
 #header-nav a:active {
-  color: #3a6a8b;
+  color: var(--blue);
 }
 
-.layout-page {
+:root {
+  --white: #66667f;
+  --black: #18181C;
+  --gray: #5f676d;
+  --red: #cb1815;
+  --orange: #a44e0e;
+  --yellow: #845f00;
+  --brown: #84613d;
+  --green: #377741;
+  --blue: #3a6a8b;
+  --teal: #217169;
+  --cyan: #166e85;
+  --purple: #9f22e8;
+  --indigo: #655cad;
+  --pink: #d0113e;
+  --bg-color: #EBEBEF;
+  --color: var(--black);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #EBEBEF;
+    --black: #818193;
+    --gray: #7c868d;
+    --red: #EF6461;
+    --orange: #EE8434;
+    --yellow: #FFCB47;
+    --brown: #BB946C;
+    --green: #74bf80;
+    --blue: #5490b8;
+    --teal: #2a9186;
+    --cyan: #6bcee7;
+    --purple: #b759ee;
+    --indigo: #9892C8;
+    --pink: #F47C98;
+    --bg-color: #18181C;
+    --color: var(--white);
+  }
+}
+
+html {
+  background-color: var(--bg-color);
+  color: var(--color);
+}
+
+a, a:hover, a:focus, a:active {
+  color: var(--blue);
+}
+
+#layout-error {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: center;
+  min-height: 100%;
+  padding: 2.352637rem;
+  margin: auto;
+}
+@media (min-width: 0px) {
+  #layout-error > h1 {
+    font-size: 2.0272865295rem;
+  }
+}
+@media (min-width: 300.5px) {
+  #layout-error > h1 {
+    font-size: 2.565784514rem;
+  }
+}
+@media (min-width: 640.5px) {
+  #layout-error > h1 {
+    font-size: 3.2473210255rem;
+  }
+}
+@media (min-width: 980.5px) {
+  #layout-error > h1 {
+    font-size: 4.1098906729rem;
+  }
+}
+#layout-error > h4 {
+  color: var(--gray);
+}
+@media (min-width: 0px) {
+  #layout-error > h4 {
+    font-size: 1.265625rem;
+  }
+}
+@media (min-width: 300.5px) {
+  #layout-error > h4 {
+    font-size: 1.423828125rem;
+  }
+}
+@media (min-width: 640.5px) {
+  #layout-error > h4 {
+    font-size: 1.8020324707rem;
+  }
+}
+#layout-error > a {
+  font-size: 1.125rem;
+  margin-top: 1.33rem;
+}
+
+#layout-page {
   position: absolute;
   display: flex;
   flex-flow: column nowrap;
@@ -914,45 +1041,16 @@ b, strong {
   left: 0;
 }
 
-#header,
-#footer,
-.layout-page-content {
+#header, #footer,
+#layout-page-content {
   display: block;
   width: 100%;
   flex: 0 0 auto;
 }
 
-.layout-page-content {
+#layout-page-content {
   display: block;
+  flex: 1 0 auto;
   padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
-  max-width: 1440.5px;
-  margin: 0 auto auto;
-}
-
-::-webkit-scrollbar,
-::-webkit-scrollbar-corner {
-  background-color: #EBEBEF;
-}
-
-::-webkit-scrollbar:vertical {
-  width: 16px;
-}
-
-::-webkit-scrollbar:horizontal {
-  height: 16px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #727C83;
-  background-clip: padding-box;
-  border: 4px solid transparent;
-  border-radius: 8px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background-color: #18181C;
-}
-
-.page-404 .layout-page-content {
-  text-align: center;
-  margin: auto;
+  margin: 0 auto;
 }
