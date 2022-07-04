@@ -10,10 +10,6 @@
 @forward "classes/";
 @forward "includes/";
 @forward "layouts/";
-@forward "pages/";
 
 // Import fonts...
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-// Import syntax highlighting...
-@import url('https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css');
