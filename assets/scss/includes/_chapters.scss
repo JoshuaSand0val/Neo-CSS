@@ -4,17 +4,29 @@
 
 .chapters {
     display: block;
+    border-width: 1px 0;
+    border-style: dashed;
+    border-color: step-color($white, 3);
+    list-style: none;
     text-align: center;
-    max-width: $lg;
-    padding: 0;
-    margin: size(0) auto;
+    padding: size(1);
+    margin: 0 auto;
+    @include dark {
+        border-color: step-color($black, 3);
+    }
 }
 
 .chapters > :not(:first-child)::before {
     content: "\2022\00a0";
+    display: inline-block;
+    margin: 0 px(6);
+}
+
+.chapters li {
+    display: inline;
 }
 
 .chapters a[aria-current="page"] {
-    color: text-color($black, $white);
+    color: inherit;
     font-weight: $weight-bold;
 }
