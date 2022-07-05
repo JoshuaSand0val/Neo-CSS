@@ -1,0 +1,17 @@
+<footer id="footer">
+    <div id="footer-wrapper">
+        <div id="footer-info">
+            <h1>About {{ site.title }}</h1>
+            <span>&copy; {% year %} {{ site.author }}.</span>
+            <span>Site built with <a href="https://www.11ty.dev/">11ty</a> static site generator.</span>
+            <span>Code currently {{ code.version }}.</span>
+            <span>Distributed under the <a href="{{ code.license.url }}">{{ code.license.type }}</a> License.</span>
+        </div>
+        <nav id="footer-nav">
+            <h1>Navigation</h1>
+            {%- for name, link in navigation.footer -%}
+            <a href="{{ link | url }}" {% if page.url == link %} aria-current="page"{% endif %}>{{ name }}</a>
+            {%- endfor -%}
+        </nav>
+    </div>
+</footer>

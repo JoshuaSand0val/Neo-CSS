@@ -1,0 +1,11 @@
+{% if chapters %}
+<ul class="chapters" role="navigation" aria-label="Chapters">
+{%- for name, link in chapters %}
+    {% if page.url == link %}
+    <li><a href="{{ link | url }}" aria-current="page"><b>{{ name }}</b></a></li>
+    {% else %}
+    <li><a href="{{ link | url }}">{{ name }}</a></li>
+    {% endif %}
+{% endfor -%}
+</ul>
+{% endif %}

@@ -1,9 +1,0 @@
-// Step Color: Steps $color contrast by $ratio, $step number of times.
-
-@use "../variables/" as *;
-@use "../sass" as *;
-@use "accessible" as *;
-
-@function step-color($color, $step, $ratio: $contrast-step-ratio) {
-    @return accessible($color, $color, MATH-pow($ratio, $step));
-}

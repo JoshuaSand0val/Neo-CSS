@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <!-- Title and character set: -->
+        <title>{{ title }}{% if page.url != '/' %} | {{ site.title }}{% endif %}</title>
+        <meta charset="UTF-8" />
+        <!-- Metadata: -->
+        <meta name="description" content="{{ description or site.description }}" />
+        <meta name="author" content="{{ author or site.author }}" />
+        <!-- Open Graph: -->
+        <meta property="og:title" content="{{ title }}" />
+        <meta property="og:site_name" content="{{ site.title }}" />
+        <meta property="og:type" content="{{ 'website' or openGraphType }}" />
+        <meta property="og:image" content="{{ '/assets/images/logo/opengraph.png' | url }}" />
+        <meta property="og:url" content="{{ [site.url, page.url] | join | trimURLslashes | url }}" />
+        <!-- Viewport: -->
+        <meta name="disabled-adaptations" content="watch" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        {% if (eleventyExcludeFromCollections != true) %}
+        <!-- Canonical URL: -->
+        <link rel="canonical" href="{{ [site.url, page.url] | join | trimURLslashes | url }}" />
+        {% endif %}
+        {% if (eleventyExcludeFromCollections == true) %}
+        <!-- Do not index this page: -->
+        <meta name="robots" content="noindex">
+        {% endif %}
+        <!-- Shortcut icons: -->
+        <link rel="icon" href="{{ '/assets/images/logo/favicon.ico' | url }}" />
+        <link rel="apple-touch-icon" href="{{ '/assets/images/logo/appicon.png' | url }}" />
+        <!-- Stylesheet: -->
+        <link rel="stylesheet" href="{{ '/assets/css/site.css' | url }}" />
+        <!-- Headroom.js: -->
+        <script defer src="{{ '/assets/js/headroom/headroom.min.js' | url }}"></script>
+    </head>
+    <body ontouchstart="">
+        {{ content | safe }}
+    </body>
+</html>

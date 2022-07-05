@@ -1,0 +1,47 @@
+// Footer: Styles for the global site footer.
+
+@use "../api" as *;
+
+#footer {
+    display: block;
+    background-color: $black;
+    color: text-color($white, $black);
+    padding: size(0) size(1) size(5);
+    @include dark {
+        background-color: shade($black, 2%);
+    }
+}
+
+#footer-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: $lg;
+    padding: 0 $safe-right $safe-bottom $safe-left;
+    margin: auto;
+}
+
+#footer-info,
+#footer-nav {
+    display: flex;
+    flex-flow: column nowrap;
+    line-height: 1.8;
+    color: text-color($gray, $black);
+    h1 {
+        color: text-color($white, $black);
+        font-size: font-size(1);
+    }
+    a {
+        color: text-color($blue, $black);
+        &:hover, &:focus, &[aria-current="page"] {
+            color: text-color($white, $black);
+        }
+        &:active {
+            color: text-color($gray, $black);
+        }
+    }
+}
+
+#footer-nav a {
+    line-height: px(36);
+}

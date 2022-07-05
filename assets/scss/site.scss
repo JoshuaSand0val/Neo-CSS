@@ -1,0 +1,15 @@
+// Site: Stylesheet for the website.
+
+// Forward boilerplate...
+@forward "api" with (
+    $font: #{'Merriweather Sans', sans-serif},
+    $font-heading: #{'Merriweather', serif}
+);
+
+// Forward website...
+@forward "classes/";
+@forward "includes/";
+@forward "layouts/";
+
+// Import fonts...
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');

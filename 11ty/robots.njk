@@ -1,0 +1,11 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+Sitemap: {{ [site.url, '/sitemap.xml'] | join | trimURLslashes | url }}
+
+User-agent: *
+Disallow:
+
+User-agent: Googlebot-Image
+Disallow: /
