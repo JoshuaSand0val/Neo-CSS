@@ -2,38 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
-            <loc>https://neo.joshuasandoval.me/404.html</loc>
-            <lastmod>2021-10-16T22:54:55.774Z</lastmod>
-        </url>
-    
-        <url>
             <loc>https://neo.joshuasandoval.me/api/built-in/</loc>
-            <lastmod>2021-10-16T22:54:55.779Z</lastmod>
+            <lastmod>2022-06-24T19:31:01.297Z</lastmod>
         </url>
     
         <url>
             <loc>https://neo.joshuasandoval.me/api/functions/</loc>
-            <lastmod>2021-10-16T22:54:55.780Z</lastmod>
+            <lastmod>2022-06-24T19:31:01.297Z</lastmod>
         </url>
     
         <url>
             <loc>https://neo.joshuasandoval.me/api/</loc>
-            <lastmod>2021-10-16T22:54:55.780Z</lastmod>
+            <lastmod>2022-06-24T19:31:01.297Z</lastmod>
         </url>
     
         <url>
             <loc>https://neo.joshuasandoval.me/api/mixins/</loc>
-            <lastmod>2021-10-16T22:54:55.780Z</lastmod>
+            <lastmod>2022-06-24T19:31:01.297Z</lastmod>
         </url>
     
         <url>
             <loc>https://neo.joshuasandoval.me/api/variables/</loc>
-            <lastmod>2021-10-16T22:54:55.781Z</lastmod>
+            <lastmod>2022-06-24T19:31:01.297Z</lastmod>
         </url>
     
         <url>
             <loc>https://neo.joshuasandoval.me/</loc>
-            <lastmod>2021-10-16T22:54:55.822Z</lastmod>
+            <lastmod>2022-07-03T14:58:47.563Z</lastmod>
         </url>
     
 </urlset>

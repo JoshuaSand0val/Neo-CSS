@@ -1,40 +1,48 @@
 <!DOCTYPE html>
-<html id="">
+<html lang="en-US">
     <head>
-        <title>
-    
-        API Functions | Neo CSS
-    
-</title>
-<meta charset="UTF-8" />
-<!-- Metadata -->
-<meta name="author" content="Joshua Elijah Sandoval" />
-<meta name="description" content="A modern, modular and extensible CSS boilerplate built with SASS/SCSS." />
-<meta name="keywords" content="Neo CSS, CSS Boilerplate, SCSS, CSS" />
-<!-- Shortcut favicon: -->
-<link rel="shortcut icon" href="/assets/images/logo/favicon.ico" type="image/x-icon" />
-<!-- Apple -->
-<link rel="apple-touch-icon-precomposed" href="/assets/images/logo/appicon.png" />
-<!-- Stylesheet -->
-<link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
-<!-- Apple Watch OS5 WebKit support!!! -->
-<meta name="disabled-adaptations" content="watch" />
-<!-- Initial viewport for mobile (including irregular displays): -->
-<meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <!-- Title and character set: -->
+        <title>API Functions | Neo CSS</title>
+        <meta charset="UTF-8" />
+        <!-- Metadata: -->
+        <meta name="description" content="A modern, modular and extensible CSS boilerplate built with SASS/SCSS." />
+        <meta name="author" content="Joshua Elijah Sandoval" />
+        <!-- Open Graph: -->
+        <meta property="og:title" content="API Functions" />
+        <meta property="og:site_name" content="Neo CSS" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/assets/images/logo/opengraph.png" />
+        <meta property="og:url" content="https://neo.joshuasandoval.me/api/functions/" />
+        <!-- Viewport: -->
+        <meta name="disabled-adaptations" content="watch" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        
+        <!-- Canonical URL: -->
+        <link rel="canonical" href="https://neo.joshuasandoval.me/api/functions/" />
+        
+        
+        <!-- Shortcut icons: -->
+        <link rel="icon" href="/assets/images/logo/favicon.ico" />
+        <link rel="apple-touch-icon" href="/assets/images/logo/appicon.png" />
+        <!-- Stylesheet: -->
+        <link rel="stylesheet" href="/assets/css/site.css" />
+        <!-- Headroom.js: -->
+        <script defer src="/assets/js/headroom/headroom.min.js"></script>
     </head>
-    <body id="page">
-        <header id="sitehead">
-    <div id="sitehead-wrapper">
-        <a href="/" id="sitehead-title">
-            <h2>Neo CSS</h2>
-            <h4><em>Modern CSS Boilerplate</em></h3>
+    <body ontouchstart="">
+        <div id="layout-page">
+    <header id="header">
+    <div id="header-wrapper">
+        <a href="/" id="header-title">
+            <h1>Neo CSS</h1>
+            <h2><em>Modern CSS Boilerplate</em></h2>
         </a>
-        <nav id="sitehead-nav"><a href="/" >Home</a><a href="/api/" >API</a><a href="https://github.com/JoshuaSand0val/Neo-CSS/" >Github</a></nav>
+        <nav id="header-nav"><a href="/" >Home</a><a href="/api/" >API</a><a href="https://github.com/JoshuaSand0val/Neo-CSS/" >Github</a></nav>
     </div>
 </header>
-<script src="/assets/js/headroom/headroom.min.js"></script>
 <script>
-    var header = document.getElementById("sitehead");
+document.addEventListener("DOMContentLoaded", function() {
+    var header = document.getElementById("header");
     var headroom  = new Headroom(header, {
         offset: header.offsetHeight,
         classes : {
@@ -42,34 +50,35 @@
         },
     });
     headroom.init();
+});
 </script>
-        <main id="sitecontent">
-            
-<div class="markdown">
+    <div id="layout-page-content">
+        <div id="layout-post">
     
-<ul id="nav">
-        
-            <li><a href="/api/">API</a></li>
-        
+<ul class="chapters" role="navigation" aria-label="Chapters">
     
-        
-            <li><a href="/api/variables/">Variables</a></li>
-        
+    <li><a href="/api/">API</a></li>
     
-        
-            <li><a href="/api/functions/" aria-current="page"><b>Functions</b></a></li>
-        
-    
-        
-            <li><a href="/api/mixins/">Mixins</a></li>
-        
-    
-        
-            <li><a href="/api/built-in/">Built-In</a></li>
-        
-    </ul>
 
-    <h1>API Functions</h1>
+    
+    <li><a href="/api/variables/">Variables</a></li>
+    
+
+    
+    <li><a href="/api/functions/" aria-current="page"><b>Functions</b></a></li>
+    
+
+    
+    <li><a href="/api/mixins/">Mixins</a></li>
+    
+
+    
+    <li><a href="/api/built-in/">Built-In</a></li>
+    
+</ul>
+
+    <div class="markdown">
+        <h1>API Functions</h1>
 <p><strong>All global API functions by name, parameters and description.</strong></p>
 <pre class="language-scss"><code class="language-scss"><span class="token keyword">@use</span> <span class="token string">"../Neo-CSS/scss/neo-api"</span> <span class="token module-modifier keyword">as</span> *<span class="token punctuation">;</span></code></pre>
 <hr>
@@ -150,20 +159,22 @@
 </tbody>
 </table>
 
+    </div>
 </div>
-        </main>
-        <footer id="sitefoot">
-    <div id="sitefoot-wrapper">
-        <div id="sitefoot-info">
-            <h4>About Neo CSS</h4>
-            <span>&copy; 2021 Joshua Elijah Sandoval.</span>
+    </div>
+    <footer id="footer">
+    <div id="footer-wrapper">
+        <div id="footer-info">
+            <h1>About Neo CSS</h1>
+            <span>&copy; 2022 Joshua Elijah Sandoval.</span>
             <span>Site built with <a href="https://www.11ty.dev/">11ty</a> static site generator.</span>
-            <span>Code currently v2.0.</span>
+            <span>Code currently v2.0.0.</span>
             <span>Distributed under the <a href="https://choosealicense.com/licenses/mit/">MIT</a> License.</span>
         </div>
-        <nav id="sitefoot-nav">
-            <h4>Navigation</h4><a href="/" >Home</a><a href="/api/" >Neo CSS API</a><a href="#" >Back To Top</a></nav>
+        <nav id="footer-nav">
+            <h1>Navigation</h1><a href="/" >Home</a><a href="/api/" >Neo CSS API</a><a href="#" >Back To Top</a></nav>
     </div>
 </footer>
+</div>
     </body>
 </html>
