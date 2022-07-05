@@ -615,22 +615,20 @@ b, strong {
 /* https://github.com/joshuasand0val */
 .markdown {
   display: block;
-  max-width: 1440.5px;
-  margin: 0 auto;
 }
 @media (min-width: 0px) {
   .markdown {
-    padding: 1rem;
+    margin: 1rem;
   }
 }
 @media (min-width: 300.5px) {
   .markdown {
-    padding: 1.33rem;
+    margin: 1.33rem;
   }
 }
 @media (min-width: 640.5px) {
   .markdown {
-    padding: 1.7689rem;
+    margin: 1.7689rem;
   }
 }
 .markdown > * {
