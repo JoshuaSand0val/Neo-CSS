@@ -9,7 +9,7 @@
     border-color: step-color($white, 3);
     list-style: none;
     text-align: center;
-    padding: size(1);
+    padding: px(16) size(1);
     margin: 0 auto;
     @include dark {
         border-color: step-color($black, 3);
@@ -19,11 +19,12 @@
 .chapters > :not(:first-child)::before {
     content: "\2022\00a0";
     display: inline-block;
-    margin: 0 px(6);
+    margin: 0 px(8);
 }
 
 .chapters li {
     display: inline;
+    line-height: px(36);
 }
 
 .chapters a[aria-current="page"] {

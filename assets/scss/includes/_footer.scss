@@ -27,8 +27,9 @@
     flex-flow: column nowrap;
     line-height: 1.8;
     color: text-color($gray, $black);
-    h4 {
+    h1 {
         color: text-color($white, $black);
+        font-size: font-size(1);
     }
     a {
         color: text-color($blue, $black);
@@ -39,4 +40,8 @@
             color: text-color($gray, $black);
         }
     }
+}
+
+#footer-nav a {
+    line-height: px(36);
 }
