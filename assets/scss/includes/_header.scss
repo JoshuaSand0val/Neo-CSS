@@ -38,15 +38,15 @@
 	flex: 0 1 auto;
 	color: var(--gray);
 	padding: px(8);
-	h2, h4 {
+	h1, h2 {
 		margin: 0;
 	}
-	h2 {
+	h1 {
 		color: var(--orange);
 		font-size: font-size(3);
         font-weight: $weight-bold;
 	}
-	h4 {
+	h2 {
 		color: var(--color);
 		font-size: font-size(0);
         font-weight: $weight;
