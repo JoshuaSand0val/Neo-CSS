@@ -4,9 +4,7 @@
 
 .markdown {
     display: block;
-    max-width: $xxl;
-    margin: 0 auto;
-    @include breakpoints(padding,
+    @include breakpoints(margin,
         size(0), size(1), size(2)
     );
 
