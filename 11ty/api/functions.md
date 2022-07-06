@@ -3,7 +3,9 @@ title: API Functions
 ---
 
 # API Functions
-**All global API functions by name, parameters and description.**
+## All global API functions by name, parameters and description.
+
+[Learn more about SASS functions.](https://sass-lang.com/documentation/at-rules/function)
 
 ```scss
 @use "../Neo-CSS/scss/neo-api" as *;

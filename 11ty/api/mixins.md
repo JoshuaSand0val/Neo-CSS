@@ -3,7 +3,9 @@ title: API Mixins
 ---
 
 # API Mixins
-**All global API mixins by name, parameters and description.**
+## All global API mixins by name, parameters and description.
+
+[Learn more about SASS mixins.](https://sass-lang.com/documentation/at-rules/mixin)
 
 ```scss
 @use "../Neo-CSS/scss/neo-api" as *;

@@ -3,7 +3,9 @@ title: API Variables
 ---
 
 # API Variables
-**All global API variables by name, value and description.**
+## All global API variables by name, value and description.
+
+[Learn more about SASS variables.](https://sass-lang.com/documentation/variables)
 
 ```scss
 @use "../Neo-CSS/scss/neo-api" as *;
