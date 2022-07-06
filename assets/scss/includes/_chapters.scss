@@ -9,6 +9,8 @@
     border-color: step-color($white, 3);
     list-style: none;
     text-align: center;
+    white-space: nowrap;
+    overflow-x: auto;
     padding: px(16) size(1);
     margin: 0 auto;
     @include dark {
