@@ -5,12 +5,12 @@
 .markdown {
     display: block;
     @include breakpoints(margin,
-        size(0), size(1), size(2)
+        size(0), size(1), size(3), size(4)
     );
 
     & > * {
         display: block;
-        max-width: $xl;
+        max-width: $xxl;
         margin: px(24) auto;
     }
 
@@ -118,12 +118,11 @@
 
     hr {
         width: 80%;
-        max-width: $md;
+        max-width: $lg;
         margin: px(48) auto;
     }
 
     table {
-        max-width: $xxl;
         min-width: 0;
         overflow-x: auto;
         @include max-vw($md) {
