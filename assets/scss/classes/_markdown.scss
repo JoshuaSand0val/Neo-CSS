@@ -10,17 +10,17 @@
 
     & > * {
         display: block;
-        max-width: $xxl;
+        max-width: $xl;
         margin: px(24) auto;
     }
 
     h1 {
         @include breakpoints(
             font-size,
-            font-size(4),
-            font-size(6),
-            font-size(8),
-            font-size(9)
+            font-size(5),
+            font-size(7),
+            font-size(9),
+            font-size(10)
         );
     }
 
@@ -33,6 +33,10 @@
         );
     }
 
+    h1 + h2 {
+        margin-top: px(-24);
+    }
+
     code {
         color: var(--pink);
         padding: px(1) px(3);
@@ -42,6 +46,8 @@
     pre {
         background-color: $black;
         color: text-color($white, $black);
+        font-size: font-size(1);
+        tab-size: 4;
         border: 1px solid step-color($black, 3);
         border-radius: $radius-xs;
         box-shadow:
@@ -51,9 +57,7 @@
     }
 
     pre code {
-        background-color: transparent;
         color: inherit;
-        tab-size: 4;
         padding: 0;
     }
 
