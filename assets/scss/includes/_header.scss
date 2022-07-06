@@ -4,10 +4,12 @@
 
 #header {
 	position: relative;
+	display: block;
+	min-height: px(44);
 	transition: all 300ms ease-out;
 	background-color: var(--bg-color);
 	box-shadow: 2px 0 4px 2px shade($white, 10%);
-	padding: px(8) px(16);
+	padding: px(16);
 	overflow: visible;
 	@include dark {
 		box-shadow: 2px 0 4px 2px shade($black, 10%);
@@ -27,8 +29,8 @@
 #header-wrapper {
 	display: flex;
 	flex-flow: row wrap;
-	max-width: $lg;
 	align-items: center;
+	max-width: $xxl;
 	padding: $safe-top $safe-right 0 $safe-left;
 	margin: auto;
 }
@@ -36,19 +38,21 @@
 #header-title {
 	display: block;
 	flex: 0 1 auto;
-	color: var(--gray);
-	padding: px(8);
+	text-decoration: none;
+	padding-right: px(8);
+	margin-right: auto;
 	h1, h2 {
+		display: inline-block;
 		margin: 0;
 	}
 	h1 {
 		color: var(--orange);
-		font-size: font-size(3);
+		font-size: font-size(2);
         font-weight: $weight-bold;
 	}
 	h2 {
-		color: var(--color);
-		font-size: font-size(0);
+		color: var(--gray);
+		font-size: font-size(1);
         font-weight: $weight;
 	}
 }
@@ -56,13 +60,12 @@
 #header-nav {
 	display: flex;
 	flex-flow: row wrap;
-	align-self: flex-end;
 	flex: 0 0 auto;
-	margin-left: auto;
+	margin-left: px(-8);
 	a {
         display: block;
         color: var(--gray);
-        padding: px(8);
+        padding: 0 px(8);
         &:hover, &:focus, &[aria-current="page"] {
             color: var(--color);
         }
