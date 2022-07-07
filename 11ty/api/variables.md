@@ -32,8 +32,6 @@ title: API Variables
 | `$pink`   | `#F47C98` | The color pink.   |
 | `$colors` | `(<color>: <value>, ...)` | A color:value map of all color variables. |
 
----
-
 ## Color Contrast
 
 | Variable Name | Default Value | Description |
@@ -41,16 +39,12 @@ title: API Variables
 | `$contrast-text-ratio` | `4.5` | The default color contrast ratio for text, matching the WCAG requirement of 4.5. |
 | `$contrast-step-ratio` | `1.1` | The ratio for stepping up the contrast of a color. |
 
----
-
 ## Scaling Properties
 
 | Variable Name | Default Value | Description |
 | ------------- | ------------- | ----------- |
 | `$scale-baseline` | `1rem` | The baseline size for padding/margin/ect. Typically in **rem** units. |
 | `$scale-ratio` | `1.33` | The ratio for upscaling CSS properties. |
-
----
 
 ## Font/Text Properties
 
@@ -67,8 +61,6 @@ title: API Variables
 | `$weight-heavy` | `800` | Heavy text font weight. |
 | `$line-height` | `1.5` | The default text CSS line-height. |
 | `$line-height-heading` | `1.33` | The CSS line-height for headings. |
-
----
 
 ## Viewport Breakpoints
 **Note: Add the following. Breakpoints are designed to work on every device. Including smart-watches!**
@@ -87,8 +79,6 @@ title: API Variables
 | `$vw-map` | `(<variable>: <value>, ...)` | A variable:value map of all viewport width variables. |
 | `$breakpoints` | `(0px, $sm, $md, $lg, $xl, $xxl)` | A list, each value being a viewport width breakpoint. |
 
----
-
 ## Corner Radius
 
 | Variable Name | Default Value | Description |
@@ -99,8 +89,6 @@ title: API Variables
 | `$radius-lg` | `12px` | A large radius value. |
 | `$radius-xl` | `16px` | An extra large radius value. |
 | `$radius-xxl` | `24px` | An extra extra large radius value. |
-
----
 
 ## Z-Index Positioning
 
@@ -113,8 +101,6 @@ title: API Variables
 | `$z-modal` | `500` | An index for `position: fixed` menus. |
 | `$z-popover` | `600` | An index for pop-ups or popovers. |
 | `$z-tooltip` | `700` | An index for mouse-over tooltips. |
-
----
 
 ## Safe Areas
 **Note: A special viewport meta content value is needed for these variables.**
