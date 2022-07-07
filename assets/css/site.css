@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -559,13 +559,13 @@ th {
 
 html {
   font-size: 1rem;
-  font-family: Merriweather Sans, sans-serif;
+  font-family: Ubuntu, sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Merriweather, serif;
+  font-family: Oxanium, sans-serif;
   font-weight: 600;
   line-height: 1.33;
   margin: 0.7518796992rem 0px;
@@ -604,7 +604,7 @@ small small {
 }
 
 code, samp, pre, kbd {
-  font-family: Consolas, Monaco, monospace;
+  font-family: Ubuntu Mono, monospace;
 }
 
 b, strong {
@@ -628,7 +628,12 @@ b, strong {
 }
 @media (min-width: 640.5px) {
   .markdown {
-    margin: 1.7689rem;
+    margin: 2.352637rem;
+  }
+}
+@media (min-width: 980.5px) {
+  .markdown {
+    margin: 3.12900721rem;
   }
 }
 .markdown > * {
@@ -636,24 +641,27 @@ b, strong {
   max-width: 1280.5px;
   margin: 1.5rem auto;
 }
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+  margin: 0.5rem auto;
+}
 @media (min-width: 0px) {
   .markdown h1 {
-    font-size: 1.6018066406rem;
+    font-size: 1.8020324707rem;
   }
 }
 @media (min-width: 300.5px) {
   .markdown h1 {
-    font-size: 2.0272865295rem;
+    font-size: 2.2806973457rem;
   }
 }
 @media (min-width: 640.5px) {
   .markdown h1 {
-    font-size: 2.565784514rem;
+    font-size: 2.8865075782rem;
   }
 }
 @media (min-width: 980.5px) {
   .markdown h1 {
-    font-size: 2.8865075782rem;
+    font-size: 3.2473210255rem;
   }
 }
 @media (min-width: 0px) {
@@ -679,15 +687,15 @@ b, strong {
 .markdown pre {
   background-color: #18181C;
   color: #EBEBEF;
+  font-size: 1.125rem;
+  tab-size: 4;
   border: 1px solid #303037;
   border-radius: 3px;
   box-shadow: inset 2px 2px 4px #0c0c0e, inset -2px -2px 4px #24242a;
   padding: 1rem;
 }
 .markdown pre code {
-  background-color: transparent;
   color: inherit;
-  tab-size: 4;
   padding: 0;
 }
 .markdown pre code .comment, .markdown pre code .prolog, .markdown pre code .doctype, .markdown pre code .cdata {
@@ -738,11 +746,10 @@ b, strong {
 }
 .markdown hr {
   width: 80%;
-  max-width: 640.5px;
+  max-width: 980.5px;
   margin: 3rem auto;
 }
 .markdown table {
-  max-width: 1440.5px;
   min-width: 0;
   overflow-x: auto;
 }
@@ -783,6 +790,8 @@ b, strong {
   border-color: #c9c9d4;
   list-style: none;
   text-align: center;
+  white-space: nowrap;
+  overflow-x: auto;
   padding: 1rem 1.33rem;
   margin: 0 auto;
 }
@@ -824,7 +833,7 @@ b, strong {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  max-width: 980.5px;
+  max-width: 1280.5px;
   padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   margin: auto;
 }
@@ -862,10 +871,12 @@ b, strong {
 
 #header {
   position: relative;
+  display: block;
+  min-height: 2.75rem;
   transition: all 300ms ease-out;
   background-color: var(--bg-color);
   box-shadow: 2px 0 4px 2px #cfcfd8;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   overflow: visible;
 }
 @media (prefers-color-scheme: dark) {
@@ -889,8 +900,8 @@ b, strong {
 #header-wrapper {
   display: flex;
   flex-flow: row wrap;
-  max-width: 980.5px;
   align-items: center;
+  max-width: 1280.5px;
   padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
   margin: auto;
 }
@@ -898,34 +909,35 @@ b, strong {
 #header-title {
   display: block;
   flex: 0 1 auto;
-  color: var(--gray);
-  padding: 0.5rem;
+  text-decoration: none;
+  padding-right: 0.5rem;
+  margin-right: auto;
 }
 #header-title h1, #header-title h2 {
+  display: inline-block;
   margin: 0;
 }
 #header-title h1 {
   color: var(--orange);
-  font-size: 1.423828125rem;
+  font-size: 1.265625rem;
   font-weight: 600;
 }
 #header-title h2 {
-  color: var(--color);
-  font-size: 1rem;
+  color: var(--gray);
+  font-size: 1.125rem;
   font-weight: 400;
 }
 
 #header-nav {
   display: flex;
   flex-flow: row wrap;
-  align-self: flex-end;
   flex: 0 0 auto;
-  margin-left: auto;
+  margin-left: -0.5rem;
 }
 #header-nav a {
   display: block;
   color: var(--gray);
-  padding: 0.5rem;
+  padding: 0 0.5rem;
 }
 #header-nav a:hover, #header-nav a:focus, #header-nav a[aria-current=page] {
   color: var(--color);
