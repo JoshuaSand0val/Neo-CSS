@@ -7,9 +7,6 @@ title: API Mixins
 
 [Learn more about SASS mixins.](https://sass-lang.com/documentation/at-rules/mixin)
 
-```scss
-@use "../Neo-CSS/scss/neo-api" as *;
-```
 ---
 
 | Mixin Name | Parameters | Description |

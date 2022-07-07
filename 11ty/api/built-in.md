@@ -5,11 +5,8 @@ title: API Built-In SASS Modules
 # API Built-In SASS Modules
 ## All API built-in SASS modules by namespace, URL and documentation.
 
-[Learn more about SASS modules.](https://sass-lang.com/documentation/modules)
+[Learn more about Built-In SASS modules.](https://sass-lang.com/documentation/modules)
 
-```scss
-@use "../Neo-CSS/scss/neo-api" as *;
-```
 ---
 
 | Namespace | URL | Documentation |

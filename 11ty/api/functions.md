@@ -7,9 +7,6 @@ title: API Functions
 
 [Learn more about SASS functions.](https://sass-lang.com/documentation/at-rules/function)
 
-```scss
-@use "../Neo-CSS/scss/neo-api" as *;
-```
 ---
 
 | Function Name | Parameters | Description |
