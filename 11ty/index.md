@@ -39,7 +39,8 @@ $ npm install css-neo # Installs {{ code.version }} via NPM.
 $ npm install css-neo # Installs {{ code.version }} via NPM.
 ```
 
-2. Make a new `master.scss` file that links to Neo CSS.
+2. Make a new `master.scss` file that links to Neo CSS.  
+*Alternatively you can link to `neo-setup` instead, which just includes the API and browser fixes.*
 
 ```bash
 # Creates a new SCSS file that forwards Neo CSS.
