@@ -1,61 +1,74 @@
 ---
-title: Modern CSS Boilerplate
-layout: post.njk
+title: Neo CSS
+description: A modern, modular and extensible CSS boilerplate.
+layout: post
+chapters:
+    What is Neo CSS?: "#what-is"
+    Getting Started: "#getting-started"
+    Using Neo CSS API: "#using-api"
+    Acknowledgment: "#acknowledgment"
+    License: "#license"
 ---
 
-# A modern, modular and extensible CSS boilerplate.
-**Start your new project today by cloning the repo:**
+# Create masterful websites with Neo CSS
+## A modern, modular and extensible CSS boilerplate.
 
-```shell
-$ git clone https://github.com/JoshuaSand0val/Neo-CSS.git
+**Add it to your project now via installation by NPM:**
+
+```bash
+$ npm install css-neo # Installs {{ code.version }} via NPM.
 ```
 
 ---
 
-## What does Neo CSS do?
+## <span id="what-is">What is Neo CSS?</span>
+### Neo CSS is a modern CSS starter boilerplate, which aims to streamline the process of building a website's styles from scratch. It provides the following benefits:
+
 - Provides new CSS in addition to [normalize.css](https://github.com/necolas/normalize.css/) to fix additional problems with browser CSS.
 - Provides a consistent styled baseline for all elements.
 - Provides easy to use [API]({{ '/api/' | url }}) to allow for effortless extension.
 - Provides a modular design to allow developer choice in what components are included in compile.
 
-## Getting started with Neo CSS
-To get started with Neo CSS, complete the following:
+## <span id="getting-started">Getting Started</span>
+### Getting started with Neo CSS is easy! Just complete three easy steps:
 
-1. Start your new project in a new directory and clone the repo.
+1. Open a terminal (in this case, Bash) and install Neo CSS via NPM.  
+*If you are unfamiliar with NPM, here is an [installation guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
 
-```shell
-$ mkdir my-project
-$ cd my-project
-$ git clone https://github.com/JoshuaSand0val/Neo-CSS.git
+```bash
+$ npm install css-neo # Installs {{ code.version }} via NPM.
 ```
 
-2. Make a new `master.scss` file in a separate directory that links to Neo CSS.
+2. Make a new `master.scss` file that links to Neo CSS.
 
-```shell
-$ mkdir my-scss
-$ cd my-scss
-$ echo @forward "../Neo-CSS/scss/neo"; > master.scss
+```bash
+# Creates a new SCSS file that forwards Neo CSS.
+$ echo '@forward "node_modules/css-neo/scss/neo";' > master.scss
 ```
 
-3. Compile using [SASS](https://sass-lang.com/install).
+3. Compile using SASS.  
+*If you are unfamiliar with SASS, here is an [installation guide](https://sass-lang.com/install).*
 
-```shell
-$ sass master.scss output.css
+```bash
+# Compiles Neo CSS SCSS into a CSS file.
+$ sass --no-source-map master.scss master.css
 ```
 
-## Using Neo CSS API
+## <span id="using-api">Using Neo CSS API</span>
 The Neo CSS API uses the SASS module system.
 To begin using it, link the entry file with `@use`:
 
 ```scss
-@use "../Neo-CSS/scss/neo-api" as *;
+@use "node_modules/css-neo/scss/neo-api" as *;
 ```
+
+But more ideally, `@forward` the above code instead, and `@use` that file instead for simplicity.
 
 [Learn more about the API.]({{ '/api/' | url }})
 
-## Acknowledgment
+## <span id="acknowledgment">Acknowledgment</span>
 Neo CSS was built by Joshua Elijah Sandoval.
 Thanks to all those who worked on [normalize.css](https://github.com/necolas/normalize.css/).
 
-## License
+## <span id="license">License</span>
 Neo CSS is distributed under the [{{ code.license.type }}]({{ code.license.url }}) License.
