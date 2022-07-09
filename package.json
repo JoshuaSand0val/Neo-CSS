@@ -5,7 +5,18 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "autoprefixer": "^10.4.7",
     "css-neo": "^2.0.0",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0",
     "sass": "^1.52.1"
+  },
+  "scripts": {
+    "stylesheet": "sass --no-source-map assets/scss/site.scss assets/css/site.css",
+    "poststylesheet": "postcss assets/css/site.css --no-map --use autoprefixer --dir assets/css/",
+    "pretest": "npm run stylesheet",
+    "test": "npx @11ty/eleventy --serve --output=docs_testing",
+    "predocs": "npm run stylesheet",
+    "docs": "npx @11ty/eleventy"
   }
 }
