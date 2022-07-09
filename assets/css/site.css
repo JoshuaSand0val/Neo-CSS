@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -8,8 +9,10 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
 /* Sections
@@ -44,9 +47,12 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
 }
 
 /**
@@ -54,8 +60,10 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /* Text-level semantics
@@ -72,9 +80,13 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
 }
 
 /**
@@ -92,8 +104,10 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /**
@@ -143,10 +157,14 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
 }
 
 /**
@@ -154,7 +172,8 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -163,7 +182,8 @@ input { /* 1 */
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -212,12 +232,18 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
 }
 
 /**
@@ -240,8 +266,10 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
 }
 
 /**
@@ -257,8 +285,10 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
 }
 
 /**
@@ -273,8 +303,10 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
 }
 
 /* Interactive
@@ -517,7 +549,8 @@ select {
 }
 
 img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 ul, ol {
@@ -682,13 +715,16 @@ b, strong {
 .markdown code {
   color: var(--pink);
   padding: 0.0625rem 0.1875rem;
-  hyphens: none;
+  -webkit-hyphens: none;
+          hyphens: none;
 }
 .markdown pre {
   background-color: #18181C;
   color: #EBEBEF;
   font-size: 1.125rem;
-  tab-size: 4;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
   border: 1px solid #303037;
   border-radius: 3px;
   box-shadow: inset 2px 2px 4px #0c0c0e, inset -2px -2px 4px #24242a;
@@ -869,32 +905,57 @@ b, strong {
   line-height: 2.25rem;
 }
 
-#header {
-  position: relative;
+#footer-top-link {
+  position: fixed;
+  z-index: 300;
   display: block;
-  min-height: 2.75rem;
-  transition: all 300ms ease-out;
+  font-size: 2rem;
+  line-height: 0;
   background-color: var(--bg-color);
-  box-shadow: 2px 0 4px 2px #cfcfd8;
+  color: var(--color);
+  border: 1px solid currentColor;
+  border-radius: 9999px;
+  transition-property: transform, opacity, visibility;
+  transition-duration: 150ms;
+  transition-timing-function: linear;
+  margin: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  right: 1.25rem;
+  bottom: 1.25rem;
+}
+#footer-top-link:hover, #footer-top-link:focus {
+  transform: scale(1.1);
+}
+#footer-top-link:active {
+  transform: scale(1);
+}
+#footer-top-link.headroom--unpinned, #footer-top-link.headroom--top {
+  pointer-events: none;
+  visibility: hidden;
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+#header {
+  display: block;
+  background-color: var(--bg-color);
+  box-shadow: 2px 0 4px 2px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   overflow: visible;
 }
 @media (prefers-color-scheme: dark) {
   #header {
-    box-shadow: 2px 0 4px 2px #000001;
+    box-shadow: 2px 0 4px 2px rgba(0, 0, 0, 0.4);
   }
 }
-@media (min-height: 480px), (min-width: 980.5px) {
-  #header {
-    position: sticky;
-    top: 0;
-    z-index: 300;
-  }
-  #header.hidden {
-    transform: translateY(-100%);
-    pointer-events: none;
-    visibility: hidden;
-  }
+#header.headroom {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 300;
+  transition: transform 300ms ease-out;
+}
+#header.headroom--unpinned {
+  transform: translateY(-100%) translateY(-8px);
 }
 
 #header-wrapper {
@@ -986,6 +1047,7 @@ b, strong {
 }
 
 html {
+  scroll-behavior: smooth;
   background-color: var(--bg-color);
   color: var(--color);
 }
@@ -995,55 +1057,66 @@ a, a:hover, a:focus, a:active {
 }
 
 #layout-error {
+  position: absolute;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
-  min-height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#layout-error-content {
+  display: block;
   padding: 2.352637rem;
   margin: auto;
 }
+
 @media (min-width: 0px) {
-  #layout-error > h1 {
+  #layout-error-content h1 {
     font-size: 2.0272865295rem;
   }
 }
 @media (min-width: 300.5px) {
-  #layout-error > h1 {
+  #layout-error-content h1 {
     font-size: 2.565784514rem;
   }
 }
 @media (min-width: 640.5px) {
-  #layout-error > h1 {
+  #layout-error-content h1 {
     font-size: 3.2473210255rem;
   }
 }
 @media (min-width: 980.5px) {
-  #layout-error > h1 {
+  #layout-error-content h1 {
     font-size: 4.1098906729rem;
   }
 }
-#layout-error > h2 {
+
+#layout-error-content h2 {
   color: var(--gray);
 }
 @media (min-width: 0px) {
-  #layout-error > h2 {
+  #layout-error-content h2 {
     font-size: 1.265625rem;
   }
 }
 @media (min-width: 300.5px) {
-  #layout-error > h2 {
+  #layout-error-content h2 {
     font-size: 1.423828125rem;
   }
 }
 @media (min-width: 640.5px) {
-  #layout-error > h2 {
+  #layout-error-content h2 {
     font-size: 1.8020324707rem;
   }
 }
-#layout-error > a {
+
+#layout-error-content a {
   font-size: 1.125rem;
-  margin-top: 1.33rem;
+  margin: 1.33rem 0;
 }
 
 #layout-page {
@@ -1051,22 +1124,19 @@ a, a:hover, a:focus, a:active {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
+  min-height: 100%;
   top: 0;
   right: 0;
-  bottom: 0;
   left: 0;
 }
 
-#header, #footer,
-#layout-page-content {
-  display: block;
+#layout-page > * {
   width: 100%;
   flex: 0 0 auto;
 }
 
 #layout-page-content {
-  display: block;
-  flex: 1 0 auto;
+  position: relative;
+  flex-grow: 1;
   padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
-  margin: 0 auto;
 }
