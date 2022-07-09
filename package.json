@@ -16,7 +16,6 @@
     "poststylesheet": "postcss assets/css/site.css --no-map --use autoprefixer --dir assets/css/",
     "pretest": "npm run stylesheet",
     "test": "npx @11ty/eleventy --serve --output=docs_testing",
-    "predocs": "npm run stylesheet",
     "docs": "npx @11ty/eleventy"
   }
 }
