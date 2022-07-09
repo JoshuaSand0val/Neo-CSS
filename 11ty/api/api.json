@@ -5,6 +5,6 @@
         "Variables": "/api/variables/",
         "Functions": "/api/functions/",
         "Mixins": "/api/mixins/",
-        "Built-In": "/api/built-in/"
+        "Built-In SASS Modules": "/api/built-in/"
     }
 }
