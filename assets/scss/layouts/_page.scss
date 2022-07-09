@@ -7,19 +7,17 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    @include inset(0);
+    min-height: 100%;
+    @include declare(top right left, 0);
 }
 
-#header, #footer,
-#layout-page-content {
-    display: block;
+#layout-page > * {
     width: 100%;
     flex: 0 0 auto;
 }
 
 #layout-page-content {
-    display: block;
-    flex: 1 0 auto;
+    position: relative;
+    flex-grow: 1;
     padding: $safe-x;
-    margin: 0 auto;
 }
