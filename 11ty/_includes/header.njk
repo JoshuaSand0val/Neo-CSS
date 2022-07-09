@@ -14,12 +14,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     var header = document.getElementById("header");
-    var headroom  = new Headroom(header, {
-        offset: header.offsetHeight,
-        classes : {
-            unpinned : "hidden"
-        },
-    });
+    var headroom  = new Headroom(header);
     headroom.init();
 });
 </script>

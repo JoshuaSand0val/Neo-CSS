@@ -3,25 +3,21 @@
 @use "../api" as *;
 
 #header {
-	position: relative;
 	display: block;
-	min-height: px(44);
-	transition: all 300ms ease-out;
 	background-color: var(--bg-color);
-	box-shadow: 2px 0 4px 2px shade($white, 10%);
+	box-shadow: 2px 0 4px 2px rgba(#000, 0.2);
 	padding: px(16);
 	overflow: visible;
 	@include dark {
-		box-shadow: 2px 0 4px 2px shade($black, 10%);
+		box-shadow: 2px 0 4px 2px rgba(#000, 0.4);
 	}
-	@media (min-height: 480px), (min-width: $lg) {
+	&.headroom {
 		position: sticky;
 		top: 0;
 		z-index: $z-fixed;
-		&.hidden {
-			transform: translateY(-100%);
-			pointer-events: none;
-			visibility: hidden;
+		transition: transform 300ms ease-out;
+		&--unpinned {
+			transform: translateY(-100%) translateY(-8px);
 		}
 	}
 }
