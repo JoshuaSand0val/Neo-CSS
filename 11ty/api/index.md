@@ -3,12 +3,12 @@ title: API
 ---
 
 # Supercharge your CSS with the Neo CSS API.
-## *Easy to use. Powerful design tools.*
+## Easy to use. Powerful design tools.
 
 **Add it to your project today by linking the entry file with `@use`:**
 
 ```scss
-@use "../Neo-CSS/scss/neo-api" as *;
+@use "node_modules/css-neo/scss/neo-api" as *;
 ```
 
 ---
