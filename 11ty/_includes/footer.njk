@@ -13,5 +13,15 @@
             <a href="{{ link | url }}" {% if page.url == link %} aria-current="page"{% endif %}>{{ name }}</a>
             {%- endfor -%}
         </nav>
+        <a href="#" id="footer-top-link">
+            <i class="bi bi-arrow-up-short"></i>
+        </a>
     </div>
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var footerTopLink = document.getElementById("footer-top-link");
+    var headroom  = new Headroom(footerTopLink);
+    headroom.init();
+});
+</script>

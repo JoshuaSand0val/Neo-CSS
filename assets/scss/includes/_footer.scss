@@ -45,3 +45,33 @@
 #footer-nav a {
     line-height: px(36);
 }
+
+#footer-top-link {
+    position: fixed;
+    z-index: $z-fixed;
+    display: block;
+    font-size: px(32);
+    line-height: 0;
+    background-color: var(--bg-color);
+    color: var(--color);
+    border: 1px solid currentColor;
+    border-radius: 9999px;
+    transition-property: transform, opacity, visibility;
+    transition-duration: 150ms;
+    transition-timing-function: linear;
+    margin: $safe;
+    @include declare(right bottom, px(20));
+    &:hover, &:focus {
+        transform: scale(1.1);
+    }
+    &:active {
+        transform: scale(1);
+    }
+    &.headroom--unpinned,
+    &.headroom--top {
+        pointer-events: none;
+        visibility: hidden;
+        transform: scale(0.9);
+        opacity: 0;
+    }
+}
