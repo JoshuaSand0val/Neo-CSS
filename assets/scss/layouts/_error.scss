@@ -3,31 +3,39 @@
 @use "../api" as *;
 
 #layout-error {
+    position: absolute;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
-    min-height: 100%;
+    @include inset(0);
+}
+
+#layout-error-content {
+    display: block;
     padding: size(3);
     margin: auto;
-    & > h1 {
-        @include breakpoints(font-size,
-            font-size(6),
-            font-size(8),
-            font-size(10),
-            font-size(12)
-        );
-    }
-    & > h2 {
-        color: var(--gray);
-        @include breakpoints(font-size,
-            font-size(2),
-            font-size(3),
-            font-size(5)
-        );
-    }
-    & > a {
-        font-size: font-size(1);
-        margin-top: size(1);
-    }
+}
+
+#layout-error-content h1 {
+    @include breakpoints(font-size,
+        font-size(6),
+        font-size(8),
+        font-size(10),
+        font-size(12)
+    );
+}
+
+#layout-error-content h2 {
+    color: var(--gray);
+    @include breakpoints(font-size,
+        font-size(2),
+        font-size(3),
+        font-size(5)
+    );
+}
+
+#layout-error-content a {
+    font-size: font-size(1);
+    margin: size(1) 0;
 }
