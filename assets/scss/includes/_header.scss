@@ -16,7 +16,7 @@
 		top: 0;
 		z-index: $z-fixed;
 		transition: transform 300ms ease-out;
-		&--unpinned {
+		&--unpinned, &--bottom {
 			transform: translateY(-100%) translateY(-8px);
 		}
 	}

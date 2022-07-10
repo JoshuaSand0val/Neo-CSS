@@ -67,7 +67,7 @@
     &:active {
         transform: scale(1);
     }
-    &.headroom--unpinned,
+    &.headroom--unpinned:not(.headroom--bottom),
     &.headroom--top {
         pointer-events: none;
         visibility: hidden;

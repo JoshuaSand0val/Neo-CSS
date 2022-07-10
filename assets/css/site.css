@@ -928,7 +928,7 @@ b, strong {
 #footer-top-link:active {
   transform: scale(1);
 }
-#footer-top-link.headroom--unpinned, #footer-top-link.headroom--top {
+#footer-top-link.headroom--unpinned:not(.headroom--bottom), #footer-top-link.headroom--top {
   pointer-events: none;
   visibility: hidden;
   transform: scale(0.9);
@@ -954,7 +954,7 @@ b, strong {
   z-index: 300;
   transition: transform 300ms ease-out;
 }
-#header.headroom--unpinned {
+#header.headroom--unpinned, #header.headroom--bottom {
   transform: translateY(-100%) translateY(-8px);
 }
 
