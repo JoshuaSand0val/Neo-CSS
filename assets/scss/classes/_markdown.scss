@@ -4,18 +4,20 @@
 
 .markdown {
     display: block;
-    @include breakpoints(margin,
+    max-width: $xl;
+    box-sizing: content-box;
+    margin: 0 auto;
+    @include breakpoints(padding,
         size(0), size(1), size(3), size(4)
     );
 
-    & > * {
+    p, pre, blockquote, img {
         display: block;
-        max-width: $xl;
-        margin: px(24) auto;
+        margin: px(24) 0;
     }
 
     h1, h2, h3, h4, h5, h6 {
-        margin: px(8) auto;
+        margin: px(8) 0;
     }
 
     h1 {
@@ -49,7 +51,7 @@
         font-size: font-size(1);
         tab-size: 4;
         border: 1px solid step-color($black, 3);
-        border-radius: $radius-xs;
+        border-radius: $radius-sm;
         box-shadow:
             inset 2px 2px 4px shade($black, 5%),
             inset -2px -2px 4px tint($black, 5%);
@@ -128,6 +130,7 @@
 
     table {
         min-width: 0;
+        margin: px(36) 0;
         overflow-x: auto;
         @include max-vw($md) {
             font-size: font-size(-1);
