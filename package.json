@@ -14,7 +14,6 @@
   "scripts": {
     "stylesheet": "sass --no-source-map assets/scss/site.scss assets/css/site.css",
     "poststylesheet": "postcss assets/css/site.css --no-map --use autoprefixer --dir assets/css/",
-    "pretest": "npm run stylesheet",
     "test": "npx @11ty/eleventy --serve --output=docs_testing",
     "docs": "npx @11ty/eleventy"
   }
