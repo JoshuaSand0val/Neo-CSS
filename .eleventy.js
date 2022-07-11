@@ -1,7 +1,7 @@
 // Require plugin for code syntax highlighting.
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-module.exports = function (eleventyConfig) {
+module.exports = eleventyConfig => {
 	// Add code syntax highlighting plugin.
 	eleventyConfig.addPlugin(syntaxHighlight);
 	// Add passthrough copy of website asset files.
@@ -17,7 +17,7 @@ module.exports = function (eleventyConfig) {
 		dir: {
 			layouts: "_layouts",
 			input: "11ty",
-			output: "docs",
+			output: "docs"
 		},
 	};
 };
