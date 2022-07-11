@@ -22,8 +22,9 @@ $ npm install css-neo # Installs {{ code.version }} via NPM.
 ---
 
 ## <span id="what-is">What is Neo CSS?</span>
-### Neo CSS is a modern CSS starter boilerplate, which aims to streamline the process of building a website's styles from scratch. It provides the following benefits:
+### Neo CSS is a modern, modular and extensible CSS boilerplate written in SCSS, built to correct styles across browser engines.
 
+**It provides the following benefits:**
 - Provides new CSS in addition to [normalize.css](https://github.com/necolas/normalize.css/) to fix additional problems with browser CSS.
 - Provides a consistent styled baseline for all elements.
 - Provides easy to use [API]({{ '/api/' | url }}) to allow for effortless extension.
