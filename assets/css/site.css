@@ -648,34 +648,49 @@ b, strong {
 /* https://github.com/joshuasand0val */
 .markdown {
   display: block;
+  max-width: 1280.5px;
+  box-sizing: content-box;
+  margin-right: auto;
+  margin-left: auto;
 }
 @media (min-width: 0px) {
   .markdown {
-    margin: 1rem;
+    margin-top: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
   }
 }
 @media (min-width: 300.5px) {
   .markdown {
-    margin: 1.33rem;
+    margin-top: 1.33rem;
+    padding-right: 1.33rem;
+    margin-bottom: 1.33rem;
+    padding-left: 1.33rem;
   }
 }
 @media (min-width: 640.5px) {
   .markdown {
-    margin: 2.352637rem;
+    margin-top: 2.352637rem;
+    padding-right: 2.352637rem;
+    margin-bottom: 2.352637rem;
+    padding-left: 2.352637rem;
   }
 }
 @media (min-width: 980.5px) {
   .markdown {
-    margin: 3.12900721rem;
+    margin-top: 3.12900721rem;
+    padding-right: 3.12900721rem;
+    margin-bottom: 3.12900721rem;
+    padding-left: 3.12900721rem;
   }
 }
-.markdown > * {
+.markdown p, .markdown pre, .markdown blockquote, .markdown img {
   display: block;
-  max-width: 1280.5px;
-  margin: 1.5rem auto;
+  margin: 1.5rem 0;
 }
 .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
-  margin: 0.5rem auto;
+  margin: 0.5rem 0;
 }
 @media (min-width: 0px) {
   .markdown h1 {
@@ -726,7 +741,7 @@ b, strong {
     -o-tab-size: 4;
        tab-size: 4;
   border: 1px solid #303037;
-  border-radius: 3px;
+  border-radius: 6px;
   box-shadow: inset 2px 2px 4px #0c0c0e, inset -2px -2px 4px #24242a;
   padding: 1rem;
 }
@@ -787,6 +802,7 @@ b, strong {
 }
 .markdown table {
   min-width: 0;
+  margin: 2.25rem 0;
   overflow-x: auto;
 }
 @media (max-width: 640.5px) {
@@ -954,7 +970,7 @@ b, strong {
   z-index: 300;
   transition: transform 300ms ease-out;
 }
-#header.headroom--unpinned, #header.headroom--bottom {
+#header.headroom--unpinned, #header.headroom--bottom:not(#header.headroom--top) {
   transform: translateY(-100%) translateY(-8px);
 }
 
