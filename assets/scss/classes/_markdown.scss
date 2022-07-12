@@ -6,8 +6,9 @@
     display: block;
     max-width: $xl;
     box-sizing: content-box;
-    margin: 0 auto;
-    @include breakpoints(padding,
+    @include declare(margin-right margin-left, auto);
+    @include breakpoints(
+        margin-top padding-right margin-bottom padding-left,
         size(0), size(1), size(3), size(4)
     );
 
