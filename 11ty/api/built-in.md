@@ -1,9 +1,10 @@
 ---
 title: API Built-In SASS Modules
+description: All API built-in SASS modules by namespace, URL and documentation.
 ---
 
-# API Built-In SASS Modules
-## All API built-in SASS modules by namespace, URL and documentation.
+# {{ title }}
+## {{ description }}
 
 [Learn more about Built-In SASS modules.](https://sass-lang.com/documentation/modules)
 

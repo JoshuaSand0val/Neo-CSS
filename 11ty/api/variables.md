@@ -1,9 +1,10 @@
 ---
 title: API Variables
+description: All global API variables by name, default value and description.
 ---
 
-# API Variables
-## All global API variables by name, default value and description.
+# {{ title }}
+## {{ description }}
 
 [Learn more about SASS variables.](https://sass-lang.com/documentation/variables)
 

@@ -1,9 +1,10 @@
 ---
 title: API Mixins
+description: All global API mixins by name, parameters and description.
 ---
 
-# API Mixins
-## All global API mixins by name, parameters and description.
+# {{ title }}
+## {{ description }}
 
 [Learn more about SASS mixins.](https://sass-lang.com/documentation/at-rules/mixin)
 

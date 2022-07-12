@@ -1,9 +1,10 @@
 ---
 title: API Functions
+description: All global API functions by name, parameters and description.
 ---
 
-# API Functions
-## All global API functions by name, parameters and description.
+# {{ title }}
+## {{ description }}
 
 [Learn more about SASS functions.](https://sass-lang.com/documentation/at-rules/function)
 
