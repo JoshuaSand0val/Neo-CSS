@@ -1,0 +1,10 @@
+// Themes: Builds theme queries using different $schemes and a $fallback.
+
+@mixin themes($fallback, $schemes...) {
+    @content($fallback);
+    @each $theme, $color in $schemes {
+        @media (prefers-color-scheme: $theme) {
+            @content($color);
+        }
+    }
+}
