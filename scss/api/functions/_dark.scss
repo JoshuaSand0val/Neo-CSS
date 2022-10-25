@@ -1,0 +1,10 @@
+// Dark: Returns true if $color is dark.
+
+@use "../sass" as *;
+
+@function dark($color) {
+    @if COLOR-lightness($color) < 50% {
+        @return true;
+    }
+    @return false;
+}
