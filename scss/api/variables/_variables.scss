@@ -1,9 +1,6 @@
 // Variables: All global API variables.
 
-// ==============
-// COLOR PALETTE:
-// ==============
-
+// Color Palette:
 $white: #EBEBEF !default;
 $black: #18181C !default;
 $gray: #727C83 !default;
@@ -36,57 +33,36 @@ $colors: (
     "pink": $pink
 ) !default;
 
-// ===============
-// CONTRAST RATIO:
-// ===============
-
+// Contrast Ratio:
 $contrast-text-ratio: 4.5 !default;
 $contrast-step-ratio: 1.1 !default;
 
-// ===================
-// SCALING PROPERTIES:
-// ===================
-
+// Scaling Properties:
 $scale-baseline: 1rem !default;
 $scale-ratio: 1.33 !default;
 
-// ============
-// FONT SIZING:
-// ============
-
+// Font Sizing:
 $font-size: 1rem !default;
 $font-size-ratio: 1.125 !default;
 
-// ============
-// FONT FAMILY:
-// ============
-
+// Font Family:
 $font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", // Native.
 "Helvetica Neue", Arial, sans-serif, // Fallback.
 "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default; // Emoji.
 $font-heading: $font !default;
 $font-mono: Consolas, Monaco, monospace !default;
 
-// ============
-// FONT WEIGHT:
-// ============
-
+// Font Weight:
 $weight: 400 !default;
 $weight-thin: 200 !default;
 $weight-bold: 600 !default;
 $weight-heavy: 800 !default;
 
-// ============
-// LINE HEIGHT:
-// ============
-
+// Line Height:
 $line-height: 1.5 !default;
 $line-height-heading: 1.33 !default;
 
-// =====================
-// VIEWPORT BREAKPOINTS:
-// =====================
-
+// Viewport Breakpoints:
 $xs: 180.5px !default;
 $sm: 300.5px !default;
 $md: 640.5px !default;
@@ -103,10 +79,7 @@ $breakpoints: (
     0px, $sm, $md, $lg, $xl, $xxl
 ) !default;
 
-// ==============
-// CORNER-RADIUS:
-// ==============
-
+// Border Radius:
 $radius-xs: 3px !default;
 $radius-sm: 6px !default;
 $radius-md: 9px !default;
@@ -114,10 +87,7 @@ $radius-lg: 12px !default;
 $radius-xl: 16px !default;
 $radius-xxl: 24px !default;
 
-// =================
-// Z-INDEX POSITION:
-// =================
-
+// Z-Index Position:
 $z-dropdown: 100 !default;
 $z-sticky: 200 !default;
 $z-fixed: 300 !default;
@@ -126,10 +96,7 @@ $z-modal: 500 !default;
 $z-popover: 600 !default;
 $z-tooltip: 700 !default;
 
-// ===========
-// SAFE-AREAS:
-// ===========
-
+// Safe Areas:
 $safe-top: env(safe-area-inset-top) !default;
 $safe-right: env(safe-area-inset-right) !default;
 $safe-bottom: env(safe-area-inset-bottom) !default;
