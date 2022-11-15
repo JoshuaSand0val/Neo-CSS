@@ -1,8 +1,10 @@
+const site = require("./site.js");
+
 module.exports = {
     "header": {
         "Home": "/",
         "API": "/api/",
-        "Github": "https://github.com/JoshuaSand0val/Neo-CSS/"
+        "Github": site.github
     },
     "footer": {
         "Neo CSS Boilerplate": "/",
