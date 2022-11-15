@@ -12,7 +12,7 @@
     "sass": "^1.52.1"
   },
   "scripts": {
-    "stylesheet": "sass --no-source-map assets/scss/site.scss assets/css/site.css",
+    "stylesheet": "sass --no-source-map assets-dev/scss/site.scss assets/css/site.css",
     "poststylesheet": "postcss assets/css/site.css --no-map --use autoprefixer --dir assets/css/",
     "test": "npx @11ty/eleventy --serve --output=docs_testing",
     "docs": "npx @11ty/eleventy"
