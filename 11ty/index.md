@@ -16,7 +16,7 @@ chapters:
 **Add it to your project now via installation by NPM:**
 
 ```bash
-$ npm install css-neo # Installs {{ code.version }} via NPM.
+$ npm install css-neo # Installs {{ site.code.version }} via NPM.
 ```
 
 ---
@@ -37,7 +37,7 @@ $ npm install css-neo # Installs {{ code.version }} via NPM.
 *If you are unfamiliar with NPM, here is an [installation guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
 
 ```bash
-$ npm install css-neo # Installs {{ code.version }} via NPM.
+$ npm install css-neo # Installs {{ site.code.version }} via NPM.
 ```
 
 2. Make a new `master.scss` file that links to Neo CSS.  
@@ -73,4 +73,4 @@ Neo CSS was built by Joshua Elijah Sandoval.
 Thanks to all those who worked on [normalize.css](https://github.com/necolas/normalize.css/).
 
 ## <span id="license">License</span>
-Neo CSS is distributed under the [{{ code.license.type }}]({{ code.license.url }}) License.
+Neo CSS is distributed under the [{{ site.code.license.type }}]({{ site.code.license.url }}) License.
