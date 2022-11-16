@@ -21,5 +21,8 @@
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/JoshuaSand0val/Neo-CSS.git"
+	},
+	"dependencies": {
+		"sanitize.css": "^13.0.0"
 	}
 }
