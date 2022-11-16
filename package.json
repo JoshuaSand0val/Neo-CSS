@@ -6,14 +6,16 @@
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
     "autoprefixer": "^10.4.7",
+    "clean-css-cli": "^5.6.1",
     "css-neo": "^2.0.0",
     "postcss": "^8.4.14",
     "postcss-cli": "^10.0.0",
     "sass": "^1.52.1"
   },
   "scripts": {
-    "stylesheet": "sass --no-source-map assets-dev/scss/site.scss assets/css/site.css",
-    "poststylesheet": "postcss assets/css/site.css --no-map --use autoprefixer --dir assets/css/",
+    "prestylesheet": "sass --no-source-map assets-dev/scss/site.scss assets/css/site.css",
+    "stylesheet": "postcss assets/css/site.css --no-map --use autoprefixer --dir assets/css/",
+    "poststylesheet": "cleancss --output assets/css/site.min.css assets/css/site.css",
     "test": "npx @11ty/eleventy --serve --output=docs_testing",
     "docs": "npx @11ty/eleventy"
   }
