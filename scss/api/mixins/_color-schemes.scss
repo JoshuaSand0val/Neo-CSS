@@ -1,0 +1,10 @@
+// Color Schemes: Builds scheme queries using different $schemes and a $default.
+
+@mixin color-schemes($default, $schemes...) {
+    @content($default);
+    @each $mode, $color in $schemes {
+        @media (prefers-color-scheme: $mode) {
+            @content($color);
+        }
+    }
+}

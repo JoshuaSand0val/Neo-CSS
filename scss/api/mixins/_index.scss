@@ -1,5 +1,6 @@
 // Mixins: All API mixins forwarded.
 @forward "breakpoints";
+@forward "color-schemes";
 @forward "dark";
 @forward "declare";
 @forward "inset";
@@ -9,4 +10,3 @@
 @forward "min-vh";
 @forward "min-vw";
 @forward "reduced-motion";
-@forward "themes";
