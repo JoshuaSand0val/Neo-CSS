@@ -23,6 +23,6 @@
 		"url": "git://github.com/JoshuaSand0val/Neo-CSS.git"
 	},
 	"dependencies": {
-		"sanitize.css": "^13.0.0"
+		"@csstools/normalize.css": "^12.0.0"
 	}
 }
