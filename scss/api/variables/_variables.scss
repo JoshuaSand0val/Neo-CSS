@@ -89,13 +89,13 @@ $radius-xl: 16px !default;
 $radius-xxl: 24px !default;
 
 // Z-Index Position:
-$z-dropdown: 100 !default;
-$z-sticky: 200 !default;
-$z-fixed: 300 !default;
-$z-modal-backdrop: 400 !default;
-$z-modal: 500 !default;
-$z-popover: 600 !default;
-$z-tooltip: 700 !default;
+$z-dropdown: 1000 !default;
+$z-sticky: 2000 !default;
+$z-fixed: 3000 !default;
+$z-modal-backdrop: 4000 !default;
+$z-modal: 5000 !default;
+$z-popover: 6000 !default;
+$z-tooltip: 7000 !default;
 
 // Safe Areas:
 $safe-top: env(safe-area-inset-top) !default;
