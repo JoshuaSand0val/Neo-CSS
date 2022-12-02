@@ -1,5 +1,7 @@
 // Variables: All global API variables.
 
+@use "../sass" as *;
+
 // Color Palette:
 $white: #EBEBEF !default;
 $black: #18181C !default;
@@ -45,6 +47,16 @@ $scale-ratio: 1.33 !default;
 $font-size: 1rem !default;
 $font-size-ratio: 1.125 !default;
 
+// Font Scaling:
+$font-scale: (
+    "xs": 1.125,
+    "sm": 1.250,
+    "md": 1.333,
+    "lg": 1.414,
+    "xl": 1.500,
+    "xxl": 1.618
+) !default;
+
 // Font Family:
 $font: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
 helvetica neue, helvetica, Cantarell, Ubuntu, roboto,
@@ -64,7 +76,7 @@ $line-height: 1.5 !default;
 $line-height-heading: 1.33 !default;
 
 // Viewport Breakpoints:
-$xs: 180.5px !default;
+$xs: 0px !default;
 $sm: 300.5px !default;
 $md: 640.5px !default;
 $lg: 980.5px !default;
@@ -76,9 +88,7 @@ $vw-map: (
     "lg": $lg, "xl": $xl, "xxl": $xxl
 ) !default;
 
-$breakpoints: (
-    0px, $sm, $md, $lg, $xl, $xxl
-) !default;
+$breakpoints: MAP-values($vw-map) !default;
 
 // Border Radius:
 $radius-xs: 3px !default;

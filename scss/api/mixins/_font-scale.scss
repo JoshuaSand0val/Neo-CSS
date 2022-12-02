@@ -1,0 +1,17 @@
+// Font Scale: Scales font based on $step and $font-scale breakpoints.
+
+@use "../variables/" as *;
+@use "../functions/step" as *;
+@use "../sass" as *;
+
+@mixin font-scale($step) {
+    @each $key, $ratio in $font-scale {
+        @container (min-width: #{ MAP-get($vw-map, $key) }) {
+            $value: step($font-size, $ratio, $step);
+            @if META-content-exists() == false {
+                font-size: $value;
+            }
+            @content($value);
+        }
+    }
+}
