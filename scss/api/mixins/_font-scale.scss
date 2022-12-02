@@ -1,17 +1,21 @@
-// Font Scale: Scales font based on $step and $font-scale breakpoints.
+// Font Scale: Scales font based on $step and $font-scale $breakpoint(s).
 
 @use "../variables/" as *;
 @use "../functions/step" as *;
 @use "../sass" as *;
 
-@mixin font-scale($step) {
+@mixin font-scale($step, $breakpoint: "xxl") {
+    $breakpoint: map-get($vw-map, $breakpoint);
     @each $key, $ratio in $font-scale {
-        @container (min-width: #{ MAP-get($vw-map, $key) }) {
-            $value: step($font-size, $ratio, $step);
-            @if META-content-exists() == false {
-                font-size: $value;
+        $min-width: MAP-get($vw-map, $key);
+        @if $min-width <= $breakpoint {
+            @container (min-width: #{ $min-width }) {
+                $value: step($font-size, $ratio, $step);
+                @if META-content-exists() == false {
+                    font-size: $value;
+                }
+                @content($value);
             }
-            @content($value);
         }
     }
 }
