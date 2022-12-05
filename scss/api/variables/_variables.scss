@@ -45,17 +45,7 @@ $scale-ratio: 1.33 !default;
 
 // Font Sizing:
 $font-size: 1rem !default;
-$font-size-ratio: 1.125 !default;
-
-// Font Scaling:
-$font-scale: (
-    "xs": 1.125,
-    "sm": 1.250,
-    "md": 1.333,
-    "lg": 1.414,
-    "xl": 1.500,
-    "xxl": 1.618
-) !default;
+$font-size-ratio: 1.200 !default;
 
 // Font Family:
 $font: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
