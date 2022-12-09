@@ -81,14 +81,6 @@ $vw-map: (
 // Viewport Breakpoints:
 $breakpoints: 0px, $sm, $md, $lg, $xl, $xxl !default;
 
-// Border Radius:
-$radius-xs: 3px !default;
-$radius-sm: 6px !default;
-$radius-md: 9px !default;
-$radius-lg: 12px !default;
-$radius-xl: 16px !default;
-$radius-xxl: 24px !default;
-
 // Z-Index Position:
 $z-dropdown: 1000 !default;
 $z-sticky: 2000 !default;
@@ -97,6 +89,14 @@ $z-modal-backdrop: 4000 !default;
 $z-modal: 5000 !default;
 $z-popover: 6000 !default;
 $z-tooltip: 7000 !default;
+
+// Border Radius:
+$radius-xs: 4px !default;
+$radius-sm: 8px !default;
+$radius-md: 16px !default;
+$radius-lg: 24px !default;
+$radius-xl: 32px !default;
+$radius-xxl: 48px !default;
 
 // Safe Areas:
 $safe-top: env(safe-area-inset-top) !default;
