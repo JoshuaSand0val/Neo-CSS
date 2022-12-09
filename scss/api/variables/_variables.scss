@@ -65,8 +65,8 @@ $weight-heavy: 800 !default;
 $line-height: 1.5 !default;
 $line-height-heading: 1.33 !default;
 
-// Viewport Breakpoints:
-$xs: 0px !default;
+// Viewport Widths:
+$xs: 180.5px !default;
 $sm: 300.5px !default;
 $md: 640.5px !default;
 $lg: 980.5px !default;
@@ -78,7 +78,8 @@ $vw-map: (
     "lg": $lg, "xl": $xl, "xxl": $xxl
 ) !default;
 
-$breakpoints: MAP-values($vw-map) !default;
+// Viewport Breakpoints:
+$breakpoints: 0px, $sm, $md, $lg, $xl, $xxl !default;
 
 // Border Radius:
 $radius-xs: 3px !default;
