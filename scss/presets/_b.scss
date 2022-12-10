@@ -1,0 +1,7 @@
+// B: CSS for the "bring attention to" element.
+
+@use "../api/" as *;
+
+:where(b) {
+    font-weight: $weight-bold;
+}
