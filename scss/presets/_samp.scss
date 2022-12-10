@@ -1,0 +1,7 @@
+// Samp: CSS for sample output.
+
+@use "../api/" as *;
+
+:where(samp) {
+    font-family: $font-mono;
+}
