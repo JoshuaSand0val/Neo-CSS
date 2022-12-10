@@ -16,8 +16,8 @@
 		"LICENSE.md",
 		"README.md"
 	],
-	"main": "scss/neo.scss",
-	"style": "scss/neo.scss",
+	"main": "scss/boilerplate.scss",
+	"style": "scss/boilerplate.scss",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/JoshuaSand0val/Neo-CSS.git"
