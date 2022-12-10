@@ -1,0 +1,7 @@
+// DD: CSS for the description details element.
+
+@use "../api/" as *;
+
+:where(dd) {
+    margin-inline-start: size(3);
+}
