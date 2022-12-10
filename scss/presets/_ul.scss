@@ -1,0 +1,8 @@
+// UL: CSS for unordered lists.
+
+@use "../api/" as *;
+
+:where(ul) {
+    margin-block: size(0);
+    padding-inline-start: size(3);
+}
