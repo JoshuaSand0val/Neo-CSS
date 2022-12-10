@@ -4,4 +4,7 @@
 
 :where(dl) {
     margin-block: size(0);
+    & & {
+        margin-block: 0;
+    }
 }

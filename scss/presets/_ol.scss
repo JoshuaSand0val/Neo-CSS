@@ -5,4 +5,7 @@
 :where(ol) {
     margin-block: size(0);
     padding-inline-start: size(3);
+    & & {
+        margin-block: 0;
+    }
 }
