@@ -1,0 +1,13 @@
+// A: CSS for HTML anchor links.
+
+@use "../api/" as *;
+
+:where(a:any-link) {
+    color: text-color($blue, $white);
+    &:where(:visited) {
+        color: text-color($indigo, $white);
+    }
+    &:where(:active) {
+        color: text-color($red, $white);
+    }
+}
