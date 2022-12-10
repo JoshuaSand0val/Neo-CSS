@@ -9,6 +9,9 @@
     line-height: $line-height;
     @include color-schemes($background-color...) using ($bg) {
         background-color: $bg;
-        color: if(dark(text-color($bg, $bg, 21)), $black, $white);
+        color: if(accessible($bg, $bg, 21) == #000,
+            text-color($black, $bg),
+            text-color($white, $bg)
+        );
     }
 }
