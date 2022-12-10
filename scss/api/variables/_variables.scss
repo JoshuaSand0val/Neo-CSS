@@ -36,7 +36,7 @@ $colors: (
 ) !default;
 
 // Color Schemes:
-$background-color: $white, dark $black;
+$background-color: $white, dark $black !default;
 
 // Contrast Ratio:
 $contrast-text-ratio: 4.5 !default;
