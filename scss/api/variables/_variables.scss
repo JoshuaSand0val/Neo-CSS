@@ -35,6 +35,9 @@ $colors: (
     "pink": $pink
 ) !default;
 
+// Color Schemes:
+$background-color: $white, dark $black;
+
 // Contrast Ratio:
 $contrast-text-ratio: 4.5 !default;
 $contrast-step-ratio: 1.1 !default;
