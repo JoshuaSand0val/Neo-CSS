@@ -1,7 +1,2 @@
-// Presets: CSS presets for a consistent baseline for all elements.
-@forward "document";
-@forward "form";
-@forward "image";
-@forward "list";
-@forward "table";
-@forward "text";
+// Presets: CSS to convert user-agent CSS to API calls.
+@forward "root";
