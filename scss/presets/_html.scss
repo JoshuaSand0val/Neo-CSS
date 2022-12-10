@@ -1,8 +1,8 @@
-// Root: CSS for the main document root; typically the HTML tag.
+// HTML: CSS for the HTML tag.
 
 @use "../api/" as *;
 
-:where(:root) {
+:where(html) {
     font-size: $font-size;
     font-family: $font;
     font-weight: $weight;
