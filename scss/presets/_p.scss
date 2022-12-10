@@ -1,0 +1,7 @@
+// P: CSS for the paragraph element.
+
+@use "../api/" as *;
+
+:where(p) {
+    margin-block: size(0);
+}
