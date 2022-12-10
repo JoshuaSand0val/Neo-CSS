@@ -1,0 +1,8 @@
+// OL: CSS for ordered lists.
+
+@use "../api/" as *;
+
+:where(ol) {
+    margin-block: size(0);
+    padding-inline-start: size(3);
+}
