@@ -3,10 +3,12 @@
 @use "../api/" as *;
 
 :where(:root) {
-    background-color: $white;
-    color: text-color($black, $white);
     font-size: $font-size;
     font-family: $font;
     font-weight: $weight;
     line-height: $line-height;
+    @include color-schemes($background-color...) using ($bg) {
+        background-color: $bg;
+        color: if(dark(text-color($bg, $bg)), $black, $white);
+    }
 }

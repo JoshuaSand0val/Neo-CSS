@@ -2,12 +2,14 @@
 
 @use "../api/" as *;
 
-:where(a:any-link) {
-    color: text-color($blue, $white);
-    &:where(:visited) {
-        color: text-color($indigo, $white);
-    }
-    &:where(:active) {
-        color: text-color($red, $white);
+@include color-schemes($background-color...) using ($bg) {
+    :where(a:any-link) {
+        color: text-color($blue, $bg);
+        &:where(:visited) {
+            color: text-color($indigo, $bg);
+        }
+        &:where(:active) {
+            color: text-color($red, $bg);
+        }
     }
 }
