@@ -1,0 +1,7 @@
+// Code: CSS for inline code.
+
+@use "../api/" as *;
+
+:where(code) {
+    font-family: $font-mono;
+}
