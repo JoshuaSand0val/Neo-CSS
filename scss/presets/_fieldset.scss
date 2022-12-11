@@ -1,0 +1,13 @@
+// Fieldset: CSS for field sets.
+
+@use "../api/" as *;
+
+:where(fieldset) {
+    margin-inline-start: px(2);
+    margin-inline-end: px(2);
+    padding-block-start: size(-3);
+    padding-inline-start: size(-1);
+    padding-inline-end: size(-1);
+    padding-block-end: size(-1);
+    border-width: px(2);
+}
