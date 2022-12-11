@@ -1,0 +1,7 @@
+// Optgroup: CSS for option groups.
+
+@use "../api/" as *;
+
+:where(optgroup) {
+    font-weight: $weight-heavy;
+}
