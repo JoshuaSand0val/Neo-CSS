@@ -1,0 +1,7 @@
+// TH: CSS for table headers.
+
+@use "../api/" as *;
+
+:where(th) {
+    font-weight: $weight-bold;
+}
