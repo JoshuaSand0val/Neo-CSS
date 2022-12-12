@@ -3,6 +3,7 @@
 @use "../api/" as *;
 
 :where(html) {
+    color-scheme: $color-scheme;
     font-size: $font-size;
     font-family: $font;
     font-weight: $weight;
