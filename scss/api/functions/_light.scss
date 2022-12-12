@@ -1,10 +1,7 @@
 // Light: Returns true if $color is light.
 
-@use "../sass" as *;
+@use "luminance" as *;
 
 @function light($color) {
-    @if COLOR-lightness($color) > 50% {
-        @return true;
-    }
-    @return false;
+    @return if(luminance($color) > 0.5, true, false);
 }
