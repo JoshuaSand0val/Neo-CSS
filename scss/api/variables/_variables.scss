@@ -44,7 +44,7 @@ $contrast-text-ratio: 4.5 !default;
 $contrast-step-ratio: 1.1 !default;
 
 // Scaling Properties:
-$scale-baseline: 1em !default;
+$scale-baseline: 1rem !default;
 $scale-ratio: 1.414 !default;
 
 // Font Sizing:
@@ -55,7 +55,7 @@ $font-size-ratio: 1.200 !default;
 $font: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
 helvetica neue, helvetica, Cantarell, Ubuntu, roboto,
 noto, arial, sans-serif !default;
-$font-heading: $font !default;
+$font-heading: inherit !default;
 $font-mono: Menlo, Consolas, Monaco, Liberation Mono,
 Lucida Console, monospace !default;
 
