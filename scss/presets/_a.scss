@@ -3,12 +3,14 @@
 @use "../api/" as *;
 
 @include color-schemes($background-color...) using ($bg) {
-    :where(a:any-link) {
-        color: text-color($blue, $bg);
-        &:where(:visited) {
+    a:any-link {
+        :where(&) {
+            color: text-color($blue, $bg);
+        }
+        :where(&:visited) {
             color: text-color($indigo, $bg);
         }
-        &:where(:active) {
+        :where(&:active) {
             color: text-color($red, $bg);
         }
     }
