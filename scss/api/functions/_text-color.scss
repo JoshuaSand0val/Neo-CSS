@@ -4,10 +4,9 @@
 @use "accessible" as *;
 @use "dark" as *;
 
-@function text-color($color1, $color2: null, $ratio: $contrast-text-ratio) {
-    @if $color2 {
-        @return accessible($color1, $color2, $ratio);
+@function text-color($color1: null, $color2, $ratio: $contrast-text-ratio) {
+    @if $color1 == null {
+        $color1: if(dark($color2), $white, $black);
     }
-    $mono: if(dark($color1), $white, $black);
-    @return accessible($mono, $color1, $ratio);
+    @return accessible($color1, $color2, $ratio);
 }
