@@ -1,0 +1,10 @@
+// Background Color: Shorthand for $background-color in color-schemes mixin.
+
+@use "../variables/" as *;
+@use "color-schemes" as *;
+
+@mixin background-color {
+    @include color-schemes($background-color...) using ($bg) {
+        @content($bg);
+    }
+}
