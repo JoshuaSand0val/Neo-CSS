@@ -1,5 +1,5 @@
-// Presets: CSS to convert user-agent CSS to API calls.
-@forward "a";
+// Presets: CSS to style API variable !default(s) to user-agent CSS.
+@forward "a" as a-*;
 @forward "b";
 @forward "blockquote";
 @forward "body";

@@ -2,16 +2,15 @@
 
 @use "../api/" as *;
 
-@include color-schemes($background-color...) using ($bg) {
-    a:any-link {
+$color: $blue !default;
+
+a[href] {
+    @include background-color using ($bg) {
         :where(&) {
-            color: text-color($blue, $bg);
+            color: text-color($color, $bg);
         }
-        :where(&:visited) {
-            color: text-color($indigo, $bg);
-        }
-        :where(&:active) {
-            color: text-color($red, $bg);
-        }
+    }
+    :where(&:not(:hover, :focus, :active)) {
+        text-decoration: none;
     }
 }
