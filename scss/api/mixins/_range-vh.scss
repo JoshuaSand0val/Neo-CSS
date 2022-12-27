@@ -1,0 +1,7 @@
+// Range-Viewport Height: A query for a ranging viewport height.
+
+@mixin range-vh($min-vh, $max-vh) {
+    @media (min-height: $min-vh) and (max-height: $max-vh) {
+        @content;
+    }
+}

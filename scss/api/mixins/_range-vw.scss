@@ -1,0 +1,7 @@
+// Range-Viewport Width: A query for a ranging viewport width.
+
+@mixin range-vw($min-vw, $max-vw) {
+    @media (min-width: $min-vw) and (max-width: $max-vw) {
+        @content;
+    }
+}
