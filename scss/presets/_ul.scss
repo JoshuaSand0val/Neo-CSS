@@ -5,7 +5,7 @@
 :where(ul) {
     margin-block: size(0);
     padding-inline-start: size(3);
-    & & {
+    & :where(dl, ol, ul) {
         margin-block: 0;
     }
 }
