@@ -1,11 +1,7 @@
 // UL: CSS for unordered lists.
 
-@use "../api/" as *;
+@forward "ol";
 
 :where(ul) {
-    margin-block: size(0);
-    padding-inline-start: size(1);
-    & :where(dl, ol, ul) {
-        margin-block: 0;
-    }
+    @extend ol;
 }
