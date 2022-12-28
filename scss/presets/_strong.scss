@@ -1,7 +1,7 @@
 // Strong: CSS for the strong importance element.
 
-@use "../api/" as *;
+@forward "b";
 
-:where(strong) {
-    font-weight: $weight-bold;
+strong {
+    @extend b;
 }

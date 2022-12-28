@@ -1,7 +1,7 @@
 // TH: CSS for table headers.
 
-@use "../api/" as *;
+@forward "b";
 
-:where(th) {
-    font-weight: $weight-bold;
+th {
+    @extend b;
 }
