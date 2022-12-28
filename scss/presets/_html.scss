@@ -1,0 +1,12 @@
+// HTML: CSS for the HTML tag.
+
+@use "../api/" as *;
+
+:where(html) {
+    color-scheme: $color-scheme;
+    font: $weight #{$font-size}/#{$line-height} $font;
+    @include color-schemes($background-color...) using ($bg) {
+        background-color: $bg;
+        color: text-color($color2: $bg);
+    }
+}

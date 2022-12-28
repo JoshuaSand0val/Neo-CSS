@@ -1,0 +1,8 @@
+// Mark: CSS for the mark element.
+
+@use "../api/" as *;
+
+:where(mark) {
+    background-color: $yellow;
+    color: text-color($black, $yellow);
+}

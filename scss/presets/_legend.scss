@@ -1,0 +1,7 @@
+// Legend: CSS for field set legends.
+
+@use "../api/" as *;
+
+:where(legend) {
+    padding-inline: px(2);
+}

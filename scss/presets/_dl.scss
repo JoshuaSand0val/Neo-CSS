@@ -1,0 +1,10 @@
+// DL: CSS for the description list element.
+
+@use "../api/" as *;
+
+:where(dl) {
+    margin-block: size(0);
+    & :where(dl, ol, ul) {
+        margin-block: 0;
+    }
+}

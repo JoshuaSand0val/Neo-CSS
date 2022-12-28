@@ -1,0 +1,8 @@
+// Blockquote: CSS for large quotations.
+
+@use "../api/" as *;
+
+:where(blockquote) {
+    margin-block: size(0);
+    margin-inline: size(1);
+}

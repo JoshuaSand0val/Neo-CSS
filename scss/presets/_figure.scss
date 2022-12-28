@@ -1,0 +1,8 @@
+// Figure: CSS for the HTML figure element.
+
+@use "../api/" as *;
+
+:where(figure) {
+    margin-block: size(0);
+    margin-inline: size(1);
+}

@@ -1,0 +1,7 @@
+// Strong: CSS for the strong importance element.
+
+@use "../api/" as *;
+
+:where(strong) {
+    font-weight: $weight-bold;
+}
