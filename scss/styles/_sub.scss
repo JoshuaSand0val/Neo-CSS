@@ -1,7 +1,7 @@
 // Sub: CSS for subscript text.
 
-@use "../api/" as *;
+@forward "small";
 
 :where(sub) {
-    font-size: font-size(-1);
+    @extend small;
 }

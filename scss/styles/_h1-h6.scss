@@ -1,6 +1,7 @@
 // H1-H6: CSS for document headings.
 
 @forward "b";
+@forward "small";
 @use "../api/" as *;
 
 :where(h1, h2, h3, h4, h5, h6) {
@@ -27,7 +28,7 @@
 }
 
 :where(h5) {
-    font-size: font-size(-1);
+    @extend small;
 }
 
 :where(h6) {
