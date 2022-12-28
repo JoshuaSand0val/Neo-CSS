@@ -1,12 +1,13 @@
 // H1-H6: CSS for document headings.
 
+@forward "b";
 @use "../api/" as *;
 
 :where(h1, h2, h3, h4, h5, h6) {
     font-family: $font-heading;
-    font-weight: $weight-bold;
     line-height: $line-height-heading;
     margin-block: size(1);
+    @extend b;
 }
 
 :where(h1) {

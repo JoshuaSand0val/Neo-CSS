@@ -2,6 +2,6 @@
 
 @forward "b";
 
-strong {
+:where(strong) {
     @extend b;
 }

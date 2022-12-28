@@ -2,6 +2,6 @@
 
 @forward "b";
 
-th {
+:where(th) {
     @extend b;
 }
