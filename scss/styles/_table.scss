@@ -4,7 +4,7 @@
 
 :where(table) {
     border-spacing: px(2);
-    @include color-schemes($background-color...) using ($bg) {
+    @include background-color using ($bg) {
         border-color: accessible($gray, $bg, 3);
     }
 }

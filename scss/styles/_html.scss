@@ -5,7 +5,7 @@
 :where(html) {
     color-scheme: $color-scheme;
     font: $weight #{$font-size}/#{$line-height} $font;
-    @include color-schemes($background-color...) using ($bg) {
+    @include background-color using ($bg) {
         background-color: $bg;
         color: text-color($color2: $bg);
     }

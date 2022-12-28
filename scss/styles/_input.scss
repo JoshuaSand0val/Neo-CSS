@@ -7,7 +7,7 @@
     padding: px(2) px(3);
     border-width: 1px;
     border-style: solid;
-    @include color-schemes($background-color...) using ($bg) {
+    @include background-color using ($bg) {
         background-color: $bg;
         border-color: accessible($gray, $bg, 3);
     }
