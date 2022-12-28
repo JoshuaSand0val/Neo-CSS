@@ -1,9 +1,11 @@
 // OL: CSS for ordered lists.
 
-@forward "dl";
 @use "../api/" as *;
 
 :where(ol) {
     padding-inline-start: size(1);
-    @extend dl;
+    margin-block: size(0);
+    & :where(dl, ol, ul) {
+        margin-block: 0;
+    }
 }
