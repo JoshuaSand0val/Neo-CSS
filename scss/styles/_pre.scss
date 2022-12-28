@@ -1,8 +1,9 @@
 // Pre: CSS for preformatted text.
 
+@forward "code";
 @use "../api/" as *;
 
 :where(pre) {
-    font-family: $font-mono;
     margin: size(0) 0;
+    @extend code;
 }

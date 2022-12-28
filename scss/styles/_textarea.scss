@@ -1,14 +1,15 @@
 // Textarea: CSS for HTML textareas.
 
+@forward "code";
 @use "../api/" as *;
 
 :where(textarea) {
-    font-family: $font-mono;
-    color: inherit;
     padding: px(2);
-    @include color-schemes($background-color...) using ($bg) {
+    @extend code;
+    @include background-color using ($bg) {
         background-color: $bg;
         border-color: accessible($gray, $bg, 3);
+        color: text-color($color2: $bg);
     }
 }
 

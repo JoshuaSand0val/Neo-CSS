@@ -1,7 +1,7 @@
 // Samp: CSS for sample output.
 
-@use "../api/" as *;
+@forward "code";
 
 :where(samp) {
-    font-family: $font-mono;
+    @extend code;
 }
