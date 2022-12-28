@@ -1,7 +1,0 @@
-// KBD: CSS for the keyboard input element.
-
-@use "../api/" as *;
-
-:where(kbd) {
-    font-family: $font-mono;
-}

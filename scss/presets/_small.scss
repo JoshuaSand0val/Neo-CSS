@@ -1,7 +1,0 @@
-// Small: CSS for side comments.
-
-@use "../api/" as *;
-
-:where(small) {
-    font-size: font-size(-1);
-}

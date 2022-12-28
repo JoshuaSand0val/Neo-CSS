@@ -1,10 +1,10 @@
 {
 	"name": "css-neo",
 	"version": "3.0.0",
-	"description": "A modern, modular and extensible CSS boilerplate built with SASS/SCSS.",
+	"description": "CSS API built with SASS/SCSS.",
 	"keywords": [
 		"Neo CSS",
-		"CSS Boilerplate",
+		"CSS API",
 		"SCSS",
 		"CSS"
 	],
@@ -16,13 +16,10 @@
 		"LICENSE",
 		"README.md"
 	],
-	"main": "scss/boilerplate.scss",
-	"style": "scss/boilerplate.scss",
+	"main": "scss/_index.scss",
+	"style": "scss/_index.scss",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/JoshuaSand0val/Neo-CSS.git"
-	},
-	"dependencies": {
-		"@csstools/normalize.css": "^12.0.0"
 	}
 }

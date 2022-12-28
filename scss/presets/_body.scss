@@ -1,7 +1,0 @@
-// Body: CSS for the document body.
-
-@use "../api/" as *;
-
-:where(body) {
-    margin: size(1);
-}

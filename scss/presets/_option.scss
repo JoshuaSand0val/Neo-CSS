@@ -1,7 +1,0 @@
-// Option: CSS for HTML options.
-
-@use "../api/" as *;
-
-:where(option) {
-    padding: 0 px(2) px(1);
-}

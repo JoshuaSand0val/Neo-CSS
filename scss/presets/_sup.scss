@@ -1,7 +1,0 @@
-// Sup: CSS for superscript text.
-
-@use "../api/" as *;
-
-:where(sup) {
-    font-size: font-size(-1);
-}

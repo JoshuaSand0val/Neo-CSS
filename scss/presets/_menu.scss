@@ -1,8 +1,0 @@
-// Menu: CSS for the HTML menu element.
-
-@use "../api/" as *;
-
-:where(menu) {
-    margin-block: size(0);
-    padding-inline-start: size(1);
-}
