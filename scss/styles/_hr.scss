@@ -1,7 +1,0 @@
-// HR: CSS for the horizontal rule HTML element.
-
-@use "../api/" as *;
-
-:where(hr) {
-    margin-block: size(-2);
-}

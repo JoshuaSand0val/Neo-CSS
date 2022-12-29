@@ -1,7 +1,0 @@
-// TH: CSS for table headers.
-
-@forward "b";
-
-:where(th) {
-    @extend b;
-}

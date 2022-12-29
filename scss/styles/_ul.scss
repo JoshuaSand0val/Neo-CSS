@@ -1,7 +1,0 @@
-// UL: CSS for unordered lists.
-
-@forward "ol";
-
-:where(ul) {
-    @extend ol;
-}

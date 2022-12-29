@@ -1,7 +1,0 @@
-// Select: CSS for the HTML select element.
-
-@forward "input";
-
-:where(select) {
-    @extend %input;
-}

@@ -1,7 +1,0 @@
-// Strong: CSS for the strong importance element.
-
-@forward "b";
-
-:where(strong) {
-    @extend b;
-}

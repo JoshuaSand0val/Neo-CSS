@@ -1,7 +1,0 @@
-// Sup: CSS for superscript text.
-
-@forward "small";
-
-:where(sup) {
-    @extend small;
-}

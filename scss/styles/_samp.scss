@@ -1,7 +1,0 @@
-// Samp: CSS for sample output.
-
-@forward "code";
-
-:where(samp) {
-    @extend code;
-}

@@ -1,7 +1,0 @@
-// KBD: CSS for the keyboard input element.
-
-@forward "code";
-
-:where(kbd) {
-    @extend code;
-}

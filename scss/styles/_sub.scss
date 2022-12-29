@@ -1,7 +1,0 @@
-// Sub: CSS for subscript text.
-
-@forward "small";
-
-:where(sub) {
-    @extend small;
-}
