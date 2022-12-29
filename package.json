@@ -1,10 +1,10 @@
 {
-	"name": "@joshuasand0val/toolkit.css",
+	"name": "api.css",
 	"version": "1.0.0-beta.0",
-	"description": "A modern CSS toolkit built with SASS/SCSS.",
+	"description": "A modern CSS API built with SASS/SCSS.",
 	"keywords": [
-		"Toolkit.css",
-		"CSS Toolkit",
+		"API.css",
+		"CSS API",
 		"SCSS",
 		"CSS"
 	],
