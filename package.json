@@ -1,9 +1,9 @@
 {
-	"name": "css-neo",
-	"version": "3.0.0",
+	"name": "toolkit.css",
+	"version": "1.0.0-beta.0",
 	"description": "A modern CSS toolkit built with SASS/SCSS.",
 	"keywords": [
-		"Neo CSS",
+		"Toolkit.css",
 		"CSS Toolkit",
 		"SCSS",
 		"CSS"

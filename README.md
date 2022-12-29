@@ -1,56 +1,49 @@
-# A modern, modular and extensible CSS boilerplate.
-**Start your new project today by cloning the repo:**
+# A modern CSS toolkit built with SASS/SCSS.
 
-```shell
-$ git clone https://github.com/JoshuaSand0val/Neo-CSS.git
+**Add it to your project now via installation by NPM:**
+
+```bash
+$ npm install toolkit.css
 ```
 
 ---
 
-## What does Neo CSS do?
-- Provides new CSS in addition to [normalize.css](https://github.com/necolas/normalize.css/) to fix additional problems with browser CSS.
-- Provides a consistent styled baseline for all elements.
-- Provides easy to use [API](https://joshuasand0val.github.io/Neo-CSS/api/) to allow for effortless extension.
-- Provides a modular design to allow developer choice in what components are included in compile.
+## What is Toolkit.css?
+Toolkit.css is a modern CSS API, purpose built to streamline the creation of consistent CSS.
 
-## Getting started with Neo CSS
-To get started with Neo CSS, complete the following:
+## Get started using Toolkit.css
+### Getting started is easy! Just complete a few steps!
 
-1. Start your new project in a new directory and clone the repo.
+1. Open a terminal (in this case, Bash) and install via NPM.  
+*If you are unfamiliar with NPM, here is an [installation guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
 
-```shell
-$ mkdir my-project
-$ cd my-project
-$ git clone https://github.com/JoshuaSand0val/Neo-CSS.git
+```bash
+$ npm install toolkit.css
 ```
 
-2. Make a new `master.scss` file in a separate directory that links to Neo CSS.
-
-```shell
-$ mkdir my-scss
-$ cd my-scss
-$ echo @forward "../Neo-CSS/scss/neo"; > master.scss
-```
-
-3. Compile using [SASS](https://sass-lang.com/install).
-
-```shell
-$ sass master.scss output.css
-```
-
-## Using Neo CSS API
-The Neo CSS API uses the SASS module system.
-To begin using it, link the entry file with `@use`:
+2. Make a new `toolkit.scss` file and forward the package.  
+*You can optionally [configure any variables](https://sass-lang.com/documentation/at-rules/forward#configuring-modules) using `with()` in SASS.*
 
 ```scss
-@use "../Neo-CSS/scss/neo-api" as *;
+@forward "node_modules/toolkit.css/scss/";
 ```
 
-[Learn more about the API.](https://joshuasand0val.github.io/Neo-CSS/api/)
+3. Make a new `master.scss` file and write CSS using the package.  
+*[Learn more about what is possible with Toolkit.css.](https://neo.joshuasandoval.me/api/)*
+
+```scss
+@use "toolkit" as *;
+```
+
+4. Compile using SASS.  
+*If you are unfamiliar with SASS, here is an [installation guide](https://sass-lang.com/install).*
+
+```bash
+$ sass --no-source-map master.scss master.css
+```
 
 ## Acknowledgment
-Neo CSS was built by Joshua Elijah Sandoval.
-Thanks to all those who worked on [normalize.css](https://github.com/necolas/normalize.css/).
+Toolkit.css was built by Joshua Elijah Sandoval.
 
 ## License
-Neo CSS is distributed under the [MIT](https://choosealicense.com/licenses/mit/) License.
+Toolkit.css is distributed under the [MIT](https://choosealicense.com/licenses/mit/) License.
